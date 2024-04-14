@@ -37,7 +37,14 @@
             SearchLabel = new Label();
             textBox1 = new TextBox();
             SearchButton = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            fileSystemWatcher1 = new FileSystemWatcher();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -120,11 +127,68 @@
             SearchButton.Text = "Найти запись";
             SearchButton.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            button1.Location = new Point(140, 407);
+            button1.Name = "button1";
+            button1.Size = new Size(124, 39);
+            button1.TabIndex = 9;
+            button1.Text = "Сохранить файл с данными БД";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(287, 400);
+            button2.Name = "button2";
+            button2.Size = new Size(100, 46);
+            button2.TabIndex = 10;
+            button2.Text = "Удалить базу данных";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(400, 347);
+            button3.Name = "button3";
+            button3.Size = new Size(121, 40);
+            button3.TabIndex = 11;
+            button3.Text = "Добавить новое блюдо\r\n";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(428, 271);
+            button4.Name = "button4";
+            button4.Size = new Size(93, 39);
+            button4.TabIndex = 12;
+            button4.Text = "Создать базу данных?";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(482, 192);
+            button5.Name = "button5";
+            button5.Size = new Size(105, 53);
+            button5.TabIndex = 13;
+            button5.Text = "Найти блюдо по названию";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // fileSystemWatcher1
+            // 
+            fileSystemWatcher1.EnableRaisingEvents = true;
+            fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // MealForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(SearchButton);
             Controls.Add(textBox1);
             Controls.Add(SearchLabel);
@@ -138,6 +202,7 @@
             Text = "Меню";
             Load += MealForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -153,5 +218,11 @@
         private Label SearchLabel;
         private TextBox textBox1;
         private Button SearchButton;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private FileSystemWatcher fileSystemWatcher1;
     }
 }

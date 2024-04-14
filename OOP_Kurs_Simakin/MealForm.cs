@@ -23,5 +23,16 @@ namespace OOP_Kurs_Simakin
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Открытие окна добаления
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddMealForm addMealForm = new AddMealForm();
+            addMealForm.ShowDialog();
+        }
     }
 }
