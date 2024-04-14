@@ -14,7 +14,14 @@ namespace OOP_Kurs_Simakin
     {
         public MealForm()
         {
+            WelcomeForm welcomeForm = new WelcomeForm();
+            welcomeForm.ShowDialog();
             InitializeComponent();
+        }
+
+        private void MealForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

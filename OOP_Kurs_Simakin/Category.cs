@@ -1,11 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-
 namespace OOP_Kurs_Simakin
 {
     public partial class Category
@@ -15,14 +10,13 @@ namespace OOP_Kurs_Simakin
             Meals = new HashSet<Meal>();
         }
 
-        public Category(long idCategory, string name)
+        public Category(string name)
         {
-            IdCategory = idCategory;
             Name = name;
         }
 
         [Key]
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long IdCategory { get; set; }
         public string Name { get; set; } = null!;
 

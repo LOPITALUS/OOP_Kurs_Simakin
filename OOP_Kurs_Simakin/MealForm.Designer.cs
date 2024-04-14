@@ -120,7 +120,7 @@
             SearchButton.Text = "Найти запись";
             SearchButton.UseVisualStyleBackColor = true;
             // 
-            // Meal
+            // MealForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -134,8 +134,9 @@
             Controls.Add(FiltersLabel);
             Controls.Add(Exit);
             Controls.Add(dataGridView1);
-            Name = "Meal";
+            Name = "MealForm";
             Text = "Меню";
+            Load += MealForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

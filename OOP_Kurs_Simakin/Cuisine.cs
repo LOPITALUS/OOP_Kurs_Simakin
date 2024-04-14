@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OOP_Kurs_Simakin
 {
@@ -10,6 +10,13 @@ namespace OOP_Kurs_Simakin
             Meals = new HashSet<Meal>();
         }
 
+        public Cuisine(string name)
+        {
+            Name = name;
+        }
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long IdCuisine { get; set; }
         public string Name { get; set; } = null!;
 
