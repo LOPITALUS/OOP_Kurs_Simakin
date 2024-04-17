@@ -16,8 +16,6 @@ namespace OOP_Kurs_Simakin
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long IdCategory { get; set; }
         public string Name { get; set; } = null!;
 
         public virtual ICollection<Meal> Meals { get; set; }

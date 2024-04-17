@@ -34,5 +34,16 @@ namespace OOP_Kurs_Simakin
             AddMealForm addMealForm = new AddMealForm();
             addMealForm.ShowDialog();
         }
+
+        private void AddNewCuisine_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddNewCategory_Click(object sender, EventArgs e)
+        {
+            AddCategoryForm addCategoryForm = new AddCategoryForm();
+            addCategoryForm.ShowDialog();
+        }
     }
 }

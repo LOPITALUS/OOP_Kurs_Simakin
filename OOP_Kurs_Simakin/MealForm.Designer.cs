@@ -43,6 +43,8 @@
             button4 = new Button();
             button5 = new Button();
             fileSystemWatcher1 = new FileSystemWatcher();
+            AddNewCategory = new Button();
+            AddNewCuisine = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             SuspendLayout();
@@ -179,11 +181,33 @@
             fileSystemWatcher1.EnableRaisingEvents = true;
             fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // AddNewCategory
+            // 
+            AddNewCategory.Location = new Point(368, 50);
+            AddNewCategory.Name = "AddNewCategory";
+            AddNewCategory.Size = new Size(134, 41);
+            AddNewCategory.TabIndex = 14;
+            AddNewCategory.Text = "Добавить новую категорию блюд";
+            AddNewCategory.UseVisualStyleBackColor = true;
+            AddNewCategory.Click += AddNewCategory_Click;
+            // 
+            // AddNewCuisine
+            // 
+            AddNewCuisine.Location = new Point(368, 97);
+            AddNewCuisine.Name = "AddNewCuisine";
+            AddNewCuisine.Size = new Size(157, 51);
+            AddNewCuisine.TabIndex = 15;
+            AddNewCuisine.Text = "Добавить новый вид кухни";
+            AddNewCuisine.UseVisualStyleBackColor = true;
+            AddNewCuisine.Click += AddNewCuisine_Click;
+            // 
             // MealForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(AddNewCuisine);
+            Controls.Add(AddNewCategory);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -224,5 +248,7 @@
         private Button button4;
         private Button button5;
         private FileSystemWatcher fileSystemWatcher1;
+        private Button AddNewCuisine;
+        private Button AddNewCategory;
     }
 }

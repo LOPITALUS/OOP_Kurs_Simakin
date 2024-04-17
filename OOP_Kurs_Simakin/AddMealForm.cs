@@ -21,5 +21,17 @@ namespace OOP_Kurs_Simakin
         {
             Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string name = NewMealName.ToString();
+            int weight = (int)NewMealWeight.Value;
+            int kcal = (int)NewMealKcal.Value;
+            int price = (int)NewMealPrice.Value;
+            string cuisine = NewMealCuisine.ToString();
+            string category = NewMealCategory.ToString();
+
+
+        }
     }
 }

@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            ExitAddMealForm = new Button();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox1 = new TextBox();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            numericUpDown3 = new NumericUpDown();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+            NewMealName = new TextBox();
+            NewMealWeight = new NumericUpDown();
+            NewMealKcal = new NumericUpDown();
+            NewMealPrice = new NumericUpDown();
+            NewMealCuisine = new TextBox();
+            NewMealCategory = new TextBox();
+            ApplyAddMealForm = new Button();
+            ((System.ComponentModel.ISupportInitialize)NewMealWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)NewMealKcal).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)NewMealPrice).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // ExitAddMealForm
             // 
-            button1.Location = new Point(70, 387);
-            button1.Name = "button1";
-            button1.Size = new Size(92, 25);
-            button1.TabIndex = 1;
-            button1.Text = "Выход";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            ExitAddMealForm.Location = new Point(70, 387);
+            ExitAddMealForm.Name = "ExitAddMealForm";
+            ExitAddMealForm.Size = new Size(92, 25);
+            ExitAddMealForm.TabIndex = 1;
+            ExitAddMealForm.Text = "Выход";
+            ExitAddMealForm.UseVisualStyleBackColor = true;
+            ExitAddMealForm.Click += button1_Click;
             // 
             // label2
             // 
@@ -110,97 +111,109 @@
             label7.TabIndex = 7;
             label7.Text = "Тип блюда:";
             // 
-            // textBox1
+            // NewMealName
             // 
-            textBox1.Location = new Point(103, 62);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 8;
+            NewMealName.Location = new Point(103, 62);
+            NewMealName.Name = "NewMealName";
+            NewMealName.Size = new Size(100, 23);
+            NewMealName.TabIndex = 8;
             // 
-            // numericUpDown1
+            // NewMealWeight
             // 
-            numericUpDown1.Location = new Point(83, 93);
-            numericUpDown1.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 9;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            NewMealWeight.Location = new Point(83, 93);
+            NewMealWeight.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            NewMealWeight.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            NewMealWeight.Name = "NewMealWeight";
+            NewMealWeight.Size = new Size(120, 23);
+            NewMealWeight.TabIndex = 9;
+            NewMealWeight.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // numericUpDown2
+            // NewMealKcal
             // 
-            numericUpDown2.Location = new Point(109, 130);
-            numericUpDown2.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
-            numericUpDown2.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(120, 23);
-            numericUpDown2.TabIndex = 10;
-            numericUpDown2.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            NewMealKcal.Location = new Point(109, 130);
+            NewMealKcal.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
+            NewMealKcal.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            NewMealKcal.Name = "NewMealKcal";
+            NewMealKcal.Size = new Size(120, 23);
+            NewMealKcal.TabIndex = 10;
+            NewMealKcal.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // numericUpDown3
+            // NewMealPrice
             // 
-            numericUpDown3.Location = new Point(70, 161);
-            numericUpDown3.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
-            numericUpDown3.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(120, 23);
-            numericUpDown3.TabIndex = 11;
-            numericUpDown3.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            NewMealPrice.Location = new Point(70, 161);
+            NewMealPrice.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
+            NewMealPrice.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            NewMealPrice.Name = "NewMealPrice";
+            NewMealPrice.Size = new Size(120, 23);
+            NewMealPrice.TabIndex = 11;
+            NewMealPrice.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // textBox2
+            // NewMealCuisine
             // 
-            textBox2.Location = new Point(97, 200);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 12;
+            NewMealCuisine.Location = new Point(97, 200);
+            NewMealCuisine.Name = "NewMealCuisine";
+            NewMealCuisine.Size = new Size(100, 23);
+            NewMealCuisine.TabIndex = 12;
             // 
-            // textBox3
+            // NewMealCategory
             // 
-            textBox3.Location = new Point(101, 234);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 13;
+            NewMealCategory.Location = new Point(101, 234);
+            NewMealCategory.Name = "NewMealCategory";
+            NewMealCategory.Size = new Size(100, 23);
+            NewMealCategory.TabIndex = 13;
+            // 
+            // ApplyAddMealForm
+            // 
+            ApplyAddMealForm.Location = new Point(320, 389);
+            ApplyAddMealForm.Name = "ApplyAddMealForm";
+            ApplyAddMealForm.Size = new Size(75, 23);
+            ApplyAddMealForm.TabIndex = 14;
+            ApplyAddMealForm.Text = "Добавить";
+            ApplyAddMealForm.UseVisualStyleBackColor = true;
+            ApplyAddMealForm.Click += button2_Click;
             // 
             // AddMealForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(numericUpDown3);
-            Controls.Add(numericUpDown2);
-            Controls.Add(numericUpDown1);
-            Controls.Add(textBox1);
+            Controls.Add(ApplyAddMealForm);
+            Controls.Add(NewMealCategory);
+            Controls.Add(NewMealCuisine);
+            Controls.Add(NewMealPrice);
+            Controls.Add(NewMealKcal);
+            Controls.Add(NewMealWeight);
+            Controls.Add(NewMealName);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(button1);
+            Controls.Add(ExitAddMealForm);
             Name = "AddMealForm";
             Text = "Добавление нового блюда";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NewMealWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NewMealKcal).EndInit();
+            ((System.ComponentModel.ISupportInitialize)NewMealPrice).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button button1;
+        private Button ExitAddMealForm;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox1;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown3;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox NewMealName;
+        private NumericUpDown NewMealWeight;
+        private NumericUpDown NewMealKcal;
+        private NumericUpDown NewMealPrice;
+        private TextBox NewMealCuisine;
+        private TextBox NewMealCategory;
+        private Button ApplyAddMealForm;
     }
 }
