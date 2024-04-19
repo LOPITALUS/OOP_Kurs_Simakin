@@ -19,7 +19,7 @@ namespace OOP_Kurs_Simakin
 
         private void ApplyAddCategoryForm_Click(object sender, EventArgs e)
         {
-            string new_category_name = "ABBA";//NewCategoryName.Text;
+            string new_category_name = "12345";//NewCategoryName.Text;
             string descr = "description1";
             Category new_category = new Category(new_category_name, descr);
 

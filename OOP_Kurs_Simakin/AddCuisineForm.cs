@@ -19,16 +19,16 @@ namespace OOP_Kurs_Simakin
 
         private void ApplyAddCuisinelForm_Click(object sender, EventArgs e)
         {
-            string new_cuisine_name = "ABBA";//NewCategoryName.Text;
-            string descr = "description1";
-            Cuisine new_cuisine = new Cuisine(new_cuisine_name, descr);
+            //string new_cuisine_name = "ABBA";//NewCategoryName.Text;
+            //string descr = "description1";
+            //Cuisine new_cuisine = new Cuisine(new_cuisine_name, descr);
 
-            kursContext db = new kursContext();
+            //kursContext db = new kursContext();
 
-            // Проверка, что с заданными данными нет записи
+            //// Проверка, что с заданными данными нет записи
 
-            db.Cuisines.Add(new_cuisine);
-            db.SaveChanges();
+            //db.Cuisines.Add(new_cuisine);
+            //db.SaveChanges();
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OOP_Kurs_Simakin
 {
@@ -19,8 +19,8 @@ namespace OOP_Kurs_Simakin
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long CategoryId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
 
         public virtual ICollection<Meal> Meals { get; set; }
     }
