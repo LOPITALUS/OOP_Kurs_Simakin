@@ -58,6 +58,7 @@
             ApplyAddCuisinelForm.TabIndex = 2;
             ApplyAddCuisinelForm.Text = "Добавить";
             ApplyAddCuisinelForm.UseVisualStyleBackColor = true;
+            ApplyAddCuisinelForm.Click += ApplyAddCuisinelForm_Click;
             // 
             // ExitAddCuisineForm
             // 

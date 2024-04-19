@@ -24,6 +24,7 @@ namespace OOP_Kurs_Simakin
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlite("Data Source=E:\\\\\\\\Институт\\\\\\\\4 семестр\\\\\\\\Курсовой 4 семестр ООП\\\\\\\\db\\\\\\\\kurs.db");
             }
         }
@@ -32,22 +33,14 @@ namespace OOP_Kurs_Simakin
         {
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.HasKey(e => e.IdCategory);
-
                 entity.ToTable("Category");
 
-                entity.Property(e => e.IdCategory).HasColumnName("idCategory");
-             //   entity.Property(e => e.IdCategory).ValueGeneratedOnAdd();
+                entity.Property(e => e.CategoryId).ValueGeneratedNever();
             });
 
             modelBuilder.Entity<Cuisine>(entity =>
             {
-                entity.HasKey(e => e.IdCuisine);
-
                 entity.ToTable("Cuisine");
-
-                entity.Property(e => e.IdCuisine).HasColumnName("idCuisine");
-              //  entity.Property(e => e.IdCuisine).ValueGeneratedOnAdd();
             });
 
             modelBuilder.Entity<Meal>(entity =>
@@ -56,18 +49,13 @@ namespace OOP_Kurs_Simakin
 
                 entity.ToTable("Meal");
 
-                entity.Property(e => e.IdMeal).HasColumnName("idMeal");
-               // entity.Property(e => e.IdMeal).ValueGeneratedOnAdd();
-
-
-                entity.Property(e => e.CategoryId).HasColumnName("Category_id");
-
-                entity.Property(e => e.CuisineId).HasColumnName("Cuisine_id");
+                entity.Property(e => e.IdMeal)
+                    .ValueGeneratedNever()
+                    .HasColumnName("idMeal");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Meals)
-                    .HasForeignKey(d => d.CategoryId)
-                    .OnDelete(DeleteBehavior.ClientSetNull);
+                    .HasForeignKey(d => d.CategoryId);
 
                 entity.HasOne(d => d.Cuisine)
                     .WithMany(p => p.Meals)

@@ -28,8 +28,8 @@ namespace OOP_Kurs_Simakin
             int weight = (int)NewMealWeight.Value;
             int kcal = (int)NewMealKcal.Value;
             int price = (int)NewMealPrice.Value;
-            string cuisine = NewMealCuisine.ToString();
-            string category = NewMealCategory.ToString();
+           // string cuisine = NewMealCuisine.ToString();
+           // string category = NewMealCategory.ToString();
 
 
         }

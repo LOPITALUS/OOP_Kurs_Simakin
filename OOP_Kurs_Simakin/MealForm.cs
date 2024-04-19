@@ -37,7 +37,8 @@ namespace OOP_Kurs_Simakin
 
         private void AddNewCuisine_Click(object sender, EventArgs e)
         {
-
+            AddCuisineForm addCuisineForm = new AddCuisineForm();
+            addCuisineForm.ShowDialog();
         }
 
         private void AddNewCategory_Click(object sender, EventArgs e)
