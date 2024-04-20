@@ -19,9 +19,9 @@ namespace OOP_Kurs_Simakin
 
         private void ApplyAddCategoryForm_Click(object sender, EventArgs e)
         {
-            string new_category_name = "12345";//NewCategoryName.Text;
-            string descr = "description1";
-            Category new_category = new Category(new_category_name, descr);
+            string new_category_name = NewCategoryName.Text;
+            string new_category_descr = NewCategoryDescription.Text;
+            Category new_category = new Category(new_category_name, new_category_descr);
 
             kursContext db = new kursContext();
 
@@ -34,6 +34,11 @@ namespace OOP_Kurs_Simakin
 
             // Обновить выпадающий список 
 
+        }
+
+        private void ExitAddCategoryForm_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

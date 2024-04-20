@@ -40,8 +40,8 @@
             NewMealKcal = new NumericUpDown();
             NewMealPrice = new NumericUpDown();
             ApplyAddMealForm = new Button();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            Cuisines = new ComboBox();
+            Categories = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)NewMealWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NewMealKcal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NewMealPrice).BeginInit();
@@ -156,31 +156,31 @@
             ApplyAddMealForm.TabIndex = 14;
             ApplyAddMealForm.Text = "Добавить";
             ApplyAddMealForm.UseVisualStyleBackColor = true;
-            ApplyAddMealForm.Click += button2_Click;
+            ApplyAddMealForm.Click += ApplyAddMealForm_Click;
             // 
-            // comboBox1
+            // Cuisines
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(97, 197);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 15;
+            Cuisines.FormattingEnabled = true;
+            Cuisines.Location = new Point(97, 197);
+            Cuisines.Name = "Cuisines";
+            Cuisines.Size = new Size(121, 23);
+            Cuisines.TabIndex = 15;
             // 
-            // comboBox2
+            // Categories
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(97, 231);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 16;
+            Categories.FormattingEnabled = true;
+            Categories.Location = new Point(97, 231);
+            Categories.Name = "Categories";
+            Categories.Size = new Size(121, 23);
+            Categories.TabIndex = 16;
             // 
             // AddMealForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(Categories);
+            Controls.Add(Cuisines);
             Controls.Add(ApplyAddMealForm);
             Controls.Add(NewMealPrice);
             Controls.Add(NewMealKcal);
@@ -195,6 +195,7 @@
             Controls.Add(ExitAddMealForm);
             Name = "AddMealForm";
             Text = "Добавление нового блюда";
+            Load += AddMealForm_Load;
             ((System.ComponentModel.ISupportInitialize)NewMealWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)NewMealKcal).EndInit();
             ((System.ComponentModel.ISupportInitialize)NewMealPrice).EndInit();
@@ -215,7 +216,7 @@
         private NumericUpDown NewMealKcal;
         private NumericUpDown NewMealPrice;
         private Button ApplyAddMealForm;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox Cuisines;
+        private ComboBox Categories;
     }
 }

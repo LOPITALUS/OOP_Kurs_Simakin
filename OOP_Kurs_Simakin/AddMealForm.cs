@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,16 +24,44 @@ namespace OOP_Kurs_Simakin
             Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ApplyAddMealForm_Click(object sender, EventArgs e)
         {
             string name = NewMealName.ToString();
             int weight = (int)NewMealWeight.Value;
             int kcal = (int)NewMealKcal.Value;
             int price = (int)NewMealPrice.Value;
-           // string cuisine = NewMealCuisine.ToString();
-           // string category = NewMealCategory.ToString();
+            string cuisine = Cuisines.Text;
+            string category = Categories.Text;
+            
+            using (kursContext db = new kursContext())
+            {
+                Cuisine cuis = db.Cuisines.First(c => c.Name == cuisine);
+                Category cat = db.Categories.First(c => c.Name == category);
+                Meal new_meal = new Meal(name, weight, kcal, price, cat, cuis);
+                db.Meals.Add(new_meal);
+                db.SaveChanges();
+            }
 
 
+
+        }
+
+        private void AddMealForm_Load(object sender, EventArgs e)
+        {
+            using (kursContext db = new kursContext())
+            {
+                var cuisines = db.Cuisines.Select(c => c.Name).ToList();
+                foreach (var c in cuisines)
+                {
+                    Cuisines.Items.Add(c);
+                }
+
+                var categoties = db.Categories.Select(c => c.Name).ToList();
+                foreach (var c in categoties)
+                {
+                    Categories.Items.Add(c);
+                }
+            }
         }
     }
 }

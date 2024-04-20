@@ -32,36 +32,39 @@
             NewCategoryName = new TextBox();
             ExitAddCategoryForm = new Button();
             ApplyAddCategoryForm = new Button();
+            NewCategoryDescription = new RichTextBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(24, 50);
+            label1.Location = new Point(21, 29);
             label1.Name = "label1";
-            label1.Size = new Size(235, 15);
+            label1.Size = new Size(191, 15);
             label1.TabIndex = 0;
-            label1.Text = "Введите название новой категории блюд:";
+            label1.Text = "Название новой категории блюд:";
             // 
             // NewCategoryName
             // 
-            NewCategoryName.Location = new Point(265, 47);
+            NewCategoryName.Location = new Point(262, 26);
             NewCategoryName.Name = "NewCategoryName";
-            NewCategoryName.Size = new Size(112, 23);
+            NewCategoryName.Size = new Size(216, 23);
             NewCategoryName.TabIndex = 1;
             // 
             // ExitAddCategoryForm
             // 
-            ExitAddCategoryForm.Location = new Point(29, 246);
+            ExitAddCategoryForm.Location = new Point(713, 415);
             ExitAddCategoryForm.Name = "ExitAddCategoryForm";
             ExitAddCategoryForm.Size = new Size(75, 23);
             ExitAddCategoryForm.TabIndex = 2;
             ExitAddCategoryForm.Text = "Выход";
             ExitAddCategoryForm.UseVisualStyleBackColor = true;
+            ExitAddCategoryForm.Click += ExitAddCategoryForm_Click;
             // 
             // ApplyAddCategoryForm
             // 
-            ApplyAddCategoryForm.Location = new Point(232, 237);
+            ApplyAddCategoryForm.Location = new Point(12, 415);
             ApplyAddCategoryForm.Name = "ApplyAddCategoryForm";
             ApplyAddCategoryForm.Size = new Size(75, 23);
             ApplyAddCategoryForm.TabIndex = 3;
@@ -69,11 +72,30 @@
             ApplyAddCategoryForm.UseVisualStyleBackColor = true;
             ApplyAddCategoryForm.Click += ApplyAddCategoryForm_Click;
             // 
+            // NewCategoryDescription
+            // 
+            NewCategoryDescription.Location = new Point(262, 68);
+            NewCategoryDescription.Name = "NewCategoryDescription";
+            NewCategoryDescription.Size = new Size(216, 124);
+            NewCategoryDescription.TabIndex = 5;
+            NewCategoryDescription.Text = "";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(21, 68);
+            label2.Name = "label2";
+            label2.Size = new Size(65, 15);
+            label2.TabIndex = 6;
+            label2.Text = "Описание:";
+            // 
             // AddCategoryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(NewCategoryDescription);
             Controls.Add(ApplyAddCategoryForm);
             Controls.Add(ExitAddCategoryForm);
             Controls.Add(NewCategoryName);
@@ -90,5 +112,7 @@
         private TextBox NewCategoryName;
         private Button ExitAddCategoryForm;
         private Button ApplyAddCategoryForm;
+        private RichTextBox NewCategoryDescription;
+        private Label label2;
     }
 }
