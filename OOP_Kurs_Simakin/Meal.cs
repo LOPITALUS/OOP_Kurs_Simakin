@@ -5,14 +5,6 @@ namespace OOP_Kurs_Simakin
 {
     public partial class Meal
     {
-        public Meal(string name, double weight, double kcal, double price, Category cat, Cuisine cuis) { 
-            Name = name;
-            Weight = weight;    
-            Kcal = kcal;
-            Price = price;
-            Category = cat;
-            Cuisine = cuis;
-        }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
