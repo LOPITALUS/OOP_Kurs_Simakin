@@ -21,7 +21,14 @@ namespace OOP_Kurs_Simakin
 
         private void MealForm_Load(object sender, EventArgs e)
         {
-
+            using (kursContext db = new kursContext())
+            {
+                var meals = db.Meals.ToList();
+                foreach (var meal in meals)
+                {
+                    MealsTable.Rows.Add(meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                }
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

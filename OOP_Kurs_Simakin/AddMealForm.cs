@@ -26,7 +26,7 @@ namespace OOP_Kurs_Simakin
 
         private void ApplyAddMealForm_Click(object sender, EventArgs e)
         {
-            string name = NewMealName.ToString();
+            string name = NewMealName.Text;
             int weight = (int)NewMealWeight.Value;
             int kcal = (int)NewMealKcal.Value;
             int price = (int)NewMealPrice.Value;
@@ -37,13 +37,10 @@ namespace OOP_Kurs_Simakin
             {
                 Cuisine cuis = db.Cuisines.First(c => c.Name == cuisine);
                 Category cat = db.Categories.First(c => c.Name == category);
-                Meal new_meal = new Meal(name, weight, kcal, price, cat, cuis);
+                Meal new_meal = new Meal { Name = name, Weight = weight, Kcal = kcal, Price = price, Category = cat, Cuisine = cuis };
                 db.Meals.Add(new_meal);
                 db.SaveChanges();
             }
-
-
-
         }
 
         private void AddMealForm_Load(object sender, EventArgs e)

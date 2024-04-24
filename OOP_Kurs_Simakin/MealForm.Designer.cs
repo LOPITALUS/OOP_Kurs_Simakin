@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             Exit = new Button();
             FiltersLabel = new Label();
             CategoryLabel = new Label();
@@ -45,18 +44,16 @@
             fileSystemWatcher1 = new FileSystemWatcher();
             AddNewCategory = new Button();
             AddNewCuisine = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            MealsTable = new DataGridView();
+            NameColumn = new DataGridViewTextBoxColumn();
+            WeightColumn = new DataGridViewTextBoxColumn();
+            KcalColumn = new DataGridViewTextBoxColumn();
+            PriceColumn = new DataGridViewTextBoxColumn();
+            CuisineColumn = new DataGridViewTextBoxColumn();
+            CategoryColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)MealsTable).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(24, 22);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 0;
             // 
             // Exit
             // 
@@ -149,9 +146,9 @@
             // 
             // button3
             // 
-            button3.Location = new Point(400, 347);
+            button3.Location = new Point(485, 156);
             button3.Name = "button3";
-            button3.Size = new Size(121, 40);
+            button3.Size = new Size(134, 40);
             button3.TabIndex = 11;
             button3.Text = "Добавить новое блюдо\r\n";
             button3.UseVisualStyleBackColor = true;
@@ -159,7 +156,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(428, 271);
+            button4.Location = new Point(412, 407);
             button4.Name = "button4";
             button4.Size = new Size(93, 39);
             button4.TabIndex = 12;
@@ -169,7 +166,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(482, 192);
+            button5.Location = new Point(689, 365);
             button5.Name = "button5";
             button5.Size = new Size(105, 53);
             button5.TabIndex = 13;
@@ -183,7 +180,7 @@
             // 
             // AddNewCategory
             // 
-            AddNewCategory.Location = new Point(368, 50);
+            AddNewCategory.Location = new Point(485, 56);
             AddNewCategory.Name = "AddNewCategory";
             AddNewCategory.Size = new Size(134, 41);
             AddNewCategory.TabIndex = 14;
@@ -193,13 +190,53 @@
             // 
             // AddNewCuisine
             // 
-            AddNewCuisine.Location = new Point(368, 97);
+            AddNewCuisine.Location = new Point(485, 103);
             AddNewCuisine.Name = "AddNewCuisine";
-            AddNewCuisine.Size = new Size(157, 51);
+            AddNewCuisine.Size = new Size(134, 40);
             AddNewCuisine.TabIndex = 15;
             AddNewCuisine.Text = "Добавить новый вид кухни";
             AddNewCuisine.UseVisualStyleBackColor = true;
             AddNewCuisine.Click += AddNewCuisine_Click;
+            // 
+            // MealsTable
+            // 
+            MealsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            MealsTable.Columns.AddRange(new DataGridViewColumn[] { NameColumn, WeightColumn, KcalColumn, PriceColumn, CuisineColumn, CategoryColumn });
+            MealsTable.Location = new Point(12, 50);
+            MealsTable.Name = "MealsTable";
+            MealsTable.RowTemplate.Height = 25;
+            MealsTable.Size = new Size(435, 150);
+            MealsTable.TabIndex = 0;
+            // 
+            // NameColumn
+            // 
+            NameColumn.HeaderText = "Название";
+            NameColumn.Name = "NameColumn";
+            // 
+            // WeightColumn
+            // 
+            WeightColumn.HeaderText = "Масса";
+            WeightColumn.Name = "WeightColumn";
+            // 
+            // KcalColumn
+            // 
+            KcalColumn.HeaderText = "Кол-во ккал";
+            KcalColumn.Name = "KcalColumn";
+            // 
+            // PriceColumn
+            // 
+            PriceColumn.HeaderText = "Цена";
+            PriceColumn.Name = "PriceColumn";
+            // 
+            // CuisineColumn
+            // 
+            CuisineColumn.HeaderText = "Вид кухни";
+            CuisineColumn.Name = "CuisineColumn";
+            // 
+            // CategoryColumn
+            // 
+            CategoryColumn.HeaderText = "Категория";
+            CategoryColumn.Name = "CategoryColumn";
             // 
             // MealForm
             // 
@@ -221,19 +258,17 @@
             Controls.Add(CategoryLabel);
             Controls.Add(FiltersLabel);
             Controls.Add(Exit);
-            Controls.Add(dataGridView1);
+            Controls.Add(MealsTable);
             Name = "MealForm";
             Text = "Меню";
             Load += MealForm_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)MealsTable).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
         private Button Exit;
         private Label FiltersLabel;
         private Label CategoryLabel;
@@ -250,5 +285,12 @@
         private FileSystemWatcher fileSystemWatcher1;
         private Button AddNewCuisine;
         private Button AddNewCategory;
+        private DataGridView MealsTable;
+        private DataGridViewTextBoxColumn NameColumn;
+        private DataGridViewTextBoxColumn WeightColumn;
+        private DataGridViewTextBoxColumn KcalColumn;
+        private DataGridViewTextBoxColumn PriceColumn;
+        private DataGridViewTextBoxColumn CuisineColumn;
+        private DataGridViewTextBoxColumn CategoryColumn;
     }
 }
