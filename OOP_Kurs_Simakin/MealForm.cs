@@ -21,14 +21,7 @@ namespace OOP_Kurs_Simakin
 
         private void MealForm_Load(object sender, EventArgs e)
         {
-            using (kursContext db = new kursContext())
-            {
-                var meals = db.Meals.ToList();
-                foreach (var meal in meals)
-                {
-                    MealsTable.Rows.Add(meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
-                }
-            }
+            UpdateMealsDGV();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -38,7 +31,7 @@ namespace OOP_Kurs_Simakin
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AddMealForm addMealForm = new AddMealForm();
+            AddMealForm addMealForm = new AddMealForm(this);
             addMealForm.ShowDialog();
         }
 
@@ -50,8 +43,20 @@ namespace OOP_Kurs_Simakin
 
         private void AddNewCategory_Click(object sender, EventArgs e)
         {
-            AddCategoryForm addCategoryForm = new AddCategoryForm();
+            AddCategoryForm addCategoryForm = new AddCategoryForm(this);
             addCategoryForm.ShowDialog();
+        }
+
+        public void UpdateMealsDGV()
+        {
+            using (kursContext db = new kursContext())
+            {
+                var meals = db.Meals.ToList();
+                foreach (var meal in meals)
+                {
+                    MealsTable.Rows.Add(meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                }
+            }
         }
     }
 }

@@ -20,6 +20,11 @@
             base.Dispose(disposing);
         }
 
+        /* public DataGridView GetMealsDGV()
+         {
+             return MealsTable;
+         }*/
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -57,9 +62,10 @@
             // 
             // Exit
             // 
-            Exit.Location = new Point(12, 415);
+            Exit.Location = new Point(14, 553);
+            Exit.Margin = new Padding(3, 4, 3, 4);
             Exit.Name = "Exit";
-            Exit.Size = new Size(75, 23);
+            Exit.Size = new Size(86, 31);
             Exit.TabIndex = 1;
             Exit.Text = "Выход";
             Exit.UseVisualStyleBackColor = true;
@@ -67,36 +73,37 @@
             // FiltersLabel
             // 
             FiltersLabel.AutoSize = true;
-            FiltersLabel.Location = new Point(692, 50);
+            FiltersLabel.Location = new Point(791, 67);
             FiltersLabel.Name = "FiltersLabel";
             FiltersLabel.RightToLeft = RightToLeft.No;
-            FiltersLabel.Size = new Size(57, 15);
+            FiltersLabel.Size = new Size(71, 20);
             FiltersLabel.TabIndex = 2;
             FiltersLabel.Text = "Фильтры";
             // 
             // CategoryLabel
             // 
             CategoryLabel.AutoSize = true;
-            CategoryLabel.Location = new Point(692, 82);
+            CategoryLabel.Location = new Point(791, 109);
             CategoryLabel.Name = "CategoryLabel";
-            CategoryLabel.Size = new Size(102, 15);
+            CategoryLabel.Size = new Size(130, 20);
             CategoryLabel.TabIndex = 3;
             CategoryLabel.Text = "Категория блюда";
             // 
             // CuisineLabel
             // 
             CuisineLabel.AutoSize = true;
-            CuisineLabel.Location = new Point(692, 119);
+            CuisineLabel.Location = new Point(791, 159);
             CuisineLabel.Name = "CuisineLabel";
-            CuisineLabel.Size = new Size(62, 15);
+            CuisineLabel.Size = new Size(78, 20);
             CuisineLabel.TabIndex = 4;
             CuisineLabel.Text = "Вид кухни";
             // 
             // SetFiltersButton
             // 
-            SetFiltersButton.Location = new Point(692, 140);
+            SetFiltersButton.Location = new Point(791, 187);
+            SetFiltersButton.Margin = new Padding(3, 4, 3, 4);
             SetFiltersButton.Name = "SetFiltersButton";
-            SetFiltersButton.Size = new Size(96, 32);
+            SetFiltersButton.Size = new Size(110, 43);
             SetFiltersButton.TabIndex = 5;
             SetFiltersButton.Text = "Применить";
             SetFiltersButton.UseVisualStyleBackColor = true;
@@ -104,51 +111,56 @@
             // SearchLabel
             // 
             SearchLabel.AutoSize = true;
-            SearchLabel.Location = new Point(692, 259);
+            SearchLabel.Location = new Point(791, 345);
             SearchLabel.Name = "SearchLabel";
-            SearchLabel.Size = new Size(42, 15);
+            SearchLabel.Size = new Size(52, 20);
             SearchLabel.TabIndex = 6;
             SearchLabel.Text = "Поиск";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(692, 287);
+            textBox1.Location = new Point(791, 383);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(114, 27);
             textBox1.TabIndex = 7;
             // 
             // SearchButton
             // 
-            SearchButton.Location = new Point(692, 325);
+            SearchButton.Location = new Point(791, 433);
+            SearchButton.Margin = new Padding(3, 4, 3, 4);
             SearchButton.Name = "SearchButton";
-            SearchButton.Size = new Size(75, 23);
+            SearchButton.Size = new Size(86, 31);
             SearchButton.TabIndex = 8;
             SearchButton.Text = "Найти запись";
             SearchButton.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            button1.Location = new Point(140, 407);
+            button1.Location = new Point(160, 543);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(124, 39);
+            button1.Size = new Size(142, 52);
             button1.TabIndex = 9;
             button1.Text = "Сохранить файл с данными БД";
             button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new Point(287, 400);
+            button2.Location = new Point(328, 533);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(100, 46);
+            button2.Size = new Size(114, 61);
             button2.TabIndex = 10;
             button2.Text = "Удалить базу данных";
             button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Location = new Point(485, 156);
+            button3.Location = new Point(554, 208);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(134, 40);
+            button3.Size = new Size(153, 53);
             button3.TabIndex = 11;
             button3.Text = "Добавить новое блюдо\r\n";
             button3.UseVisualStyleBackColor = true;
@@ -156,9 +168,10 @@
             // 
             // button4
             // 
-            button4.Location = new Point(412, 407);
+            button4.Location = new Point(471, 543);
+            button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(93, 39);
+            button4.Size = new Size(106, 52);
             button4.TabIndex = 12;
             button4.Text = "Создать базу данных?";
             button4.UseVisualStyleBackColor = true;
@@ -166,9 +179,10 @@
             // 
             // button5
             // 
-            button5.Location = new Point(689, 365);
+            button5.Location = new Point(787, 487);
+            button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
-            button5.Size = new Size(105, 53);
+            button5.Size = new Size(120, 71);
             button5.TabIndex = 13;
             button5.Text = "Найти блюдо по названию";
             button5.UseVisualStyleBackColor = true;
@@ -180,9 +194,10 @@
             // 
             // AddNewCategory
             // 
-            AddNewCategory.Location = new Point(485, 56);
+            AddNewCategory.Location = new Point(554, 75);
+            AddNewCategory.Margin = new Padding(3, 4, 3, 4);
             AddNewCategory.Name = "AddNewCategory";
-            AddNewCategory.Size = new Size(134, 41);
+            AddNewCategory.Size = new Size(153, 55);
             AddNewCategory.TabIndex = 14;
             AddNewCategory.Text = "Добавить новую категорию блюд";
             AddNewCategory.UseVisualStyleBackColor = true;
@@ -190,9 +205,10 @@
             // 
             // AddNewCuisine
             // 
-            AddNewCuisine.Location = new Point(485, 103);
+            AddNewCuisine.Location = new Point(554, 137);
+            AddNewCuisine.Margin = new Padding(3, 4, 3, 4);
             AddNewCuisine.Name = "AddNewCuisine";
-            AddNewCuisine.Size = new Size(134, 40);
+            AddNewCuisine.Size = new Size(153, 53);
             AddNewCuisine.TabIndex = 15;
             AddNewCuisine.Text = "Добавить новый вид кухни";
             AddNewCuisine.UseVisualStyleBackColor = true;
@@ -202,47 +218,61 @@
             // 
             MealsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             MealsTable.Columns.AddRange(new DataGridViewColumn[] { NameColumn, WeightColumn, KcalColumn, PriceColumn, CuisineColumn, CategoryColumn });
-            MealsTable.Location = new Point(12, 50);
+            MealsTable.Location = new Point(14, 67);
+            MealsTable.Margin = new Padding(3, 4, 3, 4);
             MealsTable.Name = "MealsTable";
+            MealsTable.RowHeadersWidth = 51;
             MealsTable.RowTemplate.Height = 25;
-            MealsTable.Size = new Size(435, 150);
+            MealsTable.Size = new Size(497, 200);
             MealsTable.TabIndex = 0;
             // 
             // NameColumn
             // 
             NameColumn.HeaderText = "Название";
+            NameColumn.MinimumWidth = 6;
             NameColumn.Name = "NameColumn";
+            NameColumn.Width = 125;
             // 
             // WeightColumn
             // 
             WeightColumn.HeaderText = "Масса";
+            WeightColumn.MinimumWidth = 6;
             WeightColumn.Name = "WeightColumn";
+            WeightColumn.Width = 125;
             // 
             // KcalColumn
             // 
             KcalColumn.HeaderText = "Кол-во ккал";
+            KcalColumn.MinimumWidth = 6;
             KcalColumn.Name = "KcalColumn";
+            KcalColumn.Width = 125;
             // 
             // PriceColumn
             // 
             PriceColumn.HeaderText = "Цена";
+            PriceColumn.MinimumWidth = 6;
             PriceColumn.Name = "PriceColumn";
+            PriceColumn.Width = 125;
             // 
             // CuisineColumn
             // 
             CuisineColumn.HeaderText = "Вид кухни";
+            CuisineColumn.MinimumWidth = 6;
             CuisineColumn.Name = "CuisineColumn";
+            CuisineColumn.Width = 125;
             // 
             // CategoryColumn
             // 
             CategoryColumn.HeaderText = "Категория";
+            CategoryColumn.MinimumWidth = 6;
             CategoryColumn.Name = "CategoryColumn";
+            CategoryColumn.Width = 125;
             // 
             // MealForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(AddNewCuisine);
             Controls.Add(AddNewCategory);
             Controls.Add(button5);
@@ -259,6 +289,7 @@
             Controls.Add(FiltersLabel);
             Controls.Add(Exit);
             Controls.Add(MealsTable);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "MealForm";
             Text = "Меню";
             Load += MealForm_Load;
@@ -285,7 +316,7 @@
         private FileSystemWatcher fileSystemWatcher1;
         private Button AddNewCuisine;
         private Button AddNewCategory;
-        private DataGridView MealsTable;
+        public DataGridView MealsTable;
         private DataGridViewTextBoxColumn NameColumn;
         private DataGridViewTextBoxColumn WeightColumn;
         private DataGridViewTextBoxColumn KcalColumn;

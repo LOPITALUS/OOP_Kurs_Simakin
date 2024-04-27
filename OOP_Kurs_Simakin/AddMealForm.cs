@@ -14,9 +14,11 @@ namespace OOP_Kurs_Simakin
 {
     public partial class AddMealForm : Form
     {
-        public AddMealForm()
+
+        public AddMealForm(MealForm meal_form)
         {
             InitializeComponent();
+            ref_to_parent_form = meal_form;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +42,8 @@ namespace OOP_Kurs_Simakin
                 Meal new_meal = new Meal {Name = name, Weight = weight, Kcal = kcal, Price = price, Category = cat, Cuisine = cuis };
                 db.Meals.Add(new_meal);
                 db.SaveChanges();
+                long id = new_meal.CuisineId;              
+                ref_to_parent_form.MealsTable.Rows.Add(new_meal.Name, new_meal.Weight, new_meal.Kcal, new_meal.Price, new_meal.CuisineId, new_meal.CategoryId);
             }
         }
 
@@ -60,5 +64,7 @@ namespace OOP_Kurs_Simakin
                 }
             }
         }
+
+        private MealForm ref_to_parent_form;
     }
 }

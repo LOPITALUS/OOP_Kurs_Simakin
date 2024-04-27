@@ -17,6 +17,12 @@ namespace OOP_Kurs_Simakin
             InitializeComponent();
         }
 
+        public AddCategoryForm(MealForm meal_form)
+        {
+            InitializeComponent();
+            ref_to_parent_form = meal_form;
+        }
+
         private void ApplyAddCategoryForm_Click(object sender, EventArgs e)
         {
             string new_category_name = NewCategoryName.Text;
@@ -40,5 +46,7 @@ namespace OOP_Kurs_Simakin
         {
             Close();
         }
+
+        private Form ref_to_parent_form;
     }
 }
