@@ -23,5 +23,7 @@ namespace OOP_Kurs_Simakin
         public string? Description { get; set; }
 
         public virtual ICollection<Meal> Meals { get; set; }
+
+        public override string ToString() => Name;
     }
 }

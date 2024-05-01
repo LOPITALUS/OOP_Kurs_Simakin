@@ -50,6 +50,7 @@
             OpenCuisineForm = new Button();
             OpenCategoryForm = new Button();
             MealsTable = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
             NameColumn = new DataGridViewTextBoxColumn();
             WeightColumn = new DataGridViewTextBoxColumn();
             KcalColumn = new DataGridViewTextBoxColumn();
@@ -218,20 +219,31 @@
             // MealsTable
             // 
             MealsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            MealsTable.Columns.AddRange(new DataGridViewColumn[] { NameColumn, WeightColumn, KcalColumn, PriceColumn, CuisineColumn, CategoryColumn });
+            MealsTable.Columns.AddRange(new DataGridViewColumn[] { ID, NameColumn, WeightColumn, KcalColumn, PriceColumn, CuisineColumn, CategoryColumn });
             MealsTable.Location = new Point(14, 67);
             MealsTable.Margin = new Padding(3, 4, 3, 4);
             MealsTable.Name = "MealsTable";
+            MealsTable.ReadOnly = true;
             MealsTable.RowHeadersWidth = 51;
             MealsTable.RowTemplate.Height = 25;
             MealsTable.Size = new Size(497, 200);
             MealsTable.TabIndex = 0;
+            MealsTable.CellContentClick += MealsTable_CellContentClick;
+            // 
+            // ID
+            // 
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.ReadOnly = true;
+            ID.Width = 125;
             // 
             // NameColumn
             // 
             NameColumn.HeaderText = "Название";
             NameColumn.MinimumWidth = 6;
             NameColumn.Name = "NameColumn";
+            NameColumn.ReadOnly = true;
             NameColumn.Width = 125;
             // 
             // WeightColumn
@@ -239,6 +251,7 @@
             WeightColumn.HeaderText = "Масса";
             WeightColumn.MinimumWidth = 6;
             WeightColumn.Name = "WeightColumn";
+            WeightColumn.ReadOnly = true;
             WeightColumn.Width = 125;
             // 
             // KcalColumn
@@ -246,6 +259,7 @@
             KcalColumn.HeaderText = "Кол-во ккал";
             KcalColumn.MinimumWidth = 6;
             KcalColumn.Name = "KcalColumn";
+            KcalColumn.ReadOnly = true;
             KcalColumn.Width = 125;
             // 
             // PriceColumn
@@ -253,6 +267,7 @@
             PriceColumn.HeaderText = "Цена";
             PriceColumn.MinimumWidth = 6;
             PriceColumn.Name = "PriceColumn";
+            PriceColumn.ReadOnly = true;
             PriceColumn.Width = 125;
             // 
             // CuisineColumn
@@ -260,6 +275,7 @@
             CuisineColumn.HeaderText = "Вид кухни";
             CuisineColumn.MinimumWidth = 6;
             CuisineColumn.Name = "CuisineColumn";
+            CuisineColumn.ReadOnly = true;
             CuisineColumn.Width = 125;
             // 
             // CategoryColumn
@@ -267,6 +283,7 @@
             CategoryColumn.HeaderText = "Категория";
             CategoryColumn.MinimumWidth = 6;
             CategoryColumn.Name = "CategoryColumn";
+            CategoryColumn.ReadOnly = true;
             CategoryColumn.Width = 125;
             // 
             // MealForm
@@ -318,6 +335,7 @@
         private Button OpenCategoryForm;
         private Button OpenCuisineForm;
         public DataGridView MealsTable;
+        private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn NameColumn;
         private DataGridViewTextBoxColumn WeightColumn;
         private DataGridViewTextBoxColumn KcalColumn;

@@ -154,6 +154,7 @@
             ApplyChanges.TabIndex = 12;
             ApplyChanges.Text = "Сохранить изменения";
             ApplyChanges.UseVisualStyleBackColor = true;
+            ApplyChanges.Click += ApplyChanges_Click;
             // 
             // ExitMealEntityForm
             // 
@@ -185,6 +186,7 @@
             Controls.Add(label1);
             Name = "MealEntityForm";
             Text = "MealEntityForm";
+            Load += MealEntityForm_Load;
             ((System.ComponentModel.ISupportInitialize)EditedMealWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)EditedMealKcal).EndInit();
             ((System.ComponentModel.ISupportInitialize)EditedMealPrice).EndInit();

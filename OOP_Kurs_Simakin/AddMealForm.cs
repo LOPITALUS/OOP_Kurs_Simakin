@@ -15,10 +15,10 @@ namespace OOP_Kurs_Simakin
     public partial class AddMealForm : Form
     {
 
-        public AddMealForm(MealForm meal_form)
+        public AddMealForm(MealForm _ref_to_parent_form)
         {
             InitializeComponent();
-            ref_to_parent_form = meal_form;
+            ref_to_parent_form = _ref_to_parent_form;
         }
 
         private void button1_Click(object sender, EventArgs e)
