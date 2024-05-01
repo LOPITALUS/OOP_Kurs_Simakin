@@ -42,8 +42,7 @@ namespace OOP_Kurs_Simakin
                 Meal new_meal = new Meal { Name = name, Weight = weight, Kcal = kcal, Price = price, Category = cat, Cuisine = cuis };
                 db.Meals.Add(new_meal);
                 db.SaveChanges();
-                long id = new_meal.CuisineId;
-                ref_to_parent_form.MealsTable.Rows.Add(new_meal.Name, new_meal.Weight, new_meal.Kcal, new_meal.Price, new_meal.CuisineId, new_meal.CategoryId);
+                ref_to_parent_form.MealsTable.Rows.Add(new_meal.IdMeal, new_meal.Name, new_meal.Weight, new_meal.Kcal, new_meal.Price, new_meal.CuisineId, new_meal.CategoryId);
             }
         }
 
