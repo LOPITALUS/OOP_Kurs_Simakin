@@ -34,15 +34,15 @@ namespace OOP_Kurs_Simakin
             int price = (int)NewMealPrice.Value;
             string cuisine = Cuisines.Text;
             string category = Categories.Text;
-            
+
             using (kursContext db = new kursContext())
             {
                 Cuisine cuis = db.Cuisines.First(c => c.Name == cuisine);
                 Category cat = db.Categories.First(c => c.Name == category);
-                Meal new_meal = new Meal {Name = name, Weight = weight, Kcal = kcal, Price = price, Category = cat, Cuisine = cuis };
+                Meal new_meal = new Meal { Name = name, Weight = weight, Kcal = kcal, Price = price, Category = cat, Cuisine = cuis };
                 db.Meals.Add(new_meal);
                 db.SaveChanges();
-                long id = new_meal.CuisineId;              
+                long id = new_meal.CuisineId;
                 ref_to_parent_form.MealsTable.Rows.Add(new_meal.Name, new_meal.Weight, new_meal.Kcal, new_meal.Price, new_meal.CuisineId, new_meal.CategoryId);
             }
         }

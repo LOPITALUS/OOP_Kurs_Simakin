@@ -47,8 +47,8 @@
             button4 = new Button();
             button5 = new Button();
             fileSystemWatcher1 = new FileSystemWatcher();
-            AddNewCategory = new Button();
-            AddNewCuisine = new Button();
+            OpenCuisineForm = new Button();
+            OpenCategoryForm = new Button();
             MealsTable = new DataGridView();
             NameColumn = new DataGridViewTextBoxColumn();
             WeightColumn = new DataGridViewTextBoxColumn();
@@ -107,6 +107,7 @@
             SetFiltersButton.TabIndex = 5;
             SetFiltersButton.Text = "Применить";
             SetFiltersButton.UseVisualStyleBackColor = true;
+            SetFiltersButton.Click += SetFiltersButton_Click;
             // 
             // SearchLabel
             // 
@@ -192,27 +193,27 @@
             fileSystemWatcher1.EnableRaisingEvents = true;
             fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // AddNewCategory
+            // OpenCuisineForm
             // 
-            AddNewCategory.Location = new Point(554, 75);
-            AddNewCategory.Margin = new Padding(3, 4, 3, 4);
-            AddNewCategory.Name = "AddNewCategory";
-            AddNewCategory.Size = new Size(153, 55);
-            AddNewCategory.TabIndex = 14;
-            AddNewCategory.Text = "Добавить новую категорию блюд";
-            AddNewCategory.UseVisualStyleBackColor = true;
-            AddNewCategory.Click += AddNewCategory_Click;
+            OpenCuisineForm.Location = new Point(554, 75);
+            OpenCuisineForm.Margin = new Padding(3, 4, 3, 4);
+            OpenCuisineForm.Name = "OpenCuisineForm";
+            OpenCuisineForm.Size = new Size(153, 55);
+            OpenCuisineForm.TabIndex = 14;
+            OpenCuisineForm.Text = "Открыть \"Виды кухонь\"";
+            OpenCuisineForm.UseVisualStyleBackColor = true;
+            OpenCuisineForm.Click += AddNewCategory_Click;
             // 
-            // AddNewCuisine
+            // OpenCategoryForm
             // 
-            AddNewCuisine.Location = new Point(554, 137);
-            AddNewCuisine.Margin = new Padding(3, 4, 3, 4);
-            AddNewCuisine.Name = "AddNewCuisine";
-            AddNewCuisine.Size = new Size(153, 53);
-            AddNewCuisine.TabIndex = 15;
-            AddNewCuisine.Text = "Добавить новый вид кухни";
-            AddNewCuisine.UseVisualStyleBackColor = true;
-            AddNewCuisine.Click += AddNewCuisine_Click;
+            OpenCategoryForm.Location = new Point(554, 137);
+            OpenCategoryForm.Margin = new Padding(3, 4, 3, 4);
+            OpenCategoryForm.Name = "OpenCategoryForm";
+            OpenCategoryForm.Size = new Size(153, 53);
+            OpenCategoryForm.TabIndex = 15;
+            OpenCategoryForm.Text = "Открыть \"Категории блюд\"";
+            OpenCategoryForm.UseVisualStyleBackColor = true;
+            OpenCategoryForm.Click += AddNewCuisine_Click;
             // 
             // MealsTable
             // 
@@ -273,8 +274,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
-            Controls.Add(AddNewCuisine);
-            Controls.Add(AddNewCategory);
+            Controls.Add(OpenCategoryForm);
+            Controls.Add(OpenCuisineForm);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -314,8 +315,8 @@
         private Button button4;
         private Button button5;
         private FileSystemWatcher fileSystemWatcher1;
-        private Button AddNewCuisine;
-        private Button AddNewCategory;
+        private Button OpenCategoryForm;
+        private Button OpenCuisineForm;
         public DataGridView MealsTable;
         private DataGridViewTextBoxColumn NameColumn;
         private DataGridViewTextBoxColumn WeightColumn;

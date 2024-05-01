@@ -28,18 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dataGridView1 = new DataGridView();
+            AddCuisineBtn = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(44, 46);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(300, 188);
+            dataGridView1.TabIndex = 0;
+            // 
+            // AddCuisineBtn
+            // 
+            AddCuisineBtn.Location = new Point(55, 521);
+            AddCuisineBtn.Name = "AddCuisineBtn";
+            AddCuisineBtn.Size = new Size(170, 36);
+            AddCuisineBtn.TabIndex = 1;
+            AddCuisineBtn.Text = "Добавить кухню";
+            AddCuisineBtn.UseVisualStyleBackColor = true;
             // 
             // CuisineForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(AddCuisineBtn);
+            Controls.Add(dataGridView1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "CuisineForm";
-            Text = "Виды блюд";
+            Text = "Виды кухонь ";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private Button AddCuisineBtn;
     }
 }

@@ -37,8 +37,8 @@ namespace OOP_Kurs_Simakin
 
         private void AddNewCuisine_Click(object sender, EventArgs e)
         {
-            AddCuisineForm addCuisineForm = new AddCuisineForm();
-            addCuisineForm.ShowDialog();
+            CuisineForm сuisineForm = new CuisineForm();
+            сuisineForm.ShowDialog();
         }
 
         private void AddNewCategory_Click(object sender, EventArgs e)
@@ -52,6 +52,19 @@ namespace OOP_Kurs_Simakin
             using (kursContext db = new kursContext())
             {
                 var meals = db.Meals.ToList();
+                foreach (var meal in meals)
+                {
+                    MealsTable.Rows.Add(meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                }
+            }
+        }
+
+        private void SetFiltersButton_Click(object sender, EventArgs e)
+        {
+            MealsTable.Rows.Clear();
+            using (kursContext db = new kursContext())
+            {
+                var meals = db.Meals.OrderBy(e => e.Price).ToList();
                 foreach (var meal in meals)
                 {
                     MealsTable.Rows.Add(meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
