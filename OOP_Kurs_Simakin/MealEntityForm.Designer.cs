@@ -42,6 +42,7 @@
             EditedMealCategories = new ComboBox();
             ApplyChanges = new Button();
             ExitMealEntityForm = new Button();
+            Delete = new Button();
             ((System.ComponentModel.ISupportInitialize)EditedMealWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EditedMealKcal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EditedMealPrice).BeginInit();
@@ -158,18 +159,30 @@
             // 
             // ExitMealEntityForm
             // 
-            ExitMealEntityForm.Location = new Point(521, 392);
+            ExitMealEntityForm.Location = new Point(682, 392);
             ExitMealEntityForm.Name = "ExitMealEntityForm";
             ExitMealEntityForm.Size = new Size(94, 29);
             ExitMealEntityForm.TabIndex = 13;
             ExitMealEntityForm.Text = "Выход";
             ExitMealEntityForm.UseVisualStyleBackColor = true;
+            ExitMealEntityForm.Click += ExitMealEntityForm_Click;
+            // 
+            // Delete
+            // 
+            Delete.Location = new Point(364, 392);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(94, 29);
+            Delete.TabIndex = 14;
+            Delete.Text = "Удалить";
+            Delete.UseVisualStyleBackColor = true;
+            Delete.Click += Delete_Click;
             // 
             // MealEntityForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Delete);
             Controls.Add(ExitMealEntityForm);
             Controls.Add(ApplyChanges);
             Controls.Add(EditedMealCategories);
@@ -210,5 +223,6 @@
         private ComboBox EditedMealCategories;
         private Button ApplyChanges;
         private Button ExitMealEntityForm;
+        private Button Delete;
     }
 }

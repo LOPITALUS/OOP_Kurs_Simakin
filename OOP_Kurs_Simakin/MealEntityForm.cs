@@ -71,7 +71,7 @@ namespace OOP_Kurs_Simakin
 
         private void UpdateDGV(Meal edited_meal)
         {
-            for (int i = 0; i<ref_to_parent_form.MealsTable.RowCount; i++)
+            for (int i = 0; i < ref_to_parent_form.MealsTable.RowCount; i++)
             {
                 if ((long)ref_to_parent_form.MealsTable.Rows[i].Cells[0].Value == id)
                 {
@@ -81,6 +81,33 @@ namespace OOP_Kurs_Simakin
                     ref_to_parent_form.MealsTable.Rows[i].Cells[4].Value = edited_meal.Price;
                     ref_to_parent_form.MealsTable.Rows[i].Cells[5].Value = edited_meal.CuisineId;
                     ref_to_parent_form.MealsTable.Rows[i].Cells[6].Value = edited_meal.CategoryId;
+                    return;
+                }
+            }
+        }
+
+        private void ExitMealEntityForm_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            using (kursContext db = new kursContext())
+            {
+                Meal meal = db.Meals.First(e => e.IdMeal == id);
+                db.Meals.Remove(meal);
+                db.SaveChanges();
+            }
+
+
+            // Удаление строки из таблицы
+            for (int i = 0; i < ref_to_parent_form.MealsTable.RowCount; i++)
+            {
+                if ((long)ref_to_parent_form.MealsTable.Rows[i].Cells[0].Value == id)
+                {
+                    ref_to_parent_form.MealsTable.Rows.RemoveAt(i);
+                    Close();
                     return;
                 }
             }

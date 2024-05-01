@@ -38,9 +38,8 @@
             CategoryLabel = new Label();
             CuisineLabel = new Label();
             SetFiltersButton = new Button();
-            SearchLabel = new Label();
-            textBox1 = new TextBox();
-            SearchButton = new Button();
+            NameForSearching = new TextBox();
+            SearchIdButton = new Button();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -57,8 +56,14 @@
             PriceColumn = new DataGridViewTextBoxColumn();
             CuisineColumn = new DataGridViewTextBoxColumn();
             CategoryColumn = new DataGridViewTextBoxColumn();
+            label1 = new Label();
+            label2 = new Label();
+            IdForSearching = new NumericUpDown();
+            SearchNameButton = new Button();
+            CancelFilters = new Button();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MealsTable).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
             SuspendLayout();
             // 
             // Exit
@@ -110,32 +115,24 @@
             SetFiltersButton.UseVisualStyleBackColor = true;
             SetFiltersButton.Click += SetFiltersButton_Click;
             // 
-            // SearchLabel
+            // NameForSearching
             // 
-            SearchLabel.AutoSize = true;
-            SearchLabel.Location = new Point(791, 345);
-            SearchLabel.Name = "SearchLabel";
-            SearchLabel.Size = new Size(52, 20);
-            SearchLabel.TabIndex = 6;
-            SearchLabel.Text = "Поиск";
+            NameForSearching.Location = new Point(173, 354);
+            NameForSearching.Margin = new Padding(3, 4, 3, 4);
+            NameForSearching.Name = "NameForSearching";
+            NameForSearching.Size = new Size(114, 27);
+            NameForSearching.TabIndex = 7;
             // 
-            // textBox1
+            // SearchIdButton
             // 
-            textBox1.Location = new Point(791, 383);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(114, 27);
-            textBox1.TabIndex = 7;
-            // 
-            // SearchButton
-            // 
-            SearchButton.Location = new Point(791, 433);
-            SearchButton.Margin = new Padding(3, 4, 3, 4);
-            SearchButton.Name = "SearchButton";
-            SearchButton.Size = new Size(86, 31);
-            SearchButton.TabIndex = 8;
-            SearchButton.Text = "Найти запись";
-            SearchButton.UseVisualStyleBackColor = true;
+            SearchIdButton.Location = new Point(272, 424);
+            SearchIdButton.Margin = new Padding(3, 4, 3, 4);
+            SearchIdButton.Name = "SearchIdButton";
+            SearchIdButton.Size = new Size(86, 31);
+            SearchIdButton.TabIndex = 8;
+            SearchIdButton.Text = "Найти запись";
+            SearchIdButton.UseVisualStyleBackColor = true;
+            SearchIdButton.Click += SearchIdButton_Click;
             // 
             // button1
             // 
@@ -286,11 +283,63 @@
             CategoryColumn.ReadOnly = true;
             CategoryColumn.Width = 125;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 354);
+            label1.Name = "label1";
+            label1.Size = new Size(155, 20);
+            label1.TabIndex = 16;
+            label1.Text = "Поиск по названию: ";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(14, 424);
+            label2.Name = "label2";
+            label2.Size = new Size(96, 20);
+            label2.TabIndex = 17;
+            label2.Text = "Поиск по ID:";
+            // 
+            // IdForSearching
+            // 
+            IdForSearching.Location = new Point(116, 424);
+            IdForSearching.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
+            IdForSearching.Name = "IdForSearching";
+            IdForSearching.Size = new Size(150, 27);
+            IdForSearching.TabIndex = 18;
+            // 
+            // SearchNameButton
+            // 
+            SearchNameButton.Location = new Point(293, 354);
+            SearchNameButton.Margin = new Padding(3, 4, 3, 4);
+            SearchNameButton.Name = "SearchNameButton";
+            SearchNameButton.Size = new Size(86, 31);
+            SearchNameButton.TabIndex = 19;
+            SearchNameButton.Text = "Найти запись";
+            SearchNameButton.UseVisualStyleBackColor = true;
+            SearchNameButton.Click += SearchNameButton_Click;
+            // 
+            // CancelFilters
+            // 
+            CancelFilters.Location = new Point(554, 317);
+            CancelFilters.Name = "CancelFilters";
+            CancelFilters.Size = new Size(226, 25);
+            CancelFilters.TabIndex = 20;
+            CancelFilters.Text = "Снять все фильтры с таблицы";
+            CancelFilters.UseVisualStyleBackColor = true;
+            CancelFilters.Click += CancelFilters_Click;
+            // 
             // MealForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(CancelFilters);
+            Controls.Add(SearchNameButton);
+            Controls.Add(IdForSearching);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(OpenCategoryForm);
             Controls.Add(OpenCuisineForm);
             Controls.Add(button5);
@@ -298,9 +347,8 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(SearchButton);
-            Controls.Add(textBox1);
-            Controls.Add(SearchLabel);
+            Controls.Add(SearchIdButton);
+            Controls.Add(NameForSearching);
             Controls.Add(SetFiltersButton);
             Controls.Add(CuisineLabel);
             Controls.Add(CategoryLabel);
@@ -313,6 +361,7 @@
             Load += MealForm_Load;
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ((System.ComponentModel.ISupportInitialize)MealsTable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)IdForSearching).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -323,9 +372,8 @@
         private Label CategoryLabel;
         private Label CuisineLabel;
         private Button SetFiltersButton;
-        private Label SearchLabel;
-        private TextBox textBox1;
-        private Button SearchButton;
+        private TextBox NameForSearching;
+        private Button SearchIdButton;
         private Button button1;
         private Button button2;
         private Button button3;
@@ -342,5 +390,10 @@
         private DataGridViewTextBoxColumn PriceColumn;
         private DataGridViewTextBoxColumn CuisineColumn;
         private DataGridViewTextBoxColumn CategoryColumn;
+        private NumericUpDown IdForSearching;
+        private Label label2;
+        private Label label1;
+        private Button SearchNameButton;
+        private Button CancelFilters;
     }
 }

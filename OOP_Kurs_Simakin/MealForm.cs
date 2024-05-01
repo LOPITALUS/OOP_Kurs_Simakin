@@ -21,7 +21,7 @@ namespace OOP_Kurs_Simakin
 
         private void MealForm_Load(object sender, EventArgs e)
         {
-            UpdateMealsDGV();
+            ResetMealsDGV();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -47,8 +47,9 @@ namespace OOP_Kurs_Simakin
             addCategoryForm.ShowDialog();
         }
 
-        public void UpdateMealsDGV()
+        public void ResetMealsDGV()
         {
+            MealsTable.Rows.Clear();
             using (kursContext db = new kursContext())
             {
                 var meals = db.Meals.ToList();
@@ -77,6 +78,40 @@ namespace OOP_Kurs_Simakin
             long current_id = (long)MealsTable.Rows[e.RowIndex].Cells[0].Value;
             MealEntityForm mef = new MealEntityForm(current_id, this);
             mef.ShowDialog();
+        }
+
+        private void SearchNameButton_Click(object sender, EventArgs e)
+        {
+            MealsTable.Rows.Clear();
+            string current_name = NameForSearching.Text;
+            using (kursContext db = new kursContext())
+            {
+                var meals = db.Meals.ToList();
+                foreach (var meal in meals)
+                {
+                    if (meal.Name == current_name)
+                        MealsTable.Rows.Add(meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                }
+            }
+        }
+
+        private void SearchIdButton_Click(object sender, EventArgs e)
+        {
+            long current_id = (long)IdForSearching.Value;
+            using (kursContext db = new kursContext())
+            {
+                if (db.Meals.FirstOrDefault(c => c.IdMeal == current_id) != null)
+                {
+                    MealEntityForm mef = new MealEntityForm(current_id, this);
+                    mef.ShowDialog();
+                }
+                // else cout не существует
+            }
+        }
+
+        private void CancelFilters_Click(object sender, EventArgs e)
+        {
+            ResetMealsDGV();
         }
     }
 }
