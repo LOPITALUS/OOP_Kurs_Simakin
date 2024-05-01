@@ -42,6 +42,7 @@ namespace OOP_Kurs_Simakin
 
         private void MealEntityForm_Load(object sender, EventArgs e)
         {
+            Text = $"ID : {id}";
             using (kursContext db = new kursContext())
             {
                 Meal meal = db.Meals.FirstOrDefault(e => e.IdMeal == id);
