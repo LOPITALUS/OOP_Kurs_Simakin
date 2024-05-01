@@ -61,6 +61,11 @@
             IdForSearching = new NumericUpDown();
             SearchNameButton = new Button();
             CancelFilters = new Button();
+            label3 = new Label();
+            IdSort = new CheckBox();
+            button6 = new Button();
+            UpSort = new RadioButton();
+            DownSort = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MealsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
@@ -79,7 +84,7 @@
             // FiltersLabel
             // 
             FiltersLabel.AutoSize = true;
-            FiltersLabel.Location = new Point(791, 67);
+            FiltersLabel.Location = new Point(1077, 400);
             FiltersLabel.Name = "FiltersLabel";
             FiltersLabel.RightToLeft = RightToLeft.No;
             FiltersLabel.Size = new Size(71, 20);
@@ -89,7 +94,7 @@
             // CategoryLabel
             // 
             CategoryLabel.AutoSize = true;
-            CategoryLabel.Location = new Point(791, 109);
+            CategoryLabel.Location = new Point(1077, 442);
             CategoryLabel.Name = "CategoryLabel";
             CategoryLabel.Size = new Size(130, 20);
             CategoryLabel.TabIndex = 3;
@@ -98,7 +103,7 @@
             // CuisineLabel
             // 
             CuisineLabel.AutoSize = true;
-            CuisineLabel.Location = new Point(791, 159);
+            CuisineLabel.Location = new Point(1077, 492);
             CuisineLabel.Name = "CuisineLabel";
             CuisineLabel.Size = new Size(78, 20);
             CuisineLabel.TabIndex = 4;
@@ -106,7 +111,7 @@
             // 
             // SetFiltersButton
             // 
-            SetFiltersButton.Location = new Point(791, 187);
+            SetFiltersButton.Location = new Point(1077, 520);
             SetFiltersButton.Margin = new Padding(3, 4, 3, 4);
             SetFiltersButton.Name = "SetFiltersButton";
             SetFiltersButton.Size = new Size(110, 43);
@@ -330,11 +335,67 @@
             CancelFilters.UseVisualStyleBackColor = true;
             CancelFilters.Click += CancelFilters_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(963, 75);
+            label3.Name = "label3";
+            label3.Size = new Size(95, 20);
+            label3.TabIndex = 21;
+            label3.Text = "Сортировка:";
+            // 
+            // IdSort
+            // 
+            IdSort.AutoSize = true;
+            IdSort.Location = new Point(963, 106);
+            IdSort.Name = "IdSort";
+            IdSort.Size = new Size(46, 24);
+            IdSort.TabIndex = 22;
+            IdSort.Text = "ID";
+            IdSort.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(963, 313);
+            button6.Name = "button6";
+            button6.Size = new Size(113, 29);
+            button6.TabIndex = 23;
+            button6.Text = "Сортировать";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // UpSort
+            // 
+            UpSort.AutoSize = true;
+            UpSort.Location = new Point(1157, 222);
+            UpSort.Name = "UpSort";
+            UpSort.Size = new Size(146, 24);
+            UpSort.TabIndex = 24;
+            UpSort.TabStop = true;
+            UpSort.Text = "По возрастанию";
+            UpSort.UseVisualStyleBackColor = true;
+            // 
+            // DownSort
+            // 
+            DownSort.AutoSize = true;
+            DownSort.Location = new Point(1157, 252);
+            DownSort.Name = "DownSort";
+            DownSort.Size = new Size(127, 24);
+            DownSort.TabIndex = 25;
+            DownSort.TabStop = true;
+            DownSort.Text = "По убыванию";
+            DownSort.UseVisualStyleBackColor = true;
+            // 
             // MealForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(1369, 600);
+            Controls.Add(DownSort);
+            Controls.Add(UpSort);
+            Controls.Add(button6);
+            Controls.Add(IdSort);
+            Controls.Add(label3);
             Controls.Add(CancelFilters);
             Controls.Add(SearchNameButton);
             Controls.Add(IdForSearching);
@@ -395,5 +456,10 @@
         private Label label1;
         private Button SearchNameButton;
         private Button CancelFilters;
+        private RadioButton DownSort;
+        private RadioButton UpSort;
+        private Button button6;
+        private CheckBox IdSort;
+        private Label label3;
     }
 }

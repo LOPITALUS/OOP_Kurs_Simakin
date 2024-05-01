@@ -68,7 +68,7 @@ namespace OOP_Kurs_Simakin
                 var meals = db.Meals.OrderBy(e => e.Price).ToList();
                 foreach (var meal in meals)
                 {
-                    MealsTable.Rows.Add(meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                    MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
                 }
             }
         }
@@ -90,7 +90,7 @@ namespace OOP_Kurs_Simakin
                 foreach (var meal in meals)
                 {
                     if (meal.Name == current_name)
-                        MealsTable.Rows.Add(meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                        MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
                 }
             }
         }
@@ -112,6 +112,35 @@ namespace OOP_Kurs_Simakin
         private void CancelFilters_Click(object sender, EventArgs e)
         {
             ResetMealsDGV();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            using (kursContext db = new kursContext())
+            {
+                if (IdSort.Checked)
+                {
+                    MealsTable.Columns[2].SortMode = DataGridViewColumnSortMode.Programmatic;
+                    MealsTable.Sort(MealsTable.Columns[2], ListSortDirection.Ascending);
+                    /*IOrderedQueryable<Meal> sorted = db.Meals.OrderBy(e => e.Price);
+                    db.Meals.RemoveRange(db.Meals);
+                    db.Meals.AddRange(sorted);
+                    db.SaveChanges();*/
+                    //sorted.ThenBy(e => e.Kcal);
+                    //sorted.ToList();
+
+                    //MealsTable.Rows.Clear();
+                    //var meals = sorted.ToList();
+                    //foreach (var meal in meals)
+                    //{
+                    //    MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                    //}
+                }
+
+
+
+
+            }
         }
     }
 }
