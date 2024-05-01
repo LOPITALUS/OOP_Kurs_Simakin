@@ -118,29 +118,62 @@ namespace OOP_Kurs_Simakin
         {
             using (kursContext db = new kursContext())
             {
+                var direction = (UpSort.Checked) ? ListSortDirection.Ascending : ListSortDirection.Descending;
+
                 if (IdSort.Checked)
                 {
-                    MealsTable.Columns[2].SortMode = DataGridViewColumnSortMode.Programmatic;
-                    MealsTable.Sort(MealsTable.Columns[2], ListSortDirection.Ascending);
-                    /*IOrderedQueryable<Meal> sorted = db.Meals.OrderBy(e => e.Price);
-                    db.Meals.RemoveRange(db.Meals);
-                    db.Meals.AddRange(sorted);
-                    db.SaveChanges();*/
-                    //sorted.ThenBy(e => e.Kcal);
-                    //sorted.ToList();
-
-                    //MealsTable.Rows.Clear();
-                    //var meals = sorted.ToList();
-                    //foreach (var meal in meals)
-                    //{
-                    //    MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
-                    //}
+                    MealsTable.Columns[0].SortMode = DataGridViewColumnSortMode.Programmatic;
+                    MealsTable.Sort(MealsTable.Columns[0], direction);
                 }
+                if (NameSort.Checked)
+                {
+                    MealsTable.Columns[1].SortMode = DataGridViewColumnSortMode.Programmatic;
+                    MealsTable.Sort(MealsTable.Columns[1], direction);
+                }
+                if (WeightSort.Checked)
+                {
+                    MealsTable.Columns[2].SortMode = DataGridViewColumnSortMode.Programmatic;
+                    MealsTable.Sort(MealsTable.Columns[2], direction);
+                }
+                if (KcalSort.Checked)
+                {
+                    MealsTable.Columns[3].SortMode = DataGridViewColumnSortMode.Programmatic;
+                    MealsTable.Sort(MealsTable.Columns[3], direction);
+                }
+                if (PriceSort.Checked)
+                {
+                    MealsTable.Columns[4].SortMode = DataGridViewColumnSortMode.Programmatic;
+                    MealsTable.Sort(MealsTable.Columns[4], direction);
+                }
+                if (CuisineSort.Checked)
+                {
+                    MealsTable.Columns[5].SortMode = DataGridViewColumnSortMode.Programmatic;
+                    MealsTable.Sort(MealsTable.Columns[5], direction);
+                }
+                if (CategorySort.Checked)
+                {
+                    MealsTable.Columns[6].SortMode = DataGridViewColumnSortMode.Programmatic;
+                    MealsTable.Sort(MealsTable.Columns[6], direction);
+                }
+                /*IOrderedQueryable<Meal> sorted = db.Meals.OrderBy(e => e.Price);
+                db.Meals.RemoveRange(db.Meals);
+                db.Meals.AddRange(sorted);
+                db.SaveChanges();*/
+                //sorted.ThenBy(e => e.Kcal);
+                //sorted.ToList();
 
-
-
-
+                //MealsTable.Rows.Clear();
+                //var meals = sorted.ToList();
+                //foreach (var meal in meals)
+                //{
+                //    MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                //}
             }
+
+
+
+
         }
     }
 }
+

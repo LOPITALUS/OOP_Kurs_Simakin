@@ -66,6 +66,12 @@
             button6 = new Button();
             UpSort = new RadioButton();
             DownSort = new RadioButton();
+            WeightSort = new CheckBox();
+            NameSort = new CheckBox();
+            PriceSort = new CheckBox();
+            CuisineSort = new CheckBox();
+            KcalSort = new CheckBox();
+            CategorySort = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MealsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
@@ -356,7 +362,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(963, 313);
+            button6.Location = new Point(963, 334);
             button6.Name = "button6";
             button6.Size = new Size(113, 29);
             button6.TabIndex = 23;
@@ -367,6 +373,7 @@
             // UpSort
             // 
             UpSort.AutoSize = true;
+            UpSort.Checked = true;
             UpSort.Location = new Point(1157, 222);
             UpSort.Name = "UpSort";
             UpSort.Size = new Size(146, 24);
@@ -382,15 +389,80 @@
             DownSort.Name = "DownSort";
             DownSort.Size = new Size(127, 24);
             DownSort.TabIndex = 25;
-            DownSort.TabStop = true;
             DownSort.Text = "По убыванию";
             DownSort.UseVisualStyleBackColor = true;
+            // 
+            // WeightSort
+            // 
+            WeightSort.AutoSize = true;
+            WeightSort.Location = new Point(963, 166);
+            WeightSort.Name = "WeightSort";
+            WeightSort.Size = new Size(74, 24);
+            WeightSort.TabIndex = 26;
+            WeightSort.Text = "Масса";
+            WeightSort.UseVisualStyleBackColor = true;
+            // 
+            // NameSort
+            // 
+            NameSort.AutoSize = true;
+            NameSort.Location = new Point(963, 136);
+            NameSort.Name = "NameSort";
+            NameSort.Size = new Size(99, 24);
+            NameSort.TabIndex = 27;
+            NameSort.Text = "Название";
+            NameSort.UseVisualStyleBackColor = true;
+            // 
+            // PriceSort
+            // 
+            PriceSort.AutoSize = true;
+            PriceSort.Location = new Point(963, 226);
+            PriceSort.Name = "PriceSort";
+            PriceSort.Size = new Size(67, 24);
+            PriceSort.TabIndex = 30;
+            PriceSort.Text = "Цена";
+            PriceSort.UseVisualStyleBackColor = true;
+            // 
+            // CuisineSort
+            // 
+            CuisineSort.AutoSize = true;
+            CuisineSort.Location = new Point(963, 256);
+            CuisineSort.Name = "CuisineSort";
+            CuisineSort.Size = new Size(100, 24);
+            CuisineSort.TabIndex = 29;
+            CuisineSort.Text = "Вид кухни";
+            CuisineSort.UseVisualStyleBackColor = true;
+            // 
+            // KcalSort
+            // 
+            KcalSort.AutoSize = true;
+            KcalSort.Location = new Point(963, 196);
+            KcalSort.Name = "KcalSort";
+            KcalSort.Size = new Size(114, 24);
+            KcalSort.TabIndex = 28;
+            KcalSort.Text = "Кол-во ккал";
+            KcalSort.UseVisualStyleBackColor = true;
+            // 
+            // CategorySort
+            // 
+            CategorySort.AutoSize = true;
+            CategorySort.Location = new Point(963, 286);
+            CategorySort.Name = "CategorySort";
+            CategorySort.Size = new Size(103, 24);
+            CategorySort.TabIndex = 31;
+            CategorySort.Text = "Категория";
+            CategorySort.UseVisualStyleBackColor = true;
             // 
             // MealForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1369, 600);
+            Controls.Add(CategorySort);
+            Controls.Add(PriceSort);
+            Controls.Add(CuisineSort);
+            Controls.Add(KcalSort);
+            Controls.Add(NameSort);
+            Controls.Add(WeightSort);
             Controls.Add(DownSort);
             Controls.Add(UpSort);
             Controls.Add(button6);
@@ -461,5 +533,11 @@
         private Button button6;
         private CheckBox IdSort;
         private Label label3;
+        private CheckBox WeightSort;
+        private CheckBox PriceSort;
+        private CheckBox CuisineSort;
+        private CheckBox KcalSort;
+        private CheckBox NameSort;
+        private CheckBox CategorySort;
     }
 }
