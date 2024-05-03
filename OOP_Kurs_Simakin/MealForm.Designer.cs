@@ -41,9 +41,9 @@
             NameForSearching = new TextBox();
             SearchIdButton = new Button();
             button1 = new Button();
-            button2 = new Button();
+            DeleteDb = new Button();
             button3 = new Button();
-            button4 = new Button();
+            CreateDb = new Button();
             button5 = new Button();
             fileSystemWatcher1 = new FileSystemWatcher();
             OpenCuisineForm = new Button();
@@ -86,6 +86,7 @@
             Exit.TabIndex = 1;
             Exit.Text = "Выход";
             Exit.UseVisualStyleBackColor = true;
+            Exit.Click += Exit_Click;
             // 
             // FiltersLabel
             // 
@@ -155,15 +156,16 @@
             button1.Text = "Сохранить файл с данными БД";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // DeleteDb
             // 
-            button2.Location = new Point(328, 533);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(114, 61);
-            button2.TabIndex = 10;
-            button2.Text = "Удалить базу данных";
-            button2.UseVisualStyleBackColor = true;
+            DeleteDb.Location = new Point(328, 533);
+            DeleteDb.Margin = new Padding(3, 4, 3, 4);
+            DeleteDb.Name = "DeleteDb";
+            DeleteDb.Size = new Size(114, 61);
+            DeleteDb.TabIndex = 10;
+            DeleteDb.Text = "Удалить базу данных";
+            DeleteDb.UseVisualStyleBackColor = true;
+            DeleteDb.Click += DeleteDb_Click;
             // 
             // button3
             // 
@@ -176,16 +178,16 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // button4
+            // CreateDb
             // 
-            button4.Location = new Point(471, 543);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(106, 52);
-            button4.TabIndex = 12;
-            button4.Text = "Создать базу данных?";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            CreateDb.Location = new Point(471, 543);
+            CreateDb.Margin = new Padding(3, 4, 3, 4);
+            CreateDb.Name = "CreateDb";
+            CreateDb.Size = new Size(106, 52);
+            CreateDb.TabIndex = 12;
+            CreateDb.Text = "Создать базу данных?";
+            CreateDb.UseVisualStyleBackColor = true;
+            CreateDb.Click += CreateDb_Click;
             // 
             // button5
             // 
@@ -211,7 +213,7 @@
             OpenCuisineForm.TabIndex = 14;
             OpenCuisineForm.Text = "Открыть \"Виды кухонь\"";
             OpenCuisineForm.UseVisualStyleBackColor = true;
-            OpenCuisineForm.Click += AddNewCategory_Click;
+            OpenCuisineForm.Click += OpenCuisineForm_Click;
             // 
             // OpenCategoryForm
             // 
@@ -222,7 +224,7 @@
             OpenCategoryForm.TabIndex = 15;
             OpenCategoryForm.Text = "Открыть \"Категории блюд\"";
             OpenCategoryForm.UseVisualStyleBackColor = true;
-            OpenCategoryForm.Click += AddNewCuisine_Click;
+            OpenCategoryForm.Click += OpenCategoryForm_Click;
             // 
             // MealsTable
             // 
@@ -476,9 +478,9 @@
             Controls.Add(OpenCategoryForm);
             Controls.Add(OpenCuisineForm);
             Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(CreateDb);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(DeleteDb);
             Controls.Add(button1);
             Controls.Add(SearchIdButton);
             Controls.Add(NameForSearching);
@@ -508,9 +510,9 @@
         private TextBox NameForSearching;
         private Button SearchIdButton;
         private Button button1;
-        private Button button2;
+        private Button DeleteDb;
         private Button button3;
-        private Button button4;
+        private Button CreateDb;
         private Button button5;
         private FileSystemWatcher fileSystemWatcher1;
         private Button OpenCategoryForm;

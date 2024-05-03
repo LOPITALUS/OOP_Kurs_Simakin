@@ -24,9 +24,22 @@ namespace OOP_Kurs_Simakin
             ResetMealsDGV();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void CreateDb_Click(object sender, EventArgs e)
         {
-            // Открытие окна добаления
+            using (kursContext db = new kursContext())
+            {
+                bool was_created = db.Database.EnsureCreated();
+            }
+            ResetMealsDGV();
+        }
+
+        private void DeleteDb_Click(object sender, EventArgs e)
+        {
+            using (kursContext db = new kursContext())
+            {
+                bool was_deleted = db.Database.EnsureDeleted();
+            }
+            MealsTable.Rows.Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -35,16 +48,16 @@ namespace OOP_Kurs_Simakin
             addMealForm.ShowDialog();
         }
 
-        private void AddNewCuisine_Click(object sender, EventArgs e)
+        private void OpenCategoryForm_Click(object sender, EventArgs e)
         {
-            CuisineForm сuisineForm = new CuisineForm();
-            сuisineForm.ShowDialog();
+            AddCategoryForm categoryForm = new AddCategoryForm();
+            categoryForm.ShowDialog();
         }
 
-        private void AddNewCategory_Click(object sender, EventArgs e)
+        private void OpenCuisineForm_Click(object sender, EventArgs e)
         {
-            AddCategoryForm addCategoryForm = new AddCategoryForm(this);
-            addCategoryForm.ShowDialog();
+            AddCuisineForm addCuisineForm = new AddCuisineForm();
+            addCuisineForm.ShowDialog();
         }
 
         public void ResetMealsDGV()
@@ -173,6 +186,11 @@ namespace OOP_Kurs_Simakin
 
 
 
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
