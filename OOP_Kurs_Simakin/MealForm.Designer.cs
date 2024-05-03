@@ -35,7 +35,6 @@
         {
             Exit = new Button();
             FiltersLabel = new Label();
-            CategoryLabel = new Label();
             CuisineLabel = new Label();
             SetFiltersButton = new Button();
             NameForSearching = new TextBox();
@@ -44,7 +43,6 @@
             DeleteDb = new Button();
             button3 = new Button();
             CreateDb = new Button();
-            button5 = new Button();
             fileSystemWatcher1 = new FileSystemWatcher();
             OpenCuisineForm = new Button();
             OpenCategoryForm = new Button();
@@ -72,9 +70,30 @@
             CuisineSort = new CheckBox();
             KcalSort = new CheckBox();
             CategorySort = new CheckBox();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            WeightFilterMin = new NumericUpDown();
+            WeightFilterMax = new NumericUpDown();
+            KcalFilterMax = new NumericUpDown();
+            KcalFilterMin = new NumericUpDown();
+            PriceFilterMin = new NumericUpDown();
+            PriceFilterMax = new NumericUpDown();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MealsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)WeightFilterMin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)WeightFilterMax).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)KcalFilterMax).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)KcalFilterMin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PriceFilterMin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PriceFilterMax).BeginInit();
             SuspendLayout();
             // 
             // Exit
@@ -91,34 +110,24 @@
             // FiltersLabel
             // 
             FiltersLabel.AutoSize = true;
-            FiltersLabel.Location = new Point(1077, 400);
+            FiltersLabel.Location = new Point(922, 424);
             FiltersLabel.Name = "FiltersLabel";
             FiltersLabel.RightToLeft = RightToLeft.No;
-            FiltersLabel.Size = new Size(71, 20);
+            FiltersLabel.Size = new Size(155, 20);
             FiltersLabel.TabIndex = 2;
-            FiltersLabel.Text = "Фильтры";
-            // 
-            // CategoryLabel
-            // 
-            CategoryLabel.AutoSize = true;
-            CategoryLabel.Location = new Point(1077, 442);
-            CategoryLabel.Name = "CategoryLabel";
-            CategoryLabel.Size = new Size(130, 20);
-            CategoryLabel.TabIndex = 3;
-            CategoryLabel.Text = "Категория блюда";
+            FiltersLabel.Text = "Настроить просмотр";
             // 
             // CuisineLabel
             // 
             CuisineLabel.AutoSize = true;
-            CuisineLabel.Location = new Point(1077, 492);
+            CuisineLabel.Location = new Point(998, 503);
             CuisineLabel.Name = "CuisineLabel";
-            CuisineLabel.Size = new Size(78, 20);
+            CuisineLabel.Size = new Size(0, 20);
             CuisineLabel.TabIndex = 4;
-            CuisineLabel.Text = "Вид кухни";
             // 
             // SetFiltersButton
             // 
-            SetFiltersButton.Location = new Point(1077, 520);
+            SetFiltersButton.Location = new Point(991, 548);
             SetFiltersButton.Margin = new Padding(3, 4, 3, 4);
             SetFiltersButton.Name = "SetFiltersButton";
             SetFiltersButton.Size = new Size(110, 43);
@@ -188,16 +197,6 @@
             CreateDb.Text = "Создать базу данных?";
             CreateDb.UseVisualStyleBackColor = true;
             CreateDb.Click += CreateDb_Click;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(787, 487);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(120, 71);
-            button5.TabIndex = 13;
-            button5.Text = "Найти блюдо по названию";
-            button5.UseVisualStyleBackColor = true;
             // 
             // fileSystemWatcher1
             // 
@@ -376,7 +375,7 @@
             // 
             UpSort.AutoSize = true;
             UpSort.Checked = true;
-            UpSort.Location = new Point(1157, 222);
+            UpSort.Location = new Point(1141, 106);
             UpSort.Name = "UpSort";
             UpSort.Size = new Size(146, 24);
             UpSort.TabIndex = 24;
@@ -387,7 +386,7 @@
             // DownSort
             // 
             DownSort.AutoSize = true;
-            DownSort.Location = new Point(1157, 252);
+            DownSort.Location = new Point(1141, 136);
             DownSort.Name = "DownSort";
             DownSort.Size = new Size(127, 24);
             DownSort.TabIndex = 25;
@@ -454,11 +453,149 @@
             CategorySort.Text = "Категория";
             CategorySort.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(917, 457);
+            label4.Name = "label4";
+            label4.Size = new Size(52, 20);
+            label4.TabIndex = 32;
+            label4.Text = "Масса";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(917, 485);
+            label5.Name = "label5";
+            label5.Size = new Size(92, 20);
+            label5.TabIndex = 33;
+            label5.Text = "Кол-во ккал";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(917, 512);
+            label6.Name = "label6";
+            label6.Size = new Size(45, 20);
+            label6.TabIndex = 34;
+            label6.Text = "Цена";
+            // 
+            // WeightFilterMin
+            // 
+            WeightFilterMin.Location = new Point(1055, 455);
+            WeightFilterMin.Name = "WeightFilterMin";
+            WeightFilterMin.Size = new Size(46, 27);
+            WeightFilterMin.TabIndex = 35;
+            // 
+            // WeightFilterMax
+            // 
+            WeightFilterMax.Location = new Point(1151, 455);
+            WeightFilterMax.Name = "WeightFilterMax";
+            WeightFilterMax.Size = new Size(46, 27);
+            WeightFilterMax.TabIndex = 36;
+            // 
+            // KcalFilterMax
+            // 
+            KcalFilterMax.Location = new Point(1151, 483);
+            KcalFilterMax.Name = "KcalFilterMax";
+            KcalFilterMax.Size = new Size(46, 27);
+            KcalFilterMax.TabIndex = 37;
+            // 
+            // KcalFilterMin
+            // 
+            KcalFilterMin.Location = new Point(1055, 483);
+            KcalFilterMin.Name = "KcalFilterMin";
+            KcalFilterMin.Size = new Size(46, 27);
+            KcalFilterMin.TabIndex = 38;
+            // 
+            // PriceFilterMin
+            // 
+            PriceFilterMin.Location = new Point(1055, 510);
+            PriceFilterMin.Name = "PriceFilterMin";
+            PriceFilterMin.Size = new Size(46, 27);
+            PriceFilterMin.TabIndex = 39;
+            // 
+            // PriceFilterMax
+            // 
+            PriceFilterMax.Location = new Point(1151, 510);
+            PriceFilterMax.Name = "PriceFilterMax";
+            PriceFilterMax.Size = new Size(46, 27);
+            PriceFilterMax.TabIndex = 40;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(1107, 457);
+            label7.Name = "label7";
+            label7.Size = new Size(26, 20);
+            label7.TabIndex = 41;
+            label7.Text = "до";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(1107, 485);
+            label8.Name = "label8";
+            label8.Size = new Size(26, 20);
+            label8.TabIndex = 42;
+            label8.Text = "до";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(1107, 517);
+            label9.Name = "label9";
+            label9.Size = new Size(26, 20);
+            label9.TabIndex = 43;
+            label9.Text = "до";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(1013, 457);
+            label10.Name = "label10";
+            label10.Size = new Size(24, 20);
+            label10.TabIndex = 44;
+            label10.Text = "от";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(1013, 490);
+            label11.Name = "label11";
+            label11.Size = new Size(24, 20);
+            label11.TabIndex = 45;
+            label11.Text = "от";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(1013, 517);
+            label12.Name = "label12";
+            label12.Size = new Size(24, 20);
+            label12.TabIndex = 46;
+            label12.Text = "от";
+            // 
             // MealForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1369, 600);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(PriceFilterMax);
+            Controls.Add(PriceFilterMin);
+            Controls.Add(KcalFilterMin);
+            Controls.Add(KcalFilterMax);
+            Controls.Add(WeightFilterMax);
+            Controls.Add(WeightFilterMin);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(CategorySort);
             Controls.Add(PriceSort);
             Controls.Add(CuisineSort);
@@ -477,7 +614,6 @@
             Controls.Add(label1);
             Controls.Add(OpenCategoryForm);
             Controls.Add(OpenCuisineForm);
-            Controls.Add(button5);
             Controls.Add(CreateDb);
             Controls.Add(button3);
             Controls.Add(DeleteDb);
@@ -486,7 +622,6 @@
             Controls.Add(NameForSearching);
             Controls.Add(SetFiltersButton);
             Controls.Add(CuisineLabel);
-            Controls.Add(CategoryLabel);
             Controls.Add(FiltersLabel);
             Controls.Add(Exit);
             Controls.Add(MealsTable);
@@ -497,6 +632,12 @@
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ((System.ComponentModel.ISupportInitialize)MealsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).EndInit();
+            ((System.ComponentModel.ISupportInitialize)WeightFilterMin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)WeightFilterMax).EndInit();
+            ((System.ComponentModel.ISupportInitialize)KcalFilterMax).EndInit();
+            ((System.ComponentModel.ISupportInitialize)KcalFilterMin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PriceFilterMin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PriceFilterMax).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -504,7 +645,6 @@
         #endregion
         private Button Exit;
         private Label FiltersLabel;
-        private Label CategoryLabel;
         private Label CuisineLabel;
         private Button SetFiltersButton;
         private TextBox NameForSearching;
@@ -513,7 +653,6 @@
         private Button DeleteDb;
         private Button button3;
         private Button CreateDb;
-        private Button button5;
         private FileSystemWatcher fileSystemWatcher1;
         private Button OpenCategoryForm;
         private Button OpenCuisineForm;
@@ -541,5 +680,20 @@
         private CheckBox KcalSort;
         private CheckBox NameSort;
         private CheckBox CategorySort;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private NumericUpDown PriceFilterMax;
+        private NumericUpDown PriceFilterMin;
+        private NumericUpDown KcalFilterMin;
+        private NumericUpDown KcalFilterMax;
+        private NumericUpDown WeightFilterMax;
+        private NumericUpDown WeightFilterMin;
+        private Label label12;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label label7;
     }
 }

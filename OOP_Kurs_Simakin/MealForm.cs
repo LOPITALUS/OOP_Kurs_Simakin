@@ -76,14 +76,25 @@ namespace OOP_Kurs_Simakin
         private void SetFiltersButton_Click(object sender, EventArgs e)
         {
             MealsTable.Rows.Clear();
+            double min_w = (double)WeightFilterMin.Value;
+            double max_w = (double)WeightFilterMax.Value;
+
+            double min_k = (double)KcalFilterMin.Value;
+            double max_k = (double)KcalFilterMax.Value;
+
+            double min_p = (double)PriceFilterMin.Value;
+            double max_p = (double)PriceFilterMax.Value;
+
             using (kursContext db = new kursContext())
             {
-                var meals = db.Meals.OrderBy(e => e.Price).ToList();
+                var meals = db.Meals.ToList();
                 foreach (var meal in meals)
                 {
-                    MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                    if ((meal.Weight >= min_w && meal.Weight <= max_w) && (meal.Kcal >= min_k && meal.Kcal <= max_k) && (meal.Price >= min_p && meal.Price <= max_p))
+                        MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
                 }
             }
+
         }
 
         private void MealsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -168,24 +179,7 @@ namespace OOP_Kurs_Simakin
                     MealsTable.Columns[6].SortMode = DataGridViewColumnSortMode.Programmatic;
                     MealsTable.Sort(MealsTable.Columns[6], direction);
                 }
-                /*IOrderedQueryable<Meal> sorted = db.Meals.OrderBy(e => e.Price);
-                db.Meals.RemoveRange(db.Meals);
-                db.Meals.AddRange(sorted);
-                db.SaveChanges();*/
-                //sorted.ThenBy(e => e.Kcal);
-                //sorted.ToList();
-
-                //MealsTable.Rows.Clear();
-                //var meals = sorted.ToList();
-                //foreach (var meal in meals)
-                //{
-                //    MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
-                //}
             }
-
-
-
-
         }
 
         private void Exit_Click(object sender, EventArgs e)
