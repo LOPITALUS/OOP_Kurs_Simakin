@@ -50,6 +50,7 @@ namespace OOP_Kurs_Simakin
                 db.SaveChanges();
                 ref_to_parent_form.MealsTable.Rows.Add(new_meal.IdMeal, new_meal.Name, new_meal.Weight, new_meal.Kcal, new_meal.Price, new_meal.CuisineId, new_meal.CategoryId);
             }
+            MessageBox.Show("Запись успешно добавлена", "Уведомление");
         }
 
         private void AddMealForm_Load(object sender, EventArgs e)
