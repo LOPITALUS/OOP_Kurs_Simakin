@@ -32,9 +32,11 @@ namespace OOP_Kurs_Simakin
         {
             using (kursContext db = new kursContext())
             {
-                bool was_created = db.Database.EnsureCreated();
+                if (db.Database.EnsureCreated())
+                    MessageBox.Show("База данных успешно создана!", "Уведомление");
+                else
+                    MessageBox.Show("База данных уже существует!", "Уведомление");
             }
-            ResetMealsDGV();
         }
 
         private void DeleteDb_Click(object sender, EventArgs e)
