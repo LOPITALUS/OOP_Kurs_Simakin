@@ -49,10 +49,9 @@
             // 
             // ExitAddMealForm
             // 
-            ExitAddMealForm.Location = new Point(80, 516);
-            ExitAddMealForm.Margin = new Padding(3, 4, 3, 4);
+            ExitAddMealForm.Location = new Point(70, 387);
             ExitAddMealForm.Name = "ExitAddMealForm";
-            ExitAddMealForm.Size = new Size(105, 33);
+            ExitAddMealForm.Size = new Size(92, 25);
             ExitAddMealForm.TabIndex = 1;
             ExitAddMealForm.Text = "Выход";
             ExitAddMealForm.UseVisualStyleBackColor = true;
@@ -61,104 +60,99 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(30, 87);
+            label2.Location = new Point(26, 65);
             label2.Name = "label2";
-            label2.Size = new Size(80, 20);
+            label2.Size = new Size(62, 15);
             label2.TabIndex = 2;
             label2.Text = "Название:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(30, 124);
+            label3.Location = new Point(26, 93);
             label3.Name = "label3";
-            label3.Size = new Size(55, 20);
+            label3.Size = new Size(45, 15);
             label3.TabIndex = 3;
             label3.Text = "Масса:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(30, 176);
+            label4.Location = new Point(26, 132);
             label4.Name = "label4";
-            label4.Size = new Size(95, 20);
+            label4.Size = new Size(77, 15);
             label4.TabIndex = 4;
             label4.Text = "Кол-во ккал:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(30, 217);
+            label5.Location = new Point(26, 163);
             label5.Name = "label5";
-            label5.Size = new Size(48, 20);
+            label5.Size = new Size(38, 15);
             label5.TabIndex = 5;
             label5.Text = "Цена:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(30, 267);
+            label6.Location = new Point(26, 200);
             label6.Name = "label6";
-            label6.Size = new Size(81, 20);
+            label6.Size = new Size(65, 15);
             label6.TabIndex = 6;
             label6.Text = "Вид кухни:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(30, 312);
+            label7.Location = new Point(26, 234);
             label7.Name = "label7";
-            label7.Size = new Size(87, 20);
+            label7.Size = new Size(69, 15);
             label7.TabIndex = 7;
             label7.Text = "Тип блюда:";
             // 
             // NewMealName
             // 
-            NewMealName.Location = new Point(118, 83);
-            NewMealName.Margin = new Padding(3, 4, 3, 4);
+            NewMealName.Location = new Point(103, 62);
             NewMealName.Name = "NewMealName";
-            NewMealName.Size = new Size(114, 27);
+            NewMealName.Size = new Size(100, 23);
             NewMealName.TabIndex = 8;
             // 
             // NewMealWeight
             // 
-            NewMealWeight.Location = new Point(95, 124);
-            NewMealWeight.Margin = new Padding(3, 4, 3, 4);
+            NewMealWeight.Location = new Point(83, 93);
             NewMealWeight.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             NewMealWeight.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             NewMealWeight.Name = "NewMealWeight";
-            NewMealWeight.Size = new Size(137, 27);
+            NewMealWeight.Size = new Size(120, 23);
             NewMealWeight.TabIndex = 9;
             NewMealWeight.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // NewMealKcal
             // 
-            NewMealKcal.Location = new Point(125, 173);
-            NewMealKcal.Margin = new Padding(3, 4, 3, 4);
+            NewMealKcal.Location = new Point(109, 130);
             NewMealKcal.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
             NewMealKcal.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             NewMealKcal.Name = "NewMealKcal";
-            NewMealKcal.Size = new Size(137, 27);
+            NewMealKcal.Size = new Size(120, 23);
             NewMealKcal.TabIndex = 10;
             NewMealKcal.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // NewMealPrice
             // 
-            NewMealPrice.Location = new Point(80, 215);
-            NewMealPrice.Margin = new Padding(3, 4, 3, 4);
+            NewMealPrice.Location = new Point(70, 161);
             NewMealPrice.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
             NewMealPrice.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             NewMealPrice.Name = "NewMealPrice";
-            NewMealPrice.Size = new Size(137, 27);
+            NewMealPrice.Size = new Size(120, 23);
             NewMealPrice.TabIndex = 11;
             NewMealPrice.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // ApplyAddMealForm
             // 
-            ApplyAddMealForm.Location = new Point(366, 519);
-            ApplyAddMealForm.Margin = new Padding(3, 4, 3, 4);
+            ApplyAddMealForm.Location = new Point(320, 389);
             ApplyAddMealForm.Name = "ApplyAddMealForm";
-            ApplyAddMealForm.Size = new Size(86, 31);
+            ApplyAddMealForm.Size = new Size(75, 23);
             ApplyAddMealForm.TabIndex = 14;
             ApplyAddMealForm.Text = "Добавить";
             ApplyAddMealForm.UseVisualStyleBackColor = true;
@@ -166,27 +160,27 @@
             // 
             // Cuisines
             // 
+            Cuisines.DropDownStyle = ComboBoxStyle.DropDownList;
             Cuisines.FormattingEnabled = true;
-            Cuisines.Location = new Point(111, 263);
-            Cuisines.Margin = new Padding(3, 4, 3, 4);
+            Cuisines.Location = new Point(97, 197);
             Cuisines.Name = "Cuisines";
-            Cuisines.Size = new Size(138, 28);
+            Cuisines.Size = new Size(121, 23);
             Cuisines.TabIndex = 15;
             // 
             // Categories
             // 
+            Categories.DropDownStyle = ComboBoxStyle.DropDownList;
             Categories.FormattingEnabled = true;
-            Categories.Location = new Point(111, 308);
-            Categories.Margin = new Padding(3, 4, 3, 4);
+            Categories.Location = new Point(97, 231);
             Categories.Name = "Categories";
-            Categories.Size = new Size(138, 28);
+            Categories.Size = new Size(121, 23);
             Categories.TabIndex = 16;
             // 
             // AddMealForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(Categories);
             Controls.Add(Cuisines);
             Controls.Add(ApplyAddMealForm);
@@ -201,7 +195,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(ExitAddMealForm);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "AddMealForm";
             Text = "Добавление нового блюда";
             Load += AddMealForm_Load;

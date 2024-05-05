@@ -35,6 +35,12 @@ namespace OOP_Kurs_Simakin
             string cuisine = Cuisines.Text;
             string category = Categories.Text;
 
+            if (name.Length == 0 || cuisine.Length == 0 || category.Length == 0)
+            {
+                MessageBox.Show("Все поля должны быть заполнены", "Уведомление");
+                return;
+            }
+
             using (kursContext db = new kursContext())
             {
                 Cuisine cuis = db.Cuisines.First(c => c.Name == cuisine);
