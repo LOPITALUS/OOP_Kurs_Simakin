@@ -27,19 +27,20 @@ namespace OOP_Kurs_Simakin
         {
             string new_category_name = NewCategoryName.Text;
             string new_category_descr = NewCategoryDescription.Text;
+
+            if (new_category_name.Length == 0 || new_category_descr.Length == 0)
+            {
+                MessageBox.Show("Все поля должны быть заполнены", "Уведомление");
+                return;
+            }
+
+
             Category new_category = new Category(new_category_name, new_category_descr);
-
             kursContext db = new kursContext();
-
-            // Проверка, что с заданными данными нет записи
 
             db.Categories.Add(new_category);
             db.SaveChanges();
-
-            // Обновить список в таблице со всеми категориями
-
-            // Обновить выпадающий список 
-
+            MessageBox.Show("Запись успешно добавлена", "Уведомление");
         }
 
         private void ExitAddCategoryForm_Click(object sender, EventArgs e)

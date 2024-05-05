@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace OOP_Kurs_Simakin
 {
@@ -21,14 +22,20 @@ namespace OOP_Kurs_Simakin
         {
             string new_cuisine_name = NewCuisineName.Text;
             string new_cuisine_descr = NewCuisineDescription.Text;
+
+            if (new_cuisine_name.Length == 0 || new_cuisine_descr.Length == 0)
+            {
+                MessageBox.Show("Все поля должны быть заполнены", "Уведомление");
+                return;
+            }
+
             Cuisine new_cuisine = new Cuisine(new_cuisine_name, new_cuisine_descr);
 
             kursContext db = new kursContext();
 
-            // Проверка, что с заданными данными нет записи
-
             db.Cuisines.Add(new_cuisine);
             db.SaveChanges();
+            MessageBox.Show("Запись успешно добавлена", "Уведомление");
         }
 
         private void ExitAddCuisineForm_Click(object sender, EventArgs e)
