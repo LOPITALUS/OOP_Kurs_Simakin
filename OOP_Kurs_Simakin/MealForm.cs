@@ -21,6 +21,10 @@ namespace OOP_Kurs_Simakin
 
         private void MealForm_Load(object sender, EventArgs e)
         {
+            using (kursContext db = new kursContext())
+            {
+                db.Database.EnsureCreated();
+            }
             ResetMealsDGV();
         }
 
