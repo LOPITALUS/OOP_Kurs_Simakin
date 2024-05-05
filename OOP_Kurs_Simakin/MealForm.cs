@@ -146,6 +146,7 @@ namespace OOP_Kurs_Simakin
         private void CancelFilters_Click(object sender, EventArgs e)
         {
             ResetMealsDGV();
+            MessageBox.Show("Все фильтры сняты\nТаблица показывает актуальную таблицу из БД", "Уведомление");
         }
 
         private void button6_Click(object sender, EventArgs e)
