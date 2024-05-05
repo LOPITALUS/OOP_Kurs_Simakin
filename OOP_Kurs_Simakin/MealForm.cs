@@ -43,7 +43,10 @@ namespace OOP_Kurs_Simakin
         {
             using (kursContext db = new kursContext())
             {
-                bool was_deleted = db.Database.EnsureDeleted();
+                if (db.Database.EnsureDeleted())
+                    MessageBox.Show("База данных успешно удалена!", "Уведомление");
+                else
+                    MessageBox.Show("База данных не существовало!", "Уведомление");
             }
             MealsTable.Rows.Clear();
         }
