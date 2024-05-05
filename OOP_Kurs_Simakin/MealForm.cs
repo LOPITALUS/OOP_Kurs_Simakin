@@ -196,6 +196,21 @@ namespace OOP_Kurs_Simakin
         {
             Close();
         }
+
+        private void WeightFilterMin_ValueChanged(object sender, EventArgs e)
+        {
+            WeightFilterMax.Minimum = WeightFilterMin.Value;
+        }
+
+        private void KcalFilterMin_ValueChanged(object sender, EventArgs e)
+        {
+            KcalFilterMax.Minimum = KcalFilterMin.Value;
+        }
+
+        private void PriceFilterMin_ValueChanged(object sender, EventArgs e)
+        {
+            PriceFilterMax.Minimum = PriceFilterMin.Value;
+        }
     }
 }
 

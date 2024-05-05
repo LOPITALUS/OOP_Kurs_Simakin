@@ -487,6 +487,7 @@
             WeightFilterMin.Name = "WeightFilterMin";
             WeightFilterMin.Size = new Size(40, 23);
             WeightFilterMin.TabIndex = 35;
+            WeightFilterMin.ValueChanged += WeightFilterMin_ValueChanged;
             // 
             // WeightFilterMax
             // 
@@ -511,6 +512,7 @@
             KcalFilterMin.Name = "KcalFilterMin";
             KcalFilterMin.Size = new Size(40, 23);
             KcalFilterMin.TabIndex = 38;
+            KcalFilterMin.ValueChanged += KcalFilterMin_ValueChanged;
             // 
             // PriceFilterMin
             // 
@@ -519,6 +521,7 @@
             PriceFilterMin.Name = "PriceFilterMin";
             PriceFilterMin.Size = new Size(40, 23);
             PriceFilterMin.TabIndex = 39;
+            PriceFilterMin.ValueChanged += PriceFilterMin_ValueChanged;
             // 
             // PriceFilterMax
             // 
