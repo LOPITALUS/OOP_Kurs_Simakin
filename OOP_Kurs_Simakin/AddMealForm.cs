@@ -51,8 +51,18 @@ namespace OOP_Kurs_Simakin
                 ref_to_parent_form.MealsTable.Rows.Add(new_meal.IdMeal, new_meal.Name, new_meal.Weight, new_meal.Kcal, new_meal.Price, new_meal.CuisineId, new_meal.CategoryId);
             }
             MessageBox.Show("Запись успешно добавлена", "Уведомление");
+            ClearInput();
         }
 
+        private void ClearInput()
+        {
+            NewMealName.Text = "";
+            NewMealWeight.Value = NewMealWeight.Minimum;
+            NewMealKcal.Value = NewMealKcal.Minimum;
+            NewMealPrice.Value = NewMealPrice.Minimum;
+            Cuisines.SelectedItem = null;
+            Categories.SelectedItem = null;
+        }
 
 
         private void AddMealForm_Load(object sender, EventArgs e)
