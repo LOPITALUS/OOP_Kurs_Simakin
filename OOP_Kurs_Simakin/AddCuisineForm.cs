@@ -36,6 +36,13 @@ namespace OOP_Kurs_Simakin
             db.Cuisines.Add(new_cuisine);
             db.SaveChanges();
             MessageBox.Show("Запись успешно добавлена", "Уведомление");
+            ClearInput();
+        }
+
+        private void ClearInput()
+        {
+            NewCuisineName.Text = "";
+            NewCuisineDescription.Text = "";
         }
 
         private void ExitAddCuisineForm_Click(object sender, EventArgs e)

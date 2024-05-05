@@ -41,6 +41,13 @@ namespace OOP_Kurs_Simakin
             db.Categories.Add(new_category);
             db.SaveChanges();
             MessageBox.Show("Запись успешно добавлена", "Уведомление");
+            ClearInput();
+        }
+
+        private void ClearInput()
+        {
+            NewCategoryName.Text = "";
+            NewCategoryDescription.Text = "";
         }
 
         private void ExitAddCategoryForm_Click(object sender, EventArgs e)

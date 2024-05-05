@@ -53,6 +53,8 @@ namespace OOP_Kurs_Simakin
             MessageBox.Show("Запись успешно добавлена", "Уведомление");
         }
 
+
+
         private void AddMealForm_Load(object sender, EventArgs e)
         {
             using (kursContext db = new kursContext())
