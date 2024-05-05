@@ -138,7 +138,8 @@ namespace OOP_Kurs_Simakin
                     MealEntityForm mef = new MealEntityForm(current_id, this);
                     mef.ShowDialog();
                 }
-                // else cout не существует
+                else
+                    MessageBox.Show("По данному ID нет записей", "Уведомление");
             }
         }
 
