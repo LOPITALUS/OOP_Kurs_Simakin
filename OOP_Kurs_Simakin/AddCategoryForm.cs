@@ -12,15 +12,10 @@ namespace OOP_Kurs_Simakin
 {
     public partial class AddCategoryForm : Form
     {
-        public AddCategoryForm()
+        public AddCategoryForm(CategoryForm _ref_to_parent_form)
         {
             InitializeComponent();
-        }
-
-        public AddCategoryForm(MealForm meal_form)
-        {
-            InitializeComponent();
-            ref_to_parent_form = meal_form;
+            ref_to_parent_form = _ref_to_parent_form;
         }
 
         private void ApplyAddCategoryForm_Click(object sender, EventArgs e)
@@ -41,6 +36,7 @@ namespace OOP_Kurs_Simakin
             db.Categories.Add(new_category);
             db.SaveChanges();
             MessageBox.Show("Запись успешно добавлена", "Уведомление");
+            ref_to_parent_form.CategoriesTable.Rows.Add(new_category.CategoryId, new_category.Name, new_category.Description);
             ClearInput();
         }
 
@@ -55,6 +51,6 @@ namespace OOP_Kurs_Simakin
             Close();
         }
 
-        private Form ref_to_parent_form;
+        private CategoryForm ref_to_parent_form;
     }
 }

@@ -13,9 +13,10 @@ namespace OOP_Kurs_Simakin
 {
     public partial class AddCuisineForm : Form
     {
-        public AddCuisineForm()
+        public AddCuisineForm(CuisineForm _ref_to_parent_form)
         {
             InitializeComponent();
+            ref_to_parent_form = _ref_to_parent_form;
         }
 
         private void ApplyAddCuisinelForm_Click(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace OOP_Kurs_Simakin
             db.Cuisines.Add(new_cuisine);
             db.SaveChanges();
             MessageBox.Show("Запись успешно добавлена", "Уведомление");
+            ref_to_parent_form.CuisinesTable.Rows.Add(new_cuisine.CuisineId, new_cuisine.Name, new_cuisine.Description);
             ClearInput();
         }
 
@@ -49,5 +51,7 @@ namespace OOP_Kurs_Simakin
         {
             Close();
         }
+    
+        private CuisineForm ref_to_parent_form;
     }
 }

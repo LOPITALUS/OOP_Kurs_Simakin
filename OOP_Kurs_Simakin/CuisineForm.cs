@@ -19,7 +19,7 @@ namespace OOP_Kurs_Simakin
 
         private void AddCuisineBtn_Click(object sender, EventArgs e)
         {
-            AddCuisineForm addCuisineForm = new AddCuisineForm();
+            AddCuisineForm addCuisineForm = new AddCuisineForm(this);
             addCuisineForm.ShowDialog();
         }
 

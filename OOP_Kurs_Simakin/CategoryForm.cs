@@ -19,7 +19,7 @@ namespace OOP_Kurs_Simakin
 
         private void AddCategoryBtn_Click(object sender, EventArgs e)
         {
-            AddCategoryForm addCuisineForm = new AddCategoryForm();
+            AddCategoryForm addCuisineForm = new AddCategoryForm(this);
             addCuisineForm.ShowDialog();
         }
 

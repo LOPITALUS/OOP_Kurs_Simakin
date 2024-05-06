@@ -95,7 +95,7 @@
         #endregion
 
         private Button AddCategoryBtn;
-        private DataGridView CategoriesTable;
+        public DataGridView CategoriesTable;
         private DataGridViewTextBoxColumn idCat;
         private DataGridViewTextBoxColumn nameCat;
         private DataGridViewTextBoxColumn descriptionCat;

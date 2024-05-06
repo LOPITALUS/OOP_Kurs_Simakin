@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             CuisinesTable = new DataGridView();
+            AddCuisineBtn = new Button();
             idCuis = new DataGridViewTextBoxColumn();
             nameCuis = new DataGridViewTextBoxColumn();
             descriptionCuis = new DataGridViewTextBoxColumn();
-            AddCuisineBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)CuisinesTable).BeginInit();
             SuspendLayout();
             // 
@@ -47,9 +47,19 @@
             CuisinesTable.Size = new Size(428, 188);
             CuisinesTable.TabIndex = 0;
             // 
+            // AddCuisineBtn
+            // 
+            AddCuisineBtn.Location = new Point(55, 521);
+            AddCuisineBtn.Name = "AddCuisineBtn";
+            AddCuisineBtn.Size = new Size(170, 36);
+            AddCuisineBtn.TabIndex = 1;
+            AddCuisineBtn.Text = "Добавить кухню";
+            AddCuisineBtn.UseVisualStyleBackColor = true;
+            AddCuisineBtn.Click += AddCuisineBtn_Click;
+            // 
             // idCuis
             // 
-            idCuis.HeaderText = "Название";
+            idCuis.HeaderText = "ID";
             idCuis.MinimumWidth = 6;
             idCuis.Name = "idCuis";
             idCuis.Width = 125;
@@ -68,16 +78,6 @@
             descriptionCuis.Name = "descriptionCuis";
             descriptionCuis.Width = 125;
             // 
-            // AddCuisineBtn
-            // 
-            AddCuisineBtn.Location = new Point(55, 521);
-            AddCuisineBtn.Name = "AddCuisineBtn";
-            AddCuisineBtn.Size = new Size(170, 36);
-            AddCuisineBtn.TabIndex = 1;
-            AddCuisineBtn.Text = "Добавить кухню";
-            AddCuisineBtn.UseVisualStyleBackColor = true;
-            AddCuisineBtn.Click += AddCuisineBtn_Click;
-            // 
             // CuisineForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -95,7 +95,7 @@
 
         #endregion
 
-        private DataGridView CuisinesTable;
+        public DataGridView CuisinesTable;
         private Button AddCuisineBtn;
         private DataGridViewTextBoxColumn idCuis;
         private DataGridViewTextBoxColumn nameCuis;
