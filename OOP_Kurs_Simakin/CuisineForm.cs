@@ -16,5 +16,28 @@ namespace OOP_Kurs_Simakin
         {
             InitializeComponent();
         }
+
+        private void AddCuisineBtn_Click(object sender, EventArgs e)
+        {
+            AddCuisineForm addCuisineForm = new AddCuisineForm();
+            addCuisineForm.ShowDialog();
+        }
+
+        private void CuisineForm_Load(object sender, EventArgs e)
+        {
+            ResetCuisineDGV();
+        }
+        private void ResetCuisineDGV()
+        {
+            CuisinesTable.Rows.Clear();
+            using (kursContext db = new kursContext())
+            {
+                var cuisines = db.Cuisines.ToList();
+                foreach (var cuisine in cuisines)
+                {
+                    CuisinesTable.Rows.Add(cuisine.CuisineId, cuisine.Name, cuisine.Description);
+                }
+            }
+        }
     }
 }

@@ -28,20 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            CuisinesTable = new DataGridView();
+            idCuis = new DataGridViewTextBoxColumn();
+            nameCuis = new DataGridViewTextBoxColumn();
+            descriptionCuis = new DataGridViewTextBoxColumn();
             AddCuisineBtn = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CuisinesTable).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // CuisinesTable
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(44, 46);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(300, 188);
-            dataGridView1.TabIndex = 0;
+            CuisinesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            CuisinesTable.Columns.AddRange(new DataGridViewColumn[] { idCuis, nameCuis, descriptionCuis });
+            CuisinesTable.Location = new Point(44, 46);
+            CuisinesTable.Name = "CuisinesTable";
+            CuisinesTable.RowHeadersWidth = 51;
+            CuisinesTable.RowTemplate.Height = 29;
+            CuisinesTable.Size = new Size(428, 188);
+            CuisinesTable.TabIndex = 0;
+            // 
+            // idCuis
+            // 
+            idCuis.HeaderText = "Название";
+            idCuis.MinimumWidth = 6;
+            idCuis.Name = "idCuis";
+            idCuis.Width = 125;
+            // 
+            // nameCuis
+            // 
+            nameCuis.HeaderText = "Название";
+            nameCuis.MinimumWidth = 6;
+            nameCuis.Name = "nameCuis";
+            nameCuis.Width = 125;
+            // 
+            // descriptionCuis
+            // 
+            descriptionCuis.HeaderText = "Описание";
+            descriptionCuis.MinimumWidth = 6;
+            descriptionCuis.Name = "descriptionCuis";
+            descriptionCuis.Width = 125;
             // 
             // AddCuisineBtn
             // 
@@ -51,6 +76,7 @@
             AddCuisineBtn.TabIndex = 1;
             AddCuisineBtn.Text = "Добавить кухню";
             AddCuisineBtn.UseVisualStyleBackColor = true;
+            AddCuisineBtn.Click += AddCuisineBtn_Click;
             // 
             // CuisineForm
             // 
@@ -58,17 +84,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
             Controls.Add(AddCuisineBtn);
-            Controls.Add(dataGridView1);
+            Controls.Add(CuisinesTable);
             Margin = new Padding(3, 4, 3, 4);
             Name = "CuisineForm";
             Text = "Виды кухонь ";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += CuisineForm_Load;
+            ((System.ComponentModel.ISupportInitialize)CuisinesTable).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView CuisinesTable;
         private Button AddCuisineBtn;
+        private DataGridViewTextBoxColumn idCuis;
+        private DataGridViewTextBoxColumn nameCuis;
+        private DataGridViewTextBoxColumn descriptionCuis;
     }
 }

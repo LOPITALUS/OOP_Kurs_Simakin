@@ -59,14 +59,14 @@ namespace OOP_Kurs_Simakin
 
         private void OpenCategoryForm_Click(object sender, EventArgs e)
         {
-            AddCategoryForm categoryForm = new AddCategoryForm();
+            CategoryForm categoryForm = new CategoryForm();
             categoryForm.ShowDialog();
         }
 
         private void OpenCuisineForm_Click(object sender, EventArgs e)
         {
-            AddCuisineForm addCuisineForm = new AddCuisineForm();
-            addCuisineForm.ShowDialog();
+            CuisineForm cuisineForm = new CuisineForm();
+            cuisineForm.ShowDialog();
         }
 
         public void ResetMealsDGV()
