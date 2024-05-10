@@ -47,5 +47,41 @@ namespace OOP_Kurs_Simakin
             CategoryEntityForm cef = new CategoryEntityForm(current_id, this);
             cef.ShowDialog();
         }
+
+        private void SearchNameButton_Click(object sender, EventArgs e)
+        {
+            CategoriesTable.Rows.Clear();
+            string current_name = NameForSearching.Text;
+            using (kursContext db = new kursContext())
+            {
+                var categories = db.Categories.ToList();
+                foreach (var category in categories)
+                {
+                    if (category.Name == current_name)
+                        CategoriesTable.Rows.Add(category.CategoryId, category.Name, category.Description);
+                }
+            }
+        }
+
+        private void SearchIdButton_Click(object sender, EventArgs e)
+        {
+            long current_id = (long)IdForSearching.Value;
+            using (kursContext db = new kursContext())
+            {
+                if (db.Categories.FirstOrDefault(c => c.CategoryId == current_id) != null)
+                {
+                    CategoryEntityForm cef = new CategoryEntityForm(current_id, this);
+                    cef.ShowDialog();
+                }
+                else
+                    MessageBox.Show("По данному ID нет записей", "Уведомление");
+            }
+        }
+
+        private void CancelFilters_Click(object sender, EventArgs e)
+        {
+            ResetCategoryDGV();
+            MessageBox.Show("Все фильтры сняты\nТаблица показывает актуальную таблицу из БД", "Уведомление");
+        }
     }
 }
