@@ -59,7 +59,7 @@ namespace OOP_Kurs_Simakin
 
         private void OpenCategoryForm_Click(object sender, EventArgs e)
         {
-            CategoryForm categoryForm = new CategoryForm();
+            CategoryForm categoryForm = new CategoryForm(this);
             categoryForm.ShowDialog();
         }
 

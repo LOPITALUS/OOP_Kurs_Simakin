@@ -12,9 +12,11 @@ namespace OOP_Kurs_Simakin
 {
     public partial class CategoryForm : Form
     {
-        public CategoryForm()
+        private MealForm ref_to_main_form;
+        public CategoryForm(MealForm _ref_to_main_form)
         {
             InitializeComponent();
+            ref_to_main_form = _ref_to_main_form;
         }
 
         private void AddCategoryBtn_Click(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace OOP_Kurs_Simakin
             if (e.RowIndex >= 0)
             {
                 long current_id = (long)CategoriesTable.Rows[e.RowIndex].Cells[0].Value;
-                CategoryEntityForm cef = new CategoryEntityForm(current_id, this);
+                CategoryEntityForm cef = new CategoryEntityForm(current_id, ref_to_main_form, this);
                 cef.ShowDialog();
             }
         }
@@ -73,7 +75,7 @@ namespace OOP_Kurs_Simakin
             {
                 if (db.Categories.FirstOrDefault(c => c.CategoryId == current_id) != null)
                 {
-                    CategoryEntityForm cef = new CategoryEntityForm(current_id, this);
+                    CategoryEntityForm cef = new CategoryEntityForm(current_id, ref_to_main_form, this);
                     cef.ShowDialog();
                 }
                 else
