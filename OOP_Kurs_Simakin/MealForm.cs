@@ -106,13 +106,6 @@ namespace OOP_Kurs_Simakin
 
         }
 
-        private void MealsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            long current_id = (long)MealsTable.Rows[e.RowIndex].Cells[0].Value;
-            MealEntityForm mef = new MealEntityForm(current_id, this);
-            mef.ShowDialog();
-        }
-
         private void SearchNameButton_Click(object sender, EventArgs e)
         {
             MealsTable.Rows.Clear();
@@ -211,6 +204,13 @@ namespace OOP_Kurs_Simakin
         private void PriceFilterMin_ValueChanged(object sender, EventArgs e)
         {
             PriceFilterMax.Minimum = PriceFilterMin.Value;
+        }
+
+        private void MealsTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            long current_id = (long)MealsTable.Rows[e.RowIndex].Cells[0].Value;
+            MealEntityForm mef = new MealEntityForm(current_id, this);
+            mef.ShowDialog();
         }
     }
 }
