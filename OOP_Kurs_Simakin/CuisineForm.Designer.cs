@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             CuisinesTable = new DataGridView();
-            AddCuisineBtn = new Button();
             idCuis = new DataGridViewTextBoxColumn();
             nameCuis = new DataGridViewTextBoxColumn();
             descriptionCuis = new DataGridViewTextBoxColumn();
+            AddCuisineBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)CuisinesTable).BeginInit();
             SuspendLayout();
             // 
@@ -40,22 +40,12 @@
             // 
             CuisinesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CuisinesTable.Columns.AddRange(new DataGridViewColumn[] { idCuis, nameCuis, descriptionCuis });
-            CuisinesTable.Location = new Point(44, 46);
+            CuisinesTable.Location = new Point(218, 60);
             CuisinesTable.Name = "CuisinesTable";
             CuisinesTable.RowHeadersWidth = 51;
             CuisinesTable.RowTemplate.Height = 29;
             CuisinesTable.Size = new Size(428, 188);
             CuisinesTable.TabIndex = 0;
-            // 
-            // AddCuisineBtn
-            // 
-            AddCuisineBtn.Location = new Point(55, 521);
-            AddCuisineBtn.Name = "AddCuisineBtn";
-            AddCuisineBtn.Size = new Size(170, 36);
-            AddCuisineBtn.TabIndex = 1;
-            AddCuisineBtn.Text = "Добавить кухню";
-            AddCuisineBtn.UseVisualStyleBackColor = true;
-            AddCuisineBtn.Click += AddCuisineBtn_Click;
             // 
             // idCuis
             // 
@@ -77,6 +67,16 @@
             descriptionCuis.MinimumWidth = 6;
             descriptionCuis.Name = "descriptionCuis";
             descriptionCuis.Width = 125;
+            // 
+            // AddCuisineBtn
+            // 
+            AddCuisineBtn.Location = new Point(55, 521);
+            AddCuisineBtn.Name = "AddCuisineBtn";
+            AddCuisineBtn.Size = new Size(170, 36);
+            AddCuisineBtn.TabIndex = 1;
+            AddCuisineBtn.Text = "Добавить кухню";
+            AddCuisineBtn.UseVisualStyleBackColor = true;
+            AddCuisineBtn.Click += AddCuisineBtn_Click;
             // 
             // CuisineForm
             // 

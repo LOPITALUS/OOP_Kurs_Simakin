@@ -54,8 +54,10 @@
             CategoriesTable.Name = "CategoriesTable";
             CategoriesTable.RowHeadersWidth = 51;
             CategoriesTable.RowTemplate.Height = 29;
+            CategoriesTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CategoriesTable.Size = new Size(428, 188);
             CategoriesTable.TabIndex = 1;
+            CategoriesTable.CellClick += CategoriesTable_CellClick;
             // 
             // idCat
             // 

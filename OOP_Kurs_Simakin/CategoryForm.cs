@@ -40,5 +40,12 @@ namespace OOP_Kurs_Simakin
                 }
             }
         }
+
+        private void CategoriesTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            long current_id = (long)CategoriesTable.Rows[e.RowIndex].Cells[0].Value;
+            CategoryEntityForm cef = new CategoryEntityForm(current_id, this);
+            cef.ShowDialog();
+        }
     }
 }
