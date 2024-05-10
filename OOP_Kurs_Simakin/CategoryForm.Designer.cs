@@ -56,6 +56,8 @@
             // 
             // CategoriesTable
             // 
+            CategoriesTable.AllowUserToAddRows = false;
+            CategoriesTable.AllowUserToDeleteRows = false;
             CategoriesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CategoriesTable.Columns.AddRange(new DataGridViewColumn[] { idCat, nameCat, descriptionCat });
             CategoriesTable.Location = new Point(46, 38);

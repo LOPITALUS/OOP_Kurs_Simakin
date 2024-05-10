@@ -228,6 +228,8 @@
             // 
             // MealsTable
             // 
+            MealsTable.AllowUserToAddRows = false;
+            MealsTable.AllowUserToDeleteRows = false;
             MealsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             MealsTable.Columns.AddRange(new DataGridViewColumn[] { ID, NameColumn, WeightColumn, KcalColumn, PriceColumn, CuisineColumn, CategoryColumn });
             MealsTable.Location = new Point(14, 75);

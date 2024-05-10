@@ -46,6 +46,8 @@
             // 
             // CuisinesTable
             // 
+            CuisinesTable.AllowUserToAddRows = false;
+            CuisinesTable.AllowUserToDeleteRows = false;
             CuisinesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CuisinesTable.Columns.AddRange(new DataGridViewColumn[] { idCuis, nameCuis, descriptionCuis });
             CuisinesTable.Location = new Point(55, 47);
