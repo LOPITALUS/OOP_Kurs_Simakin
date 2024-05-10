@@ -42,9 +42,12 @@ namespace OOP_Kurs_Simakin
 
         private void CuisinesTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            long current_id = (long)CuisinesTable.Rows[e.RowIndex].Cells[0].Value;
-            CuisineEntityForm cef = new CuisineEntityForm(current_id, this);
-            cef.ShowDialog();
+            if (e.RowIndex >= 0)
+            {
+                long current_id = (long)CuisinesTable.Rows[e.RowIndex].Cells[0].Value;
+                CuisineEntityForm cef = new CuisineEntityForm(current_id, this);
+                cef.ShowDialog();
+            }
         }
 
         private void SearchNameButton_Click(object sender, EventArgs e)
