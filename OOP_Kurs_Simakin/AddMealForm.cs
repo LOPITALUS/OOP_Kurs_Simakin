@@ -29,9 +29,9 @@ namespace OOP_Kurs_Simakin
         private void ApplyAddMealForm_Click(object sender, EventArgs e)
         {
             string name = NewMealName.Text;
-            int weight = (int)NewMealWeight.Value;
-            int kcal = (int)NewMealKcal.Value;
-            int price = (int)NewMealPrice.Value;
+            double weight = (double)NewMealWeight.Value;
+            double kcal = (double)NewMealKcal.Value;
+            double price = (double)NewMealPrice.Value;
             string cuisine = Cuisines.Text;
             string category = Categories.Text;
 

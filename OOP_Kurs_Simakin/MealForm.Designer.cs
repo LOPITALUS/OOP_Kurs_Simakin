@@ -483,53 +483,59 @@
             // 
             // WeightFilterMin
             // 
+            WeightFilterMin.DecimalPlaces = 5;
             WeightFilterMin.Location = new Point(1055, 455);
             WeightFilterMin.Name = "WeightFilterMin";
-            WeightFilterMin.Size = new Size(46, 27);
+            WeightFilterMin.Size = new Size(77, 27);
             WeightFilterMin.TabIndex = 35;
             WeightFilterMin.ValueChanged += WeightFilterMin_ValueChanged;
             // 
             // WeightFilterMax
             // 
-            WeightFilterMax.Location = new Point(1151, 455);
+            WeightFilterMax.DecimalPlaces = 5;
+            WeightFilterMax.Location = new Point(1186, 455);
             WeightFilterMax.Name = "WeightFilterMax";
-            WeightFilterMax.Size = new Size(46, 27);
+            WeightFilterMax.Size = new Size(82, 27);
             WeightFilterMax.TabIndex = 36;
             // 
             // KcalFilterMax
             // 
-            KcalFilterMax.Location = new Point(1151, 483);
+            KcalFilterMax.DecimalPlaces = 5;
+            KcalFilterMax.Location = new Point(1186, 483);
             KcalFilterMax.Name = "KcalFilterMax";
-            KcalFilterMax.Size = new Size(46, 27);
+            KcalFilterMax.Size = new Size(82, 27);
             KcalFilterMax.TabIndex = 37;
             // 
             // KcalFilterMin
             // 
+            KcalFilterMin.DecimalPlaces = 5;
             KcalFilterMin.Location = new Point(1055, 483);
             KcalFilterMin.Name = "KcalFilterMin";
-            KcalFilterMin.Size = new Size(46, 27);
+            KcalFilterMin.Size = new Size(77, 27);
             KcalFilterMin.TabIndex = 38;
             KcalFilterMin.ValueChanged += KcalFilterMin_ValueChanged;
             // 
             // PriceFilterMin
             // 
+            PriceFilterMin.DecimalPlaces = 5;
             PriceFilterMin.Location = new Point(1055, 509);
             PriceFilterMin.Name = "PriceFilterMin";
-            PriceFilterMin.Size = new Size(46, 27);
+            PriceFilterMin.Size = new Size(77, 27);
             PriceFilterMin.TabIndex = 39;
             PriceFilterMin.ValueChanged += PriceFilterMin_ValueChanged;
             // 
             // PriceFilterMax
             // 
-            PriceFilterMax.Location = new Point(1151, 509);
+            PriceFilterMax.DecimalPlaces = 5;
+            PriceFilterMax.Location = new Point(1186, 509);
             PriceFilterMax.Name = "PriceFilterMax";
-            PriceFilterMax.Size = new Size(46, 27);
+            PriceFilterMax.Size = new Size(82, 27);
             PriceFilterMax.TabIndex = 40;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(1107, 457);
+            label7.Location = new Point(1142, 457);
             label7.Name = "label7";
             label7.Size = new Size(26, 20);
             label7.TabIndex = 41;
@@ -538,7 +544,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(1107, 485);
+            label8.Location = new Point(1142, 485);
             label8.Name = "label8";
             label8.Size = new Size(26, 20);
             label8.TabIndex = 42;
@@ -547,7 +553,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(1107, 517);
+            label9.Location = new Point(1142, 517);
             label9.Name = "label9";
             label9.Size = new Size(26, 20);
             label9.TabIndex = 43;
