@@ -24,15 +24,28 @@ namespace OOP_Kurs_Simakin
 
         private void ApplyChanges_Click(object sender, EventArgs e)
         {
+            string name = EditedMealName.Text;
+            double weight = (double)EditedMealWeight.Value;
+            double kcal = (double)EditedMealKcal.Value;
+            double price = (double)EditedMealPrice.Value;
+            string cuisine = EditedMealCuisines.Text;
+            string category = EditedMealCategories.Text;
+
+            if (name.Length == 0 || cuisine.Length == 0 || category.Length == 0)
+            {
+                MessageBox.Show("Все поля должны быть заполнены", "Уведомление");
+                return;
+            }
+
             using (kursContext db = new kursContext())
             {
                 Meal meal = db.Meals.First(e => e.IdMeal == id);
-                meal.Name = EditedMealName.Text;
-                meal.Weight = (int)EditedMealWeight.Value;
-                meal.Kcal = (int)EditedMealKcal.Value;
-                meal.Price = (int)EditedMealPrice.Value;
-                Cuisine cuis = db.Cuisines.First(c => c.Name == EditedMealCuisines.Text);
-                Category cat = db.Categories.First(c => c.Name == EditedMealCategories.Text);
+                meal.Name = name;
+                meal.Weight = weight;
+                meal.Kcal = kcal;
+                meal.Price = price;
+                Cuisine cuis = db.Cuisines.First(c => c.Name == cuisine);
+                Category cat = db.Categories.First(c => c.Name == category);
                 meal.Cuisine = cuis;
                 meal.Category = cat;
                 db.SaveChanges();
