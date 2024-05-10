@@ -127,10 +127,10 @@
             // 
             // SetFiltersButton
             // 
-            SetFiltersButton.Location = new Point(991, 548);
+            SetFiltersButton.Location = new Point(1042, 548);
             SetFiltersButton.Margin = new Padding(3, 4, 3, 4);
             SetFiltersButton.Name = "SetFiltersButton";
-            SetFiltersButton.Size = new Size(110, 43);
+            SetFiltersButton.Size = new Size(106, 36);
             SetFiltersButton.TabIndex = 5;
             SetFiltersButton.Text = "Применить";
             SetFiltersButton.UseVisualStyleBackColor = true;
@@ -143,6 +143,7 @@
             NameForSearching.Name = "NameForSearching";
             NameForSearching.Size = new Size(114, 27);
             NameForSearching.TabIndex = 7;
+            NameForSearching.TextChanged += NameForSearching_TextChanged;
             // 
             // SearchIdButton
             // 
@@ -304,6 +305,7 @@
             label1.Size = new Size(155, 20);
             label1.TabIndex = 16;
             label1.Text = "Поиск по названию: ";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -313,6 +315,7 @@
             label2.Size = new Size(96, 20);
             label2.TabIndex = 17;
             label2.Text = "Поиск по ID:";
+            label2.Click += label2_Click;
             // 
             // IdForSearching
             // 
@@ -321,6 +324,7 @@
             IdForSearching.Name = "IdForSearching";
             IdForSearching.Size = new Size(150, 27);
             IdForSearching.TabIndex = 18;
+            IdForSearching.ValueChanged += IdForSearching_ValueChanged;
             // 
             // SearchNameButton
             // 

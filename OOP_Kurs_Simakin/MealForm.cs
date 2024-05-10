@@ -212,6 +212,23 @@ namespace OOP_Kurs_Simakin
             MealEntityForm mef = new MealEntityForm(current_id, this);
             mef.ShowDialog();
         }
+
+        private void IdForSearching_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void NameForSearching_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }
 
