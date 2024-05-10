@@ -78,9 +78,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(23, 30);
             label1.Name = "label1";
-            label1.Size = new Size(244, 20);
+            label1.Size = new Size(196, 20);
             label1.TabIndex = 7;
-            label1.Text = "Название новой категории блюд:";
+            label1.Text = "Название категории блюд:";
             // 
             // Delete
             // 

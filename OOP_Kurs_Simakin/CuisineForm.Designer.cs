@@ -44,8 +44,10 @@
             CuisinesTable.Name = "CuisinesTable";
             CuisinesTable.RowHeadersWidth = 51;
             CuisinesTable.RowTemplate.Height = 29;
+            CuisinesTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CuisinesTable.Size = new Size(428, 188);
             CuisinesTable.TabIndex = 0;
+            CuisinesTable.CellClick += CuisinesTable_CellClick;
             // 
             // idCuis
             // 
