@@ -40,11 +40,15 @@
             NewMealKcal = new NumericUpDown();
             NewMealPrice = new NumericUpDown();
             ApplyAddMealForm = new Button();
-            Cuisines = new ComboBox();
-            Categories = new ComboBox();
+            CuisineId = new NumericUpDown();
+            CategoryId = new NumericUpDown();
+            OpenCategoriesForm = new Button();
+            OpenCuisinesForm = new Button();
             ((System.ComponentModel.ISupportInitialize)NewMealWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NewMealKcal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NewMealPrice).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CuisineId).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CategoryId).BeginInit();
             SuspendLayout();
             // 
             // ExitAddMealForm
@@ -99,18 +103,18 @@
             label6.AutoSize = true;
             label6.Location = new Point(30, 267);
             label6.Name = "label6";
-            label6.Size = new Size(81, 20);
+            label6.Size = new Size(110, 20);
             label6.TabIndex = 6;
-            label6.Text = "Вид кухни:";
+            label6.Text = "Вид кухни (ID):";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(30, 311);
             label7.Name = "label7";
-            label7.Size = new Size(133, 20);
+            label7.Size = new Size(162, 20);
             label7.TabIndex = 7;
-            label7.Text = "Категория блюда:";
+            label7.Text = "Категория блюда (ID):";
             // 
             // NewMealName
             // 
@@ -158,7 +162,7 @@
             // 
             // ApplyAddMealForm
             // 
-            ApplyAddMealForm.Location = new Point(366, 519);
+            ApplyAddMealForm.Location = new Point(384, 523);
             ApplyAddMealForm.Margin = new Padding(3, 4, 3, 4);
             ApplyAddMealForm.Name = "ApplyAddMealForm";
             ApplyAddMealForm.Size = new Size(86, 31);
@@ -167,33 +171,47 @@
             ApplyAddMealForm.UseVisualStyleBackColor = true;
             ApplyAddMealForm.Click += ApplyAddMealForm_Click;
             // 
-            // Cuisines
+            // CuisineId
             // 
-            Cuisines.DropDownStyle = ComboBoxStyle.DropDownList;
-            Cuisines.FormattingEnabled = true;
-            Cuisines.Location = new Point(111, 263);
-            Cuisines.Margin = new Padding(3, 4, 3, 4);
-            Cuisines.Name = "Cuisines";
-            Cuisines.Size = new Size(138, 28);
-            Cuisines.TabIndex = 15;
+            CuisineId.Location = new Point(146, 265);
+            CuisineId.Name = "CuisineId";
+            CuisineId.Size = new Size(150, 27);
+            CuisineId.TabIndex = 16;
             // 
-            // Categories
+            // CategoryId
             // 
-            Categories.DropDownStyle = ComboBoxStyle.DropDownList;
-            Categories.FormattingEnabled = true;
-            Categories.Location = new Point(169, 308);
-            Categories.Margin = new Padding(3, 4, 3, 4);
-            Categories.Name = "Categories";
-            Categories.Size = new Size(138, 28);
-            Categories.TabIndex = 16;
+            CategoryId.Location = new Point(198, 311);
+            CategoryId.Name = "CategoryId";
+            CategoryId.Size = new Size(150, 27);
+            CategoryId.TabIndex = 17;
+            // 
+            // OpenCategoriesForm
+            // 
+            OpenCategoriesForm.Location = new Point(740, 164);
+            OpenCategoriesForm.Name = "OpenCategoriesForm";
+            OpenCategoriesForm.Size = new Size(162, 56);
+            OpenCategoriesForm.TabIndex = 18;
+            OpenCategoriesForm.Text = "Открыть категории блюд";
+            OpenCategoriesForm.UseVisualStyleBackColor = true;
+            // 
+            // OpenCuisinesForm
+            // 
+            OpenCuisinesForm.Location = new Point(740, 244);
+            OpenCuisinesForm.Name = "OpenCuisinesForm";
+            OpenCuisinesForm.Size = new Size(162, 55);
+            OpenCuisinesForm.TabIndex = 19;
+            OpenCuisinesForm.Text = "Открыть виды кухонь";
+            OpenCuisinesForm.UseVisualStyleBackColor = true;
             // 
             // AddMealForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
-            Controls.Add(Categories);
-            Controls.Add(Cuisines);
+            Controls.Add(OpenCuisinesForm);
+            Controls.Add(OpenCategoriesForm);
+            Controls.Add(CategoryId);
+            Controls.Add(CuisineId);
             Controls.Add(ApplyAddMealForm);
             Controls.Add(NewMealPrice);
             Controls.Add(NewMealKcal);
@@ -209,10 +227,11 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "AddMealForm";
             Text = "Добавление нового блюда";
-            Load += AddMealForm_Load;
             ((System.ComponentModel.ISupportInitialize)NewMealWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)NewMealKcal).EndInit();
             ((System.ComponentModel.ISupportInitialize)NewMealPrice).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CuisineId).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CategoryId).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -230,7 +249,9 @@
         private NumericUpDown NewMealKcal;
         private NumericUpDown NewMealPrice;
         private Button ApplyAddMealForm;
-        private ComboBox Cuisines;
-        private ComboBox Categories;
+        private NumericUpDown CuisineId;
+        private NumericUpDown CategoryId;
+        private Button OpenCategoriesForm;
+        private Button OpenCuisinesForm;
     }
 }

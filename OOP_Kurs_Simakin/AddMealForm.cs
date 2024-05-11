@@ -32,10 +32,10 @@ namespace OOP_Kurs_Simakin
             double weight = (double)NewMealWeight.Value;
             double kcal = (double)NewMealKcal.Value;
             double price = (double)NewMealPrice.Value;
-            string cuisine = Cuisines.Text;
-            string category = Categories.Text;
+            long cuisine_id = (long)CuisineId.Value;
+            long category_id = (long)CategoryId.Value;
 
-            if (name.Length == 0 || cuisine.Length == 0 || category.Length == 0)
+            if (name.Length == 0)
             {
                 MessageBox.Show("Все поля должны быть заполнены", "Уведомление");
                 return;
@@ -43,8 +43,18 @@ namespace OOP_Kurs_Simakin
 
             using (kursContext db = new kursContext())
             {
-                Cuisine cuis = db.Cuisines.First(c => c.Name == cuisine);
-                Category cat = db.Categories.First(c => c.Name == category);
+                Cuisine cuis = db.Cuisines.FirstOrDefault(c => c.CuisineId == cuisine_id);
+                Category cat = db.Categories.FirstOrDefault(c => c.CategoryId == category_id);
+                if (cuis == null)
+                {
+                    MessageBox.Show("Вида кухни с заданным ID не существует", "Уведомление");
+                    return;
+                }
+                if (cat == null)
+                {
+                    MessageBox.Show("Категории блюд с заданным ID не существует", "Уведомление");
+                    return;
+                }
                 Meal new_meal = new Meal { Name = name, Weight = weight, Kcal = kcal, Price = price, Category = cat, Cuisine = cuis };
                 db.Meals.Add(new_meal);
                 db.SaveChanges();
@@ -60,28 +70,28 @@ namespace OOP_Kurs_Simakin
             NewMealWeight.Value = NewMealWeight.Minimum;
             NewMealKcal.Value = NewMealKcal.Minimum;
             NewMealPrice.Value = NewMealPrice.Minimum;
-            Cuisines.SelectedItem = null;
-            Categories.SelectedItem = null;
+            CuisineId.Value = CuisineId.Minimum;
+            CategoryId.Value = CategoryId.Minimum;
         }
 
 
-        private void AddMealForm_Load(object sender, EventArgs e)
-        {
-            using (kursContext db = new kursContext())
-            {
-                var cuisines = db.Cuisines.Select(c => c.Name).ToList();
-                foreach (var c in cuisines)
-                {
-                    Cuisines.Items.Add(c);
-                }
+        //private void AddMealForm_Load(object sender, EventArgs e)
+        //{
+        //    using (kursContext db = new kursContext())
+        //    {
+        //        var cuisines = db.Cuisines.Select(c => c.Name).ToList();
+        //        foreach (var c in cuisines)
+        //        {
+        //            Cuisines.Items.Add(c);
+        //        }
 
-                var categoties = db.Categories.Select(c => c.Name).ToList();
-                foreach (var c in categoties)
-                {
-                    Categories.Items.Add(c);
-                }
-            }
-        }
+        //        var categoties = db.Categories.Select(c => c.Name).ToList();
+        //        foreach (var c in categoties)
+        //        {
+        //            Categories.Items.Add(c);
+        //        }
+        //    }
+        //}
 
         private MealForm ref_to_parent_form;
     }
