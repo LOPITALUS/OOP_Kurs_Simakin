@@ -12,9 +12,11 @@ namespace OOP_Kurs_Simakin
 {
     public partial class CuisineForm : Form
     {
-        public CuisineForm()
+        private MealForm ref_to_main_form;
+        public CuisineForm(MealForm _ref_to_main_form)
         {
             InitializeComponent();
+            ref_to_main_form = _ref_to_main_form;
         }
 
         private void AddCuisineBtn_Click(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace OOP_Kurs_Simakin
             if (e.RowIndex >= 0)
             {
                 long current_id = (long)CuisinesTable.Rows[e.RowIndex].Cells[0].Value;
-                CuisineEntityForm cef = new CuisineEntityForm(current_id, this);
+                CuisineEntityForm cef = new CuisineEntityForm(current_id, ref_to_main_form, this);
                 cef.ShowDialog();
             }
         }
@@ -72,7 +74,7 @@ namespace OOP_Kurs_Simakin
             {
                 if (db.Cuisines.FirstOrDefault(c => c.CuisineId == current_id) != null)
                 {
-                    CuisineEntityForm cef = new CuisineEntityForm(current_id, this);
+                    CuisineEntityForm cef = new CuisineEntityForm(current_id, ref_to_main_form, this);
                     cef.ShowDialog();
                 }
                 else

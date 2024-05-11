@@ -14,11 +14,13 @@ namespace OOP_Kurs_Simakin
     public partial class CuisineEntityForm : Form
     {
         private long id;
+        private MealForm ref_to_main_form;
         private CuisineForm ref_to_parent_form;
-        public CuisineEntityForm(long _id, CuisineForm _ref_to_parent_form)
+        public CuisineEntityForm(long _id, MealForm _ref_to_main_form, CuisineForm _ref_to_parent_form)
         {
             InitializeComponent();
             id = _id;
+            ref_to_main_form = _ref_to_main_form;
             ref_to_parent_form = _ref_to_parent_form;
         }
 
@@ -78,9 +80,11 @@ namespace OOP_Kurs_Simakin
                 {
                     ref_to_parent_form.CuisinesTable.Rows.RemoveAt(i);
                     Close();
-                    return;
+                    break;
                 }
             }
+
+            ref_to_main_form.ResetMealsDGV();
         }
 
         private void CuisineEntityForm_Load(object sender, EventArgs e)

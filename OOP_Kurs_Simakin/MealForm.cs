@@ -65,7 +65,7 @@ namespace OOP_Kurs_Simakin
 
         private void OpenCuisineForm_Click(object sender, EventArgs e)
         {
-            CuisineForm cuisineForm = new CuisineForm();
+            CuisineForm cuisineForm = new CuisineForm(this);
             cuisineForm.ShowDialog();
         }
 

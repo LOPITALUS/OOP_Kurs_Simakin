@@ -106,11 +106,11 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(30, 312);
+            label7.Location = new Point(30, 311);
             label7.Name = "label7";
-            label7.Size = new Size(87, 20);
+            label7.Size = new Size(133, 20);
             label7.TabIndex = 7;
-            label7.Text = "Тип блюда:";
+            label7.Text = "Категория блюда:";
             // 
             // NewMealName
             // 
@@ -181,7 +181,7 @@
             // 
             Categories.DropDownStyle = ComboBoxStyle.DropDownList;
             Categories.FormattingEnabled = true;
-            Categories.Location = new Point(111, 308);
+            Categories.Location = new Point(169, 308);
             Categories.Margin = new Padding(3, 4, 3, 4);
             Categories.Name = "Categories";
             Categories.Size = new Size(138, 28);
