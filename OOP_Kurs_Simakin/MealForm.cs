@@ -37,6 +37,7 @@ namespace OOP_Kurs_Simakin
                 else
                     MessageBox.Show("База данных уже существует!", "Уведомление");
             }
+            EnableButtons(true);
         }
 
         private void DeleteDb_Click(object sender, EventArgs e)
@@ -45,10 +46,9 @@ namespace OOP_Kurs_Simakin
             {
                 if (db.Database.EnsureDeleted())
                     MessageBox.Show("База данных успешно удалена!", "Уведомление");
-                else
-                    MessageBox.Show("База данных не существовало!", "Уведомление");
             }
             MealsTable.Rows.Clear();
+            EnableButtons(false);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -214,6 +214,16 @@ namespace OOP_Kurs_Simakin
                 MealEntityForm mef = new MealEntityForm(current_id, this);
                 mef.ShowDialog();
             }
+        }
+
+        private void EnableButtons(bool enable)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button)
+                    c.Enabled = enable;
+            }
+            CreateDb.Enabled = true;
         }
 
         private void IdForSearching_ValueChanged(object sender, EventArgs e)

@@ -20,11 +20,6 @@
             base.Dispose(disposing);
         }
 
-        /* public DataGridView GetMealsDGV()
-         {
-             return MealsTable;
-         }*/
-
         #region Windows Form Designer generated code
 
         /// <summary>
