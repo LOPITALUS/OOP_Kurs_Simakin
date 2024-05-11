@@ -35,44 +35,52 @@
             // 
             // button1
             // 
-            button1.Location = new Point(67, 189);
+            button1.BackColor = SystemColors.Info;
+            button1.Location = new Point(139, 248);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(86, 31);
             button1.TabIndex = 0;
             button1.Text = "Ок!";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(32, 43);
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(76, 60);
             label1.Name = "label1";
-            label1.Size = new Size(144, 15);
+            label1.Size = new Size(207, 27);
             label1.TabIndex = 1;
             label1.Text = "Приложение БД \"Меню\"";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(32, 76);
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(23, 102);
             label2.Name = "label2";
-            label2.Size = new Size(230, 15);
+            label2.Size = new Size(319, 20);
             label2.TabIndex = 2;
             label2.Text = "Разработал: Симакин Константин 22ВП1";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // WelcomeForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(282, 244);
+            BackColor = SystemColors.GradientInactiveCaption;
+            ClientSize = new Size(366, 325);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "WelcomeForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "О программе";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
