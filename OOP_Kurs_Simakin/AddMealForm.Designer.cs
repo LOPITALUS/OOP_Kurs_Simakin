@@ -193,6 +193,7 @@
             OpenCategoriesForm.TabIndex = 18;
             OpenCategoriesForm.Text = "Открыть категории блюд";
             OpenCategoriesForm.UseVisualStyleBackColor = true;
+            OpenCategoriesForm.Click += OpenCategoriesForm_Click;
             // 
             // OpenCuisinesForm
             // 
@@ -202,6 +203,7 @@
             OpenCuisinesForm.TabIndex = 19;
             OpenCuisinesForm.Text = "Открыть виды кухонь";
             OpenCuisinesForm.UseVisualStyleBackColor = true;
+            OpenCuisinesForm.Click += OpenCuisinesForm_Click;
             // 
             // AddMealForm
             // 

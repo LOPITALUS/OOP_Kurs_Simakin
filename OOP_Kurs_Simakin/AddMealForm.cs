@@ -94,5 +94,17 @@ namespace OOP_Kurs_Simakin
         //}
 
         private MealForm ref_to_parent_form;
+
+        private void OpenCategoriesForm_Click(object sender, EventArgs e)
+        {
+            CategoryForm categoryForm = new CategoryForm(ref_to_parent_form);
+            categoryForm.ShowDialog();
+        }
+
+        private void OpenCuisinesForm_Click(object sender, EventArgs e)
+        {
+            CuisineForm cuisineForm = new CuisineForm(ref_to_parent_form);
+            cuisineForm.ShowDialog();
+        }
     }
 }
