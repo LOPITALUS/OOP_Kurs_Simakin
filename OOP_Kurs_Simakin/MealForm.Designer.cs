@@ -39,14 +39,6 @@
             fileSystemWatcher1 = new FileSystemWatcher();
             OpenCuisineForm = new Button();
             OpenCategoryForm = new Button();
-            MealsTable = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            NameColumn = new DataGridViewTextBoxColumn();
-            WeightColumn = new DataGridViewTextBoxColumn();
-            KcalColumn = new DataGridViewTextBoxColumn();
-            PriceColumn = new DataGridViewTextBoxColumn();
-            CuisineColumn = new DataGridViewTextBoxColumn();
-            CategoryColumn = new DataGridViewTextBoxColumn();
             label1 = new Label();
             label2 = new Label();
             IdForSearching = new NumericUpDown();
@@ -80,11 +72,18 @@
             label12 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
-            panel3 = new Panel();
             label13 = new Label();
+            panel3 = new Panel();
             label14 = new Label();
+            MealsTable = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            NameColumn = new DataGridViewTextBoxColumn();
+            WeightColumn = new DataGridViewTextBoxColumn();
+            KcalColumn = new DataGridViewTextBoxColumn();
+            PriceColumn = new DataGridViewTextBoxColumn();
+            CuisineColumn = new DataGridViewTextBoxColumn();
+            CategoryColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)MealsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMax).BeginInit();
@@ -95,10 +94,12 @@
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)MealsTable).BeginInit();
             SuspendLayout();
             // 
             // Exit
             // 
+            Exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             Exit.BackColor = SystemColors.Info;
             Exit.Location = new Point(1346, 563);
             Exit.Margin = new Padding(3, 4, 3, 4);
@@ -111,7 +112,7 @@
             // 
             // CuisineLabel
             // 
-            CuisineLabel.AutoSize = true;
+            CuisineLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             CuisineLabel.Location = new Point(94, 95);
             CuisineLabel.Name = "CuisineLabel";
             CuisineLabel.Size = new Size(0, 20);
@@ -119,6 +120,7 @@
             // 
             // SetFiltersButton
             // 
+            SetFiltersButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SetFiltersButton.BackColor = SystemColors.Info;
             SetFiltersButton.Location = new Point(135, 259);
             SetFiltersButton.Margin = new Padding(3, 4, 3, 4);
@@ -152,6 +154,7 @@
             // 
             // DeleteDb
             // 
+            DeleteDb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             DeleteDb.BackColor = SystemColors.Info;
             DeleteDb.Location = new Point(1236, 80);
             DeleteDb.Margin = new Padding(3, 4, 3, 4);
@@ -176,6 +179,7 @@
             // 
             // CreateDb
             // 
+            CreateDb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             CreateDb.BackColor = SystemColors.Info;
             CreateDb.Location = new Point(1236, 179);
             CreateDb.Margin = new Padding(3, 4, 3, 4);
@@ -214,81 +218,6 @@
             OpenCategoryForm.Text = "Открыть \"Категории блюд\"";
             OpenCategoryForm.UseVisualStyleBackColor = false;
             OpenCategoryForm.Click += OpenCategoryForm_Click;
-            // 
-            // MealsTable
-            // 
-            MealsTable.AllowUserToAddRows = false;
-            MealsTable.AllowUserToDeleteRows = false;
-            MealsTable.BackgroundColor = SystemColors.GradientActiveCaption;
-            MealsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            MealsTable.Columns.AddRange(new DataGridViewColumn[] { ID, NameColumn, WeightColumn, KcalColumn, PriceColumn, CuisineColumn, CategoryColumn });
-            MealsTable.GridColor = SystemColors.Info;
-            MealsTable.Location = new Point(253, 51);
-            MealsTable.Margin = new Padding(3, 4, 3, 4);
-            MealsTable.Name = "MealsTable";
-            MealsTable.ReadOnly = true;
-            MealsTable.RowHeadersWidth = 51;
-            MealsTable.RowTemplate.Height = 25;
-            MealsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            MealsTable.Size = new Size(929, 200);
-            MealsTable.TabIndex = 0;
-            MealsTable.CellClick += MealsTable_CellClick;
-            // 
-            // ID
-            // 
-            ID.HeaderText = "ID";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
-            ID.ReadOnly = true;
-            ID.Width = 125;
-            // 
-            // NameColumn
-            // 
-            NameColumn.HeaderText = "Название";
-            NameColumn.MinimumWidth = 6;
-            NameColumn.Name = "NameColumn";
-            NameColumn.ReadOnly = true;
-            NameColumn.Width = 125;
-            // 
-            // WeightColumn
-            // 
-            WeightColumn.HeaderText = "Масса";
-            WeightColumn.MinimumWidth = 6;
-            WeightColumn.Name = "WeightColumn";
-            WeightColumn.ReadOnly = true;
-            WeightColumn.Width = 125;
-            // 
-            // KcalColumn
-            // 
-            KcalColumn.HeaderText = "Кол-во ккал";
-            KcalColumn.MinimumWidth = 6;
-            KcalColumn.Name = "KcalColumn";
-            KcalColumn.ReadOnly = true;
-            KcalColumn.Width = 125;
-            // 
-            // PriceColumn
-            // 
-            PriceColumn.HeaderText = "Цена";
-            PriceColumn.MinimumWidth = 6;
-            PriceColumn.Name = "PriceColumn";
-            PriceColumn.ReadOnly = true;
-            PriceColumn.Width = 125;
-            // 
-            // CuisineColumn
-            // 
-            CuisineColumn.HeaderText = "Вид кухни";
-            CuisineColumn.MinimumWidth = 6;
-            CuisineColumn.Name = "CuisineColumn";
-            CuisineColumn.ReadOnly = true;
-            CuisineColumn.Width = 125;
-            // 
-            // CategoryColumn
-            // 
-            CategoryColumn.HeaderText = "Категория";
-            CategoryColumn.MinimumWidth = 6;
-            CategoryColumn.Name = "CategoryColumn";
-            CategoryColumn.ReadOnly = true;
-            CategoryColumn.Width = 125;
             // 
             // label1
             // 
@@ -333,6 +262,7 @@
             // 
             // CancelFilters
             // 
+            CancelFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             CancelFilters.BackColor = SystemColors.Info;
             CancelFilters.Location = new Point(1216, 400);
             CancelFilters.Name = "CancelFilters";
@@ -457,7 +387,7 @@
             // 
             // label4
             // 
-            label4.AutoSize = true;
+            label4.Anchor = AnchorStyles.None;
             label4.Location = new Point(13, 49);
             label4.Name = "label4";
             label4.Size = new Size(52, 20);
@@ -466,7 +396,7 @@
             // 
             // label5
             // 
-            label5.AutoSize = true;
+            label5.Anchor = AnchorStyles.None;
             label5.Location = new Point(13, 77);
             label5.Name = "label5";
             label5.Size = new Size(92, 20);
@@ -475,7 +405,7 @@
             // 
             // label6
             // 
-            label6.AutoSize = true;
+            label6.Anchor = AnchorStyles.None;
             label6.Location = new Point(13, 104);
             label6.Name = "label6";
             label6.Size = new Size(45, 20);
@@ -484,6 +414,7 @@
             // 
             // WeightFilterMin
             // 
+            WeightFilterMin.Anchor = AnchorStyles.None;
             WeightFilterMin.DecimalPlaces = 5;
             WeightFilterMin.Location = new Point(151, 47);
             WeightFilterMin.Name = "WeightFilterMin";
@@ -493,6 +424,7 @@
             // 
             // WeightFilterMax
             // 
+            WeightFilterMax.Anchor = AnchorStyles.None;
             WeightFilterMax.DecimalPlaces = 5;
             WeightFilterMax.Location = new Point(282, 47);
             WeightFilterMax.Name = "WeightFilterMax";
@@ -501,6 +433,7 @@
             // 
             // KcalFilterMax
             // 
+            KcalFilterMax.Anchor = AnchorStyles.None;
             KcalFilterMax.DecimalPlaces = 5;
             KcalFilterMax.Location = new Point(282, 75);
             KcalFilterMax.Name = "KcalFilterMax";
@@ -509,6 +442,7 @@
             // 
             // KcalFilterMin
             // 
+            KcalFilterMin.Anchor = AnchorStyles.None;
             KcalFilterMin.DecimalPlaces = 5;
             KcalFilterMin.Location = new Point(151, 75);
             KcalFilterMin.Name = "KcalFilterMin";
@@ -518,6 +452,7 @@
             // 
             // PriceFilterMin
             // 
+            PriceFilterMin.Anchor = AnchorStyles.None;
             PriceFilterMin.DecimalPlaces = 5;
             PriceFilterMin.Location = new Point(151, 101);
             PriceFilterMin.Name = "PriceFilterMin";
@@ -527,6 +462,7 @@
             // 
             // PriceFilterMax
             // 
+            PriceFilterMax.Anchor = AnchorStyles.None;
             PriceFilterMax.DecimalPlaces = 5;
             PriceFilterMax.Location = new Point(282, 101);
             PriceFilterMax.Name = "PriceFilterMax";
@@ -535,7 +471,7 @@
             // 
             // label7
             // 
-            label7.AutoSize = true;
+            label7.Anchor = AnchorStyles.None;
             label7.Location = new Point(238, 54);
             label7.Name = "label7";
             label7.Size = new Size(26, 20);
@@ -544,7 +480,7 @@
             // 
             // label8
             // 
-            label8.AutoSize = true;
+            label8.Anchor = AnchorStyles.None;
             label8.Location = new Point(238, 82);
             label8.Name = "label8";
             label8.Size = new Size(26, 20);
@@ -553,7 +489,7 @@
             // 
             // label9
             // 
-            label9.AutoSize = true;
+            label9.Anchor = AnchorStyles.None;
             label9.Location = new Point(238, 108);
             label9.Name = "label9";
             label9.Size = new Size(26, 20);
@@ -562,7 +498,7 @@
             // 
             // label10
             // 
-            label10.AutoSize = true;
+            label10.Anchor = AnchorStyles.None;
             label10.Location = new Point(111, 54);
             label10.Name = "label10";
             label10.Size = new Size(24, 20);
@@ -571,7 +507,7 @@
             // 
             // label11
             // 
-            label11.AutoSize = true;
+            label11.Anchor = AnchorStyles.None;
             label11.Location = new Point(111, 82);
             label11.Name = "label11";
             label11.Size = new Size(24, 20);
@@ -580,7 +516,7 @@
             // 
             // label12
             // 
-            label12.AutoSize = true;
+            label12.Anchor = AnchorStyles.None;
             label12.Location = new Point(111, 107);
             label12.Name = "label12";
             label12.Size = new Size(24, 20);
@@ -589,6 +525,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(CategorySort);
             panel1.Controls.Add(PriceSort);
@@ -608,6 +545,7 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(label13);
             panel2.Controls.Add(label12);
@@ -632,8 +570,19 @@
             panel2.Size = new Size(380, 304);
             panel2.TabIndex = 48;
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Location = new Point(13, 12);
+            label13.Name = "label13";
+            label13.Size = new Size(80, 20);
+            label13.TabIndex = 32;
+            label13.Text = "Фильтры:";
+            // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(label14);
             panel3.Controls.Add(SearchNameButton);
@@ -647,16 +596,6 @@
             panel3.Size = new Size(380, 303);
             panel3.TabIndex = 49;
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(13, 12);
-            label13.Name = "label13";
-            label13.Size = new Size(80, 20);
-            label13.TabIndex = 32;
-            label13.Text = "Фильтры:";
-            // 
             // label14
             // 
             label14.AutoSize = true;
@@ -667,12 +606,90 @@
             label14.TabIndex = 47;
             label14.Text = "Поиск:";
             // 
+            // MealsTable
+            // 
+            MealsTable.AllowUserToAddRows = false;
+            MealsTable.AllowUserToDeleteRows = false;
+            MealsTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            MealsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            MealsTable.BackgroundColor = SystemColors.GradientActiveCaption;
+            MealsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            MealsTable.Columns.AddRange(new DataGridViewColumn[] { ID, NameColumn, WeightColumn, KcalColumn, PriceColumn, CuisineColumn, CategoryColumn });
+            MealsTable.GridColor = SystemColors.Info;
+            MealsTable.Location = new Point(219, 52);
+            MealsTable.Margin = new Padding(3, 4, 3, 4);
+            MealsTable.Name = "MealsTable";
+            MealsTable.ReadOnly = true;
+            MealsTable.RowHeadersWidth = 51;
+            MealsTable.RowTemplate.Height = 25;
+            MealsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            MealsTable.Size = new Size(962, 209);
+            MealsTable.TabIndex = 0;
+            MealsTable.CellClick += MealsTable_CellClick;
+            // 
+            // ID
+            // 
+            ID.FillWeight = 100.143784F;
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.ReadOnly = true;
+            // 
+            // NameColumn
+            // 
+            NameColumn.FillWeight = 99.62005F;
+            NameColumn.HeaderText = "Название";
+            NameColumn.MinimumWidth = 6;
+            NameColumn.Name = "NameColumn";
+            NameColumn.ReadOnly = true;
+            // 
+            // WeightColumn
+            // 
+            WeightColumn.FillWeight = 100.177521F;
+            WeightColumn.HeaderText = "Масса";
+            WeightColumn.MinimumWidth = 6;
+            WeightColumn.Name = "WeightColumn";
+            WeightColumn.ReadOnly = true;
+            // 
+            // KcalColumn
+            // 
+            KcalColumn.FillWeight = 100.152092F;
+            KcalColumn.HeaderText = "Кол-во ккал";
+            KcalColumn.MinimumWidth = 6;
+            KcalColumn.Name = "KcalColumn";
+            KcalColumn.ReadOnly = true;
+            // 
+            // PriceColumn
+            // 
+            PriceColumn.FillWeight = 100.130295F;
+            PriceColumn.HeaderText = "Цена";
+            PriceColumn.MinimumWidth = 6;
+            PriceColumn.Name = "PriceColumn";
+            PriceColumn.ReadOnly = true;
+            // 
+            // CuisineColumn
+            // 
+            CuisineColumn.FillWeight = 99.6085739F;
+            CuisineColumn.HeaderText = "Вид кухни";
+            CuisineColumn.MinimumWidth = 6;
+            CuisineColumn.Name = "CuisineColumn";
+            CuisineColumn.ReadOnly = true;
+            // 
+            // CategoryColumn
+            // 
+            CategoryColumn.FillWeight = 100.167618F;
+            CategoryColumn.HeaderText = "Категория";
+            CategoryColumn.MinimumWidth = 6;
+            CategoryColumn.Name = "CategoryColumn";
+            CategoryColumn.ReadOnly = true;
+            // 
             // MealForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(1444, 600);
+            Controls.Add(MealsTable);
             Controls.Add(CancelFilters);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -683,13 +700,12 @@
             Controls.Add(button3);
             Controls.Add(DeleteDb);
             Controls.Add(Exit);
-            Controls.Add(MealsTable);
             Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(1462, 647);
             Name = "MealForm";
             Text = "Меню";
             Load += MealForm_Load;
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)MealsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).EndInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMax).EndInit();
@@ -703,6 +719,7 @@
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)MealsTable).EndInit();
             ResumeLayout(false);
         }
 
@@ -718,14 +735,6 @@
         private FileSystemWatcher fileSystemWatcher1;
         private Button OpenCategoryForm;
         private Button OpenCuisineForm;
-        public DataGridView MealsTable;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn NameColumn;
-        private DataGridViewTextBoxColumn WeightColumn;
-        private DataGridViewTextBoxColumn KcalColumn;
-        private DataGridViewTextBoxColumn PriceColumn;
-        private DataGridViewTextBoxColumn CuisineColumn;
-        private DataGridViewTextBoxColumn CategoryColumn;
         private NumericUpDown IdForSearching;
         private Label label2;
         private Label label1;
@@ -762,5 +771,13 @@
         private Panel panel2;
         private Label label13;
         private Label label14;
+        public DataGridView MealsTable;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn NameColumn;
+        private DataGridViewTextBoxColumn WeightColumn;
+        private DataGridViewTextBoxColumn KcalColumn;
+        private DataGridViewTextBoxColumn PriceColumn;
+        private DataGridViewTextBoxColumn CuisineColumn;
+        private DataGridViewTextBoxColumn CategoryColumn;
     }
 }
