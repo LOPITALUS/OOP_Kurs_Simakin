@@ -14,6 +14,7 @@ namespace OOP_Kurs_Simakin
 {
     public partial class AddMealForm : Form
     {
+        private MealForm ref_to_parent_form;
 
         public AddMealForm(MealForm _ref_to_parent_form)
         {
@@ -73,27 +74,6 @@ namespace OOP_Kurs_Simakin
             CuisineId.Value = CuisineId.Minimum;
             CategoryId.Value = CategoryId.Minimum;
         }
-
-
-        //private void AddMealForm_Load(object sender, EventArgs e)
-        //{
-        //    using (kursContext db = new kursContext())
-        //    {
-        //        var cuisines = db.Cuisines.Select(c => c.Name).ToList();
-        //        foreach (var c in cuisines)
-        //        {
-        //            Cuisines.Items.Add(c);
-        //        }
-
-        //        var categoties = db.Categories.Select(c => c.Name).ToList();
-        //        foreach (var c in categoties)
-        //        {
-        //            Categories.Items.Add(c);
-        //        }
-        //    }
-        //}
-
-        private MealForm ref_to_parent_form;
 
         private void OpenCategoriesForm_Click(object sender, EventArgs e)
         {

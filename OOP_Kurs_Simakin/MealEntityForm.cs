@@ -28,10 +28,10 @@ namespace OOP_Kurs_Simakin
             double weight = (double)EditedMealWeight.Value;
             double kcal = (double)EditedMealKcal.Value;
             double price = (double)EditedMealPrice.Value;
-            string cuisine = EditedMealCuisines.Text;
-            string category = EditedMealCategories.Text;
+            long cuisine_id = (long)CuisineId.Value;
+            long category_id = (long)CategoryId.Value;
 
-            if (name.Length == 0 || cuisine.Length == 0 || category.Length == 0)
+            if (name.Length == 0)
             {
                 MessageBox.Show("Все поля должны быть заполнены", "Уведомление");
                 return;
@@ -44,8 +44,18 @@ namespace OOP_Kurs_Simakin
                 meal.Weight = weight;
                 meal.Kcal = kcal;
                 meal.Price = price;
-                Cuisine cuis = db.Cuisines.First(c => c.Name == cuisine);
-                Category cat = db.Categories.First(c => c.Name == category);
+                Cuisine cuis = db.Cuisines.FirstOrDefault(c => c.CuisineId == cuisine_id);
+                Category cat = db.Categories.FirstOrDefault(c => c.CategoryId == category_id);
+                if (cuis == null)
+                {
+                    MessageBox.Show("Вида кухни с заданным ID не существует", "Уведомление");
+                    return;
+                }
+                if (cat == null)
+                {
+                    MessageBox.Show("Категории блюд с заданным ID не существует", "Уведомление");
+                    return;
+                }
                 meal.Cuisine = cuis;
                 meal.Category = cat;
                 db.SaveChanges();
@@ -60,25 +70,11 @@ namespace OOP_Kurs_Simakin
             {
                 Meal meal = db.Meals.FirstOrDefault(e => e.IdMeal == id);
                 EditedMealName.Text = meal.Name;
-                EditedMealWeight.Value = (int)meal.Weight;
-                EditedMealKcal.Value = (int)meal.Kcal;
-                EditedMealPrice.Value = (int)meal.Price;
-
-                var cuisines = db.Cuisines.Select(c => c.Name).ToList();
-                foreach (var c in cuisines)
-                {
-                    EditedMealCuisines.Items.Add(c);
-                }
-
-                var categoties = db.Categories.Select(c => c.Name).ToList();
-                foreach (var c in categoties)
-                {
-                    EditedMealCategories.Items.Add(c);
-                }
-
-                EditedMealCuisines.SelectedItem = db.Cuisines.FirstOrDefault(c => c.CuisineId == meal.CuisineId).ToString();
-
-                EditedMealCategories.SelectedItem = db.Categories.FirstOrDefault(c => c.CategoryId == meal.CategoryId).ToString();
+                EditedMealWeight.Value = (decimal)meal.Weight;
+                EditedMealKcal.Value = (decimal)meal.Kcal;
+                EditedMealPrice.Value = (decimal)meal.Price;
+                CuisineId.Value = meal.CuisineId;
+                CategoryId.Value = meal.CategoryId;
             }
         }
 
@@ -124,6 +120,18 @@ namespace OOP_Kurs_Simakin
                     return;
                 }
             }
+        }
+
+        private void OpenCuisinesForm_Click(object sender, EventArgs e)
+        {
+            CuisineForm cuisineForm = new CuisineForm(ref_to_parent_form);
+            cuisineForm.ShowDialog();
+        }
+
+        private void OpenCategoriesForm_Click(object sender, EventArgs e)
+        {
+            CategoryForm categoryForm = new CategoryForm(ref_to_parent_form);
+            categoryForm.ShowDialog();
         }
     }
 }

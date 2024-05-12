@@ -38,14 +38,18 @@
             EditedMealWeight = new NumericUpDown();
             EditedMealKcal = new NumericUpDown();
             EditedMealPrice = new NumericUpDown();
-            EditedMealCuisines = new ComboBox();
-            EditedMealCategories = new ComboBox();
             ApplyChanges = new Button();
             ExitMealEntityForm = new Button();
             Delete = new Button();
+            OpenCuisinesForm = new Button();
+            OpenCategoriesForm = new Button();
+            CuisineId = new NumericUpDown();
+            CategoryId = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)EditedMealWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EditedMealKcal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EditedMealPrice).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CuisineId).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CategoryId).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -53,44 +57,44 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(267, 35);
+            label1.Location = new Point(30, 56);
             label1.Name = "label1";
-            label1.Size = new Size(77, 20);
+            label1.Size = new Size(81, 20);
             label1.TabIndex = 0;
-            label1.Text = "Название";
+            label1.Text = "Название:";
             // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(267, 86);
+            label2.Location = new Point(30, 107);
             label2.Name = "label2";
-            label2.Size = new Size(53, 20);
+            label2.Size = new Size(57, 20);
             label2.TabIndex = 1;
-            label2.Text = "Масса";
+            label2.Text = "Масса:";
             // 
             // label3
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(267, 137);
+            label3.Location = new Point(30, 158);
             label3.Name = "label3";
-            label3.Size = new Size(94, 20);
+            label3.Size = new Size(98, 20);
             label3.TabIndex = 2;
-            label3.Text = "Кол-во ккал";
+            label3.Text = "Кол-во ккал:";
             // 
             // label4
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(267, 188);
+            label4.Location = new Point(30, 209);
             label4.Name = "label4";
-            label4.Size = new Size(46, 20);
+            label4.Size = new Size(50, 20);
             label4.TabIndex = 3;
-            label4.Text = "Цена";
+            label4.Text = "Цена:";
             label4.TextAlign = ContentAlignment.TopCenter;
             // 
             // label5
@@ -98,27 +102,27 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(267, 239);
+            label5.Location = new Point(30, 260);
             label5.Name = "label5";
-            label5.Size = new Size(82, 20);
+            label5.Size = new Size(115, 20);
             label5.TabIndex = 4;
-            label5.Text = "Вид кухни";
+            label5.Text = "Вид кухни (ID):";
             // 
             // label6
             // 
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(267, 290);
+            label6.Location = new Point(30, 311);
             label6.Name = "label6";
-            label6.Size = new Size(85, 20);
+            label6.Size = new Size(165, 20);
             label6.TabIndex = 5;
-            label6.Text = "Тип блюда";
+            label6.Text = "Категория блюда (ID):";
             // 
             // EditedMealName
             // 
             EditedMealName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealName.Location = new Point(362, 35);
+            EditedMealName.Location = new Point(206, 56);
             EditedMealName.Name = "EditedMealName";
             EditedMealName.Size = new Size(136, 27);
             EditedMealName.TabIndex = 6;
@@ -126,44 +130,35 @@
             // EditedMealWeight
             // 
             EditedMealWeight.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealWeight.Location = new Point(362, 86);
+            EditedMealWeight.DecimalPlaces = 5;
+            EditedMealWeight.Location = new Point(206, 107);
+            EditedMealWeight.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             EditedMealWeight.Name = "EditedMealWeight";
             EditedMealWeight.Size = new Size(136, 27);
             EditedMealWeight.TabIndex = 7;
+            EditedMealWeight.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // EditedMealKcal
             // 
             EditedMealKcal.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealKcal.Location = new Point(362, 137);
+            EditedMealKcal.DecimalPlaces = 5;
+            EditedMealKcal.Location = new Point(206, 158);
+            EditedMealKcal.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             EditedMealKcal.Name = "EditedMealKcal";
             EditedMealKcal.Size = new Size(136, 27);
             EditedMealKcal.TabIndex = 8;
+            EditedMealKcal.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // EditedMealPrice
             // 
             EditedMealPrice.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealPrice.Location = new Point(362, 188);
+            EditedMealPrice.DecimalPlaces = 5;
+            EditedMealPrice.Location = new Point(206, 209);
+            EditedMealPrice.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             EditedMealPrice.Name = "EditedMealPrice";
             EditedMealPrice.Size = new Size(136, 27);
             EditedMealPrice.TabIndex = 9;
-            // 
-            // EditedMealCuisines
-            // 
-            EditedMealCuisines.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealCuisines.FormattingEnabled = true;
-            EditedMealCuisines.Location = new Point(362, 239);
-            EditedMealCuisines.Name = "EditedMealCuisines";
-            EditedMealCuisines.Size = new Size(136, 28);
-            EditedMealCuisines.TabIndex = 10;
-            // 
-            // EditedMealCategories
-            // 
-            EditedMealCategories.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealCategories.FormattingEnabled = true;
-            EditedMealCategories.Location = new Point(362, 290);
-            EditedMealCategories.Name = "EditedMealCategories";
-            EditedMealCategories.Size = new Size(136, 28);
-            EditedMealCategories.TabIndex = 11;
+            EditedMealPrice.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // ApplyChanges
             // 
@@ -201,17 +196,55 @@
             Delete.UseVisualStyleBackColor = false;
             Delete.Click += Delete_Click;
             // 
+            // OpenCuisinesForm
+            // 
+            OpenCuisinesForm.BackColor = SystemColors.Info;
+            OpenCuisinesForm.Location = new Point(489, 123);
+            OpenCuisinesForm.Name = "OpenCuisinesForm";
+            OpenCuisinesForm.Size = new Size(208, 55);
+            OpenCuisinesForm.TabIndex = 20;
+            OpenCuisinesForm.Text = "Открыть виды кухонь";
+            OpenCuisinesForm.UseVisualStyleBackColor = false;
+            OpenCuisinesForm.Click += OpenCuisinesForm_Click;
+            // 
+            // OpenCategoriesForm
+            // 
+            OpenCategoriesForm.BackColor = SystemColors.Info;
+            OpenCategoriesForm.Location = new Point(489, 224);
+            OpenCategoriesForm.Name = "OpenCategoriesForm";
+            OpenCategoriesForm.Size = new Size(208, 55);
+            OpenCategoriesForm.TabIndex = 21;
+            OpenCategoriesForm.Text = "Открыть категории блюд";
+            OpenCategoriesForm.UseVisualStyleBackColor = false;
+            OpenCategoriesForm.Click += OpenCategoriesForm_Click;
+            // 
+            // CuisineId
+            // 
+            CuisineId.Location = new Point(206, 260);
+            CuisineId.Name = "CuisineId";
+            CuisineId.Size = new Size(137, 27);
+            CuisineId.TabIndex = 22;
+            // 
+            // CategoryId
+            // 
+            CategoryId.Location = new Point(206, 311);
+            CategoryId.Name = "CategoryId";
+            CategoryId.Size = new Size(137, 27);
+            CategoryId.TabIndex = 23;
+            // 
             // MealEntityForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(817, 450);
+            Controls.Add(CategoryId);
+            Controls.Add(CuisineId);
+            Controls.Add(OpenCategoriesForm);
+            Controls.Add(OpenCuisinesForm);
             Controls.Add(Delete);
             Controls.Add(ExitMealEntityForm);
             Controls.Add(ApplyChanges);
-            Controls.Add(EditedMealCategories);
-            Controls.Add(EditedMealCuisines);
             Controls.Add(EditedMealPrice);
             Controls.Add(EditedMealKcal);
             Controls.Add(EditedMealWeight);
@@ -230,6 +263,8 @@
             ((System.ComponentModel.ISupportInitialize)EditedMealWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)EditedMealKcal).EndInit();
             ((System.ComponentModel.ISupportInitialize)EditedMealPrice).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CuisineId).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CategoryId).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,10 +281,12 @@
         private NumericUpDown EditedMealWeight;
         private NumericUpDown EditedMealKcal;
         private NumericUpDown EditedMealPrice;
-        private ComboBox EditedMealCuisines;
-        private ComboBox EditedMealCategories;
         private Button ApplyChanges;
         private Button ExitMealEntityForm;
         private Button Delete;
+        private Button OpenCuisinesForm;
+        private Button OpenCategoriesForm;
+        private NumericUpDown CuisineId;
+        private NumericUpDown CategoryId;
     }
 }
