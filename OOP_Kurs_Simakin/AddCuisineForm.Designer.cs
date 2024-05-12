@@ -39,60 +39,73 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(29, 48);
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(17, 17);
             label1.Name = "label1";
-            label1.Size = new Size(167, 15);
+            label1.Size = new Size(219, 20);
             label1.TabIndex = 0;
             label1.Text = "Название нового вида кухни:";
             // 
             // NewCuisineName
             // 
-            NewCuisineName.Location = new Point(240, 45);
+            NewCuisineName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            NewCuisineName.Location = new Point(248, 13);
+            NewCuisineName.Margin = new Padding(3, 4, 3, 4);
             NewCuisineName.Name = "NewCuisineName";
-            NewCuisineName.Size = new Size(187, 23);
+            NewCuisineName.Size = new Size(486, 27);
             NewCuisineName.TabIndex = 1;
             // 
             // ApplyAddCuisinelForm
             // 
-            ApplyAddCuisinelForm.Location = new Point(29, 405);
+            ApplyAddCuisinelForm.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            ApplyAddCuisinelForm.BackColor = SystemColors.Info;
+            ApplyAddCuisinelForm.Location = new Point(49, 396);
+            ApplyAddCuisinelForm.Margin = new Padding(3, 4, 3, 4);
             ApplyAddCuisinelForm.Name = "ApplyAddCuisinelForm";
-            ApplyAddCuisinelForm.Size = new Size(75, 23);
+            ApplyAddCuisinelForm.Size = new Size(111, 29);
             ApplyAddCuisinelForm.TabIndex = 2;
             ApplyAddCuisinelForm.Text = "Добавить";
-            ApplyAddCuisinelForm.UseVisualStyleBackColor = true;
+            ApplyAddCuisinelForm.UseVisualStyleBackColor = false;
             ApplyAddCuisinelForm.Click += ApplyAddCuisinelForm_Click;
             // 
             // ExitAddCuisineForm
             // 
-            ExitAddCuisineForm.Location = new Point(713, 415);
+            ExitAddCuisineForm.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            ExitAddCuisineForm.BackColor = SystemColors.Info;
+            ExitAddCuisineForm.Location = new Point(657, 396);
+            ExitAddCuisineForm.Margin = new Padding(3, 4, 3, 4);
             ExitAddCuisineForm.Name = "ExitAddCuisineForm";
-            ExitAddCuisineForm.Size = new Size(75, 23);
+            ExitAddCuisineForm.Size = new Size(94, 29);
             ExitAddCuisineForm.TabIndex = 3;
             ExitAddCuisineForm.Text = "Выход";
-            ExitAddCuisineForm.UseVisualStyleBackColor = true;
+            ExitAddCuisineForm.UseVisualStyleBackColor = false;
             ExitAddCuisineForm.Click += ExitAddCuisineForm_Click;
             // 
             // NewCuisineDescription
             // 
-            NewCuisineDescription.Location = new Point(240, 85);
+            NewCuisineDescription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            NewCuisineDescription.Location = new Point(248, 69);
+            NewCuisineDescription.Margin = new Padding(3, 4, 3, 4);
             NewCuisineDescription.Name = "NewCuisineDescription";
-            NewCuisineDescription.Size = new Size(187, 120);
+            NewCuisineDescription.Size = new Size(486, 292);
             NewCuisineDescription.TabIndex = 4;
             NewCuisineDescription.Text = "";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(29, 88);
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(17, 69);
             label2.Name = "label2";
-            label2.Size = new Size(65, 15);
+            label2.Size = new Size(83, 20);
             label2.TabIndex = 5;
             label2.Text = "Описание:";
             // 
             // AddCuisineForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(label2);
             Controls.Add(NewCuisineDescription);
@@ -100,6 +113,8 @@
             Controls.Add(ApplyAddCuisinelForm);
             Controls.Add(NewCuisineName);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(818, 497);
             Name = "AddCuisineForm";
             Text = "Добавление нового вида кухни в БД";
             ResumeLayout(false);

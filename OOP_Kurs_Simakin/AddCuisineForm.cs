@@ -51,7 +51,7 @@ namespace OOP_Kurs_Simakin
         {
             Close();
         }
-    
+
         private CuisineForm ref_to_parent_form;
     }
 }
