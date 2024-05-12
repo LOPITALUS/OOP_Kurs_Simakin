@@ -53,81 +53,88 @@
             // 
             // ExitAddMealForm
             // 
-            ExitAddMealForm.Location = new Point(80, 516);
+            ExitAddMealForm.BackColor = SystemColors.Info;
+            ExitAddMealForm.Location = new Point(592, 392);
             ExitAddMealForm.Margin = new Padding(3, 4, 3, 4);
             ExitAddMealForm.Name = "ExitAddMealForm";
-            ExitAddMealForm.Size = new Size(105, 33);
+            ExitAddMealForm.Size = new Size(111, 29);
             ExitAddMealForm.TabIndex = 1;
             ExitAddMealForm.Text = "Выход";
-            ExitAddMealForm.UseVisualStyleBackColor = true;
+            ExitAddMealForm.UseVisualStyleBackColor = false;
             ExitAddMealForm.Click += button1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(30, 87);
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(30, 56);
             label2.Name = "label2";
-            label2.Size = new Size(80, 20);
+            label2.Size = new Size(81, 20);
             label2.TabIndex = 2;
             label2.Text = "Название:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(30, 124);
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(30, 107);
             label3.Name = "label3";
-            label3.Size = new Size(55, 20);
+            label3.Size = new Size(57, 20);
             label3.TabIndex = 3;
             label3.Text = "Масса:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(30, 176);
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(30, 158);
             label4.Name = "label4";
-            label4.Size = new Size(95, 20);
+            label4.Size = new Size(98, 20);
             label4.TabIndex = 4;
             label4.Text = "Кол-во ккал:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(30, 217);
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(30, 209);
             label5.Name = "label5";
-            label5.Size = new Size(48, 20);
+            label5.Size = new Size(50, 20);
             label5.TabIndex = 5;
             label5.Text = "Цена:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(30, 267);
+            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(30, 260);
             label6.Name = "label6";
-            label6.Size = new Size(110, 20);
+            label6.Size = new Size(115, 20);
             label6.TabIndex = 6;
             label6.Text = "Вид кухни (ID):";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label7.Location = new Point(30, 311);
             label7.Name = "label7";
-            label7.Size = new Size(162, 20);
+            label7.Size = new Size(165, 20);
             label7.TabIndex = 7;
             label7.Text = "Категория блюда (ID):";
             // 
             // NewMealName
             // 
-            NewMealName.Location = new Point(118, 83);
+            NewMealName.Location = new Point(206, 56);
             NewMealName.Margin = new Padding(3, 4, 3, 4);
             NewMealName.Name = "NewMealName";
-            NewMealName.Size = new Size(114, 27);
+            NewMealName.Size = new Size(137, 27);
             NewMealName.TabIndex = 8;
             // 
             // NewMealWeight
             // 
             NewMealWeight.DecimalPlaces = 5;
-            NewMealWeight.Location = new Point(95, 124);
+            NewMealWeight.Location = new Point(206, 107);
             NewMealWeight.Margin = new Padding(3, 4, 3, 4);
             NewMealWeight.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             NewMealWeight.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -139,7 +146,7 @@
             // NewMealKcal
             // 
             NewMealKcal.DecimalPlaces = 5;
-            NewMealKcal.Location = new Point(125, 173);
+            NewMealKcal.Location = new Point(206, 158);
             NewMealKcal.Margin = new Padding(3, 4, 3, 4);
             NewMealKcal.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
             NewMealKcal.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -151,7 +158,7 @@
             // NewMealPrice
             // 
             NewMealPrice.DecimalPlaces = 5;
-            NewMealPrice.Location = new Point(80, 215);
+            NewMealPrice.Location = new Point(206, 209);
             NewMealPrice.Margin = new Padding(3, 4, 3, 4);
             NewMealPrice.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
             NewMealPrice.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -162,54 +169,58 @@
             // 
             // ApplyAddMealForm
             // 
-            ApplyAddMealForm.Location = new Point(384, 523);
+            ApplyAddMealForm.BackColor = SystemColors.Info;
+            ApplyAddMealForm.Location = new Point(132, 392);
             ApplyAddMealForm.Margin = new Padding(3, 4, 3, 4);
             ApplyAddMealForm.Name = "ApplyAddMealForm";
-            ApplyAddMealForm.Size = new Size(86, 31);
+            ApplyAddMealForm.Size = new Size(111, 29);
             ApplyAddMealForm.TabIndex = 14;
             ApplyAddMealForm.Text = "Добавить";
-            ApplyAddMealForm.UseVisualStyleBackColor = true;
+            ApplyAddMealForm.UseVisualStyleBackColor = false;
             ApplyAddMealForm.Click += ApplyAddMealForm_Click;
             // 
             // CuisineId
             // 
-            CuisineId.Location = new Point(146, 265);
+            CuisineId.Location = new Point(206, 260);
             CuisineId.Name = "CuisineId";
-            CuisineId.Size = new Size(150, 27);
+            CuisineId.Size = new Size(137, 27);
             CuisineId.TabIndex = 16;
             // 
             // CategoryId
             // 
-            CategoryId.Location = new Point(198, 311);
+            CategoryId.Location = new Point(206, 311);
             CategoryId.Name = "CategoryId";
-            CategoryId.Size = new Size(150, 27);
+            CategoryId.Size = new Size(137, 27);
             CategoryId.TabIndex = 17;
             // 
             // OpenCategoriesForm
             // 
-            OpenCategoriesForm.Location = new Point(740, 164);
+            OpenCategoriesForm.BackColor = SystemColors.Info;
+            OpenCategoriesForm.Location = new Point(489, 224);
             OpenCategoriesForm.Name = "OpenCategoriesForm";
-            OpenCategoriesForm.Size = new Size(162, 56);
+            OpenCategoriesForm.Size = new Size(208, 55);
             OpenCategoriesForm.TabIndex = 18;
             OpenCategoriesForm.Text = "Открыть категории блюд";
-            OpenCategoriesForm.UseVisualStyleBackColor = true;
+            OpenCategoriesForm.UseVisualStyleBackColor = false;
             OpenCategoriesForm.Click += OpenCategoriesForm_Click;
             // 
             // OpenCuisinesForm
             // 
-            OpenCuisinesForm.Location = new Point(740, 244);
+            OpenCuisinesForm.BackColor = SystemColors.Info;
+            OpenCuisinesForm.Location = new Point(489, 123);
             OpenCuisinesForm.Name = "OpenCuisinesForm";
-            OpenCuisinesForm.Size = new Size(162, 55);
+            OpenCuisinesForm.Size = new Size(208, 55);
             OpenCuisinesForm.TabIndex = 19;
             OpenCuisinesForm.Text = "Открыть виды кухонь";
-            OpenCuisinesForm.UseVisualStyleBackColor = true;
+            OpenCuisinesForm.UseVisualStyleBackColor = false;
             OpenCuisinesForm.Click += OpenCuisinesForm_Click;
             // 
             // AddMealForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            BackColor = SystemColors.GradientActiveCaption;
+            ClientSize = new Size(817, 450);
             Controls.Add(OpenCuisinesForm);
             Controls.Add(OpenCategoriesForm);
             Controls.Add(CategoryId);
@@ -226,7 +237,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(ExitAddMealForm);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            MinimumSize = new Size(835, 497);
             Name = "AddMealForm";
             Text = "Добавление нового блюда";
             ((System.ComponentModel.ISupportInitialize)NewMealWeight).EndInit();

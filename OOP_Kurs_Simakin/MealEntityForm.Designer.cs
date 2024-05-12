@@ -53,7 +53,7 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(267, 39);
+            label1.Location = new Point(267, 35);
             label1.Name = "label1";
             label1.Size = new Size(77, 20);
             label1.TabIndex = 0;
@@ -64,7 +64,7 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(267, 93);
+            label2.Location = new Point(267, 86);
             label2.Name = "label2";
             label2.Size = new Size(53, 20);
             label2.TabIndex = 1;
@@ -75,7 +75,7 @@
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(267, 144);
+            label3.Location = new Point(267, 137);
             label3.Name = "label3";
             label3.Size = new Size(94, 20);
             label3.TabIndex = 2;
@@ -86,7 +86,7 @@
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(267, 193);
+            label4.Location = new Point(267, 188);
             label4.Name = "label4";
             label4.Size = new Size(46, 20);
             label4.TabIndex = 3;
@@ -109,7 +109,7 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(267, 283);
+            label6.Location = new Point(267, 290);
             label6.Name = "label6";
             label6.Size = new Size(85, 20);
             label6.TabIndex = 5;
@@ -118,7 +118,7 @@
             // EditedMealName
             // 
             EditedMealName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealName.Location = new Point(362, 32);
+            EditedMealName.Location = new Point(362, 35);
             EditedMealName.Name = "EditedMealName";
             EditedMealName.Size = new Size(136, 27);
             EditedMealName.TabIndex = 6;
@@ -142,7 +142,7 @@
             // EditedMealPrice
             // 
             EditedMealPrice.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealPrice.Location = new Point(362, 186);
+            EditedMealPrice.Location = new Point(362, 188);
             EditedMealPrice.Name = "EditedMealPrice";
             EditedMealPrice.Size = new Size(136, 27);
             EditedMealPrice.TabIndex = 9;
@@ -151,7 +151,7 @@
             // 
             EditedMealCuisines.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             EditedMealCuisines.FormattingEnabled = true;
-            EditedMealCuisines.Location = new Point(362, 231);
+            EditedMealCuisines.Location = new Point(362, 239);
             EditedMealCuisines.Name = "EditedMealCuisines";
             EditedMealCuisines.Size = new Size(136, 28);
             EditedMealCuisines.TabIndex = 10;
@@ -160,7 +160,7 @@
             // 
             EditedMealCategories.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             EditedMealCategories.FormattingEnabled = true;
-            EditedMealCategories.Location = new Point(362, 275);
+            EditedMealCategories.Location = new Point(362, 290);
             EditedMealCategories.Name = "EditedMealCategories";
             EditedMealCategories.Size = new Size(136, 28);
             EditedMealCategories.TabIndex = 11;
