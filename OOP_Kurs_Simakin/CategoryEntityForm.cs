@@ -15,7 +15,7 @@ namespace OOP_Kurs_Simakin
         private long id;
         private MealForm ref_to_main_form;
         private CategoryForm ref_to_parent_form;
-        
+
         public CategoryEntityForm(long _id, MealForm _ref_to_main_form, CategoryForm _ref_to_parent_form)
         {
             InitializeComponent();
