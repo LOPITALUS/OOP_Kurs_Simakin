@@ -620,6 +620,7 @@
             MealsTable.Margin = new Padding(3, 4, 3, 4);
             MealsTable.Name = "MealsTable";
             MealsTable.ReadOnly = true;
+            MealsTable.RowHeadersVisible = false;
             MealsTable.RowHeadersWidth = 51;
             MealsTable.RowTemplate.Height = 25;
             MealsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

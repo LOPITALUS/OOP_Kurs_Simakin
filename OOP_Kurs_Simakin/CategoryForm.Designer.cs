@@ -30,6 +30,9 @@
         {
             AddCategoryBtn = new Button();
             CategoriesTable = new DataGridView();
+            idCat = new DataGridViewTextBoxColumn();
+            nameCat = new DataGridViewTextBoxColumn();
+            descriptionCat = new DataGridViewTextBoxColumn();
             CancelFilters = new Button();
             SearchNameButton = new Button();
             IdForSearching = new NumericUpDown();
@@ -37,9 +40,6 @@
             label1 = new Label();
             SearchIdButton = new Button();
             NameForSearching = new TextBox();
-            idCat = new DataGridViewTextBoxColumn();
-            nameCat = new DataGridViewTextBoxColumn();
-            descriptionCat = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)CategoriesTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
             SuspendLayout();
@@ -67,12 +67,34 @@
             CategoriesTable.Columns.AddRange(new DataGridViewColumn[] { idCat, nameCat, descriptionCat });
             CategoriesTable.Location = new Point(55, 47);
             CategoriesTable.Name = "CategoriesTable";
+            CategoriesTable.RowHeadersVisible = false;
             CategoriesTable.RowHeadersWidth = 51;
             CategoriesTable.RowTemplate.Height = 29;
             CategoriesTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CategoriesTable.Size = new Size(804, 288);
             CategoriesTable.TabIndex = 1;
             CategoriesTable.CellClick += CategoriesTable_CellClick;
+            // 
+            // idCat
+            // 
+            idCat.FillWeight = 38.5979729F;
+            idCat.HeaderText = "ID";
+            idCat.MinimumWidth = 6;
+            idCat.Name = "idCat";
+            // 
+            // nameCat
+            // 
+            nameCat.FillWeight = 70F;
+            nameCat.HeaderText = "Название";
+            nameCat.MinimumWidth = 6;
+            nameCat.Name = "nameCat";
+            // 
+            // descriptionCat
+            // 
+            descriptionCat.FillWeight = 221.295044F;
+            descriptionCat.HeaderText = "Описание";
+            descriptionCat.MinimumWidth = 6;
+            descriptionCat.Name = "descriptionCat";
             // 
             // CancelFilters
             // 
@@ -149,27 +171,6 @@
             NameForSearching.Name = "NameForSearching";
             NameForSearching.Size = new Size(149, 27);
             NameForSearching.TabIndex = 28;
-            // 
-            // idCat
-            // 
-            idCat.FillWeight = 38.5979729F;
-            idCat.HeaderText = "ID";
-            idCat.MinimumWidth = 6;
-            idCat.Name = "idCat";
-            // 
-            // nameCat
-            // 
-            nameCat.FillWeight = 70F;
-            nameCat.HeaderText = "Название";
-            nameCat.MinimumWidth = 6;
-            nameCat.Name = "nameCat";
-            // 
-            // descriptionCat
-            // 
-            descriptionCat.FillWeight = 221.295044F;
-            descriptionCat.HeaderText = "Описание";
-            descriptionCat.MinimumWidth = 6;
-            descriptionCat.Name = "descriptionCat";
             // 
             // CategoryForm
             // 

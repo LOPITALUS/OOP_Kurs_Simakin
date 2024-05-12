@@ -56,6 +56,7 @@
             CuisinesTable.Columns.AddRange(new DataGridViewColumn[] { idCuis, nameCuis, descriptionCuis });
             CuisinesTable.Location = new Point(55, 47);
             CuisinesTable.Name = "CuisinesTable";
+            CuisinesTable.RowHeadersVisible = false;
             CuisinesTable.RowHeadersWidth = 51;
             CuisinesTable.RowTemplate.Height = 29;
             CuisinesTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
