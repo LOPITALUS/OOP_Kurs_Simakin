@@ -70,10 +70,10 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
-            panel1 = new Panel();
-            panel2 = new Panel();
+            SortPanel = new Panel();
+            FiltersPanel = new Panel();
             label13 = new Label();
-            panel3 = new Panel();
+            SearchPanel = new Panel();
             label14 = new Label();
             MealsTable = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
@@ -91,9 +91,9 @@
             ((System.ComponentModel.ISupportInitialize)KcalFilterMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PriceFilterMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PriceFilterMax).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
+            SortPanel.SuspendLayout();
+            FiltersPanel.SuspendLayout();
+            SearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MealsTable).BeginInit();
             SuspendLayout();
             // 
@@ -523,52 +523,52 @@
             label12.TabIndex = 46;
             label12.Text = "от";
             // 
-            // panel1
+            // SortPanel
             // 
-            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(CategorySort);
-            panel1.Controls.Add(PriceSort);
-            panel1.Controls.Add(CuisineSort);
-            panel1.Controls.Add(KcalSort);
-            panel1.Controls.Add(NameSort);
-            panel1.Controls.Add(WeightSort);
-            panel1.Controls.Add(DownSort);
-            panel1.Controls.Add(UpSort);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(IdSort);
-            panel1.Controls.Add(label3);
-            panel1.Location = new Point(20, 291);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(408, 304);
-            panel1.TabIndex = 47;
+            SortPanel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            SortPanel.BorderStyle = BorderStyle.FixedSingle;
+            SortPanel.Controls.Add(CategorySort);
+            SortPanel.Controls.Add(PriceSort);
+            SortPanel.Controls.Add(CuisineSort);
+            SortPanel.Controls.Add(KcalSort);
+            SortPanel.Controls.Add(NameSort);
+            SortPanel.Controls.Add(WeightSort);
+            SortPanel.Controls.Add(DownSort);
+            SortPanel.Controls.Add(UpSort);
+            SortPanel.Controls.Add(button6);
+            SortPanel.Controls.Add(IdSort);
+            SortPanel.Controls.Add(label3);
+            SortPanel.Location = new Point(20, 291);
+            SortPanel.Name = "SortPanel";
+            SortPanel.Size = new Size(408, 304);
+            SortPanel.TabIndex = 47;
             // 
-            // panel2
+            // FiltersPanel
             // 
-            panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(label13);
-            panel2.Controls.Add(label12);
-            panel2.Controls.Add(label11);
-            panel2.Controls.Add(label10);
-            panel2.Controls.Add(label9);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(PriceFilterMax);
-            panel2.Controls.Add(PriceFilterMin);
-            panel2.Controls.Add(KcalFilterMin);
-            panel2.Controls.Add(KcalFilterMax);
-            panel2.Controls.Add(WeightFilterMax);
-            panel2.Controls.Add(WeightFilterMin);
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(label5);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(SetFiltersButton);
-            panel2.Controls.Add(CuisineLabel);
-            panel2.Location = new Point(434, 291);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(380, 304);
-            panel2.TabIndex = 48;
+            FiltersPanel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            FiltersPanel.BorderStyle = BorderStyle.FixedSingle;
+            FiltersPanel.Controls.Add(label13);
+            FiltersPanel.Controls.Add(label12);
+            FiltersPanel.Controls.Add(label11);
+            FiltersPanel.Controls.Add(label10);
+            FiltersPanel.Controls.Add(label9);
+            FiltersPanel.Controls.Add(label8);
+            FiltersPanel.Controls.Add(label7);
+            FiltersPanel.Controls.Add(PriceFilterMax);
+            FiltersPanel.Controls.Add(PriceFilterMin);
+            FiltersPanel.Controls.Add(KcalFilterMin);
+            FiltersPanel.Controls.Add(KcalFilterMax);
+            FiltersPanel.Controls.Add(WeightFilterMax);
+            FiltersPanel.Controls.Add(WeightFilterMin);
+            FiltersPanel.Controls.Add(label6);
+            FiltersPanel.Controls.Add(label5);
+            FiltersPanel.Controls.Add(label4);
+            FiltersPanel.Controls.Add(SetFiltersButton);
+            FiltersPanel.Controls.Add(CuisineLabel);
+            FiltersPanel.Location = new Point(434, 291);
+            FiltersPanel.Name = "FiltersPanel";
+            FiltersPanel.Size = new Size(380, 304);
+            FiltersPanel.TabIndex = 48;
             // 
             // label13
             // 
@@ -580,21 +580,21 @@
             label13.TabIndex = 32;
             label13.Text = "Фильтры:";
             // 
-            // panel3
+            // SearchPanel
             // 
-            panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            panel3.BorderStyle = BorderStyle.FixedSingle;
-            panel3.Controls.Add(label14);
-            panel3.Controls.Add(SearchNameButton);
-            panel3.Controls.Add(IdForSearching);
-            panel3.Controls.Add(label2);
-            panel3.Controls.Add(label1);
-            panel3.Controls.Add(SearchIdButton);
-            panel3.Controls.Add(NameForSearching);
-            panel3.Location = new Point(820, 291);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(380, 303);
-            panel3.TabIndex = 49;
+            SearchPanel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            SearchPanel.BorderStyle = BorderStyle.FixedSingle;
+            SearchPanel.Controls.Add(label14);
+            SearchPanel.Controls.Add(SearchNameButton);
+            SearchPanel.Controls.Add(IdForSearching);
+            SearchPanel.Controls.Add(label2);
+            SearchPanel.Controls.Add(label1);
+            SearchPanel.Controls.Add(SearchIdButton);
+            SearchPanel.Controls.Add(NameForSearching);
+            SearchPanel.Location = new Point(820, 291);
+            SearchPanel.Name = "SearchPanel";
+            SearchPanel.Size = new Size(380, 303);
+            SearchPanel.TabIndex = 49;
             // 
             // label14
             // 
@@ -692,9 +692,9 @@
             ClientSize = new Size(1444, 600);
             Controls.Add(MealsTable);
             Controls.Add(CancelFilters);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(SearchPanel);
+            Controls.Add(FiltersPanel);
+            Controls.Add(SortPanel);
             Controls.Add(OpenCategoryForm);
             Controls.Add(OpenCuisineForm);
             Controls.Add(CreateDb);
@@ -714,12 +714,12 @@
             ((System.ComponentModel.ISupportInitialize)KcalFilterMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)PriceFilterMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)PriceFilterMax).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            SortPanel.ResumeLayout(false);
+            SortPanel.PerformLayout();
+            FiltersPanel.ResumeLayout(false);
+            FiltersPanel.PerformLayout();
+            SearchPanel.ResumeLayout(false);
+            SearchPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)MealsTable).EndInit();
             ResumeLayout(false);
         }
@@ -767,9 +767,9 @@
         private Label label9;
         private Label label8;
         private Label label7;
-        private Panel panel1;
-        private Panel panel3;
-        private Panel panel2;
+        private Panel SortPanel;
+        private Panel SearchPanel;
+        private Panel FiltersPanel;
         private Label label13;
         private Label label14;
         public DataGridView MealsTable;

@@ -218,12 +218,28 @@ namespace OOP_Kurs_Simakin
 
         private void EnableButtons(bool enable)
         {
-            foreach (Control c in this.Controls)
+            foreach (Control c in Controls)
             {
                 if (c is Button)
                     c.Enabled = enable;
             }
-            CreateDb.Enabled = true;
+            foreach (Control c in SortPanel.Controls)
+            {
+                if (c is Button)
+                    c.Enabled = enable;
+            }
+            foreach (Control c in FiltersPanel.Controls)
+            {
+                if (c is Button)
+                    c.Enabled = enable;
+            }
+            foreach (Control c in SearchPanel.Controls)
+            {
+                if (c is Button)
+                    c.Enabled = enable;
+            }
+            if (!enable)
+                CreateDb.Enabled = true;
         }
 
         private void IdForSearching_ValueChanged(object sender, EventArgs e)
