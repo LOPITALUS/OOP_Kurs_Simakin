@@ -10,10 +10,10 @@ namespace OOP_Kurs_Simakin
             Meals = new HashSet<Meal>();
         }
 
-        public Cuisine(string name, string descriprion)
+        public Cuisine(string name, string description)
         {
             Name = name;
-            Description = descriprion; 
+            Description = description; 
         }
 
         [Key]
