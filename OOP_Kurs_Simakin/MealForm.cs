@@ -46,6 +46,8 @@ namespace OOP_Kurs_Simakin
             {
                 if (db.Database.EnsureDeleted())
                     MessageBox.Show("База данных успешно удалена!", "Уведомление");
+                else
+                    return;
             }
             MealsTable.Rows.Clear();
             EnableButtons(false);
