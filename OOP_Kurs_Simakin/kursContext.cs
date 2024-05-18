@@ -7,21 +7,46 @@ using Microsoft.Extensions.Options;
 
 namespace OOP_Kurs_Simakin
 {
+    /// <summary>
+    /// Класс контекста
+    /// </summary>
     public partial class kursContext : DbContext
     {
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
         public kursContext()
         {
         }
 
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
+        /// <param name="options">Опции</param>
         public kursContext(DbContextOptions<kursContext> options)
             : base(options)
         {
         }
 
+        /// <summary>
+        /// Категории
+        /// </summary>
         public virtual DbSet<Category> Categories { get; set; } = null!;
+
+        /// <summary>
+        /// Кухни
+        /// </summary>
         public virtual DbSet<Cuisine> Cuisines { get; set; } = null!;
+
+        /// <summary>
+        /// Блюда
+        /// </summary>
         public virtual DbSet<Meal> Meals { get; set; } = null!;
 
+        /// <summary>
+        /// Метод конфигурации
+        /// </summary>
+        /// <param name="optionsBuilder">Опции</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -31,6 +56,10 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Метод создания
+        /// </summary>
+        /// <param name="modelBuilder">Параметры</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>(entity =>
@@ -65,6 +94,10 @@ namespace OOP_Kurs_Simakin
             OnModelCreatingPartial(modelBuilder); 
         }
 
+        /// <summary>
+        /// Метод частичного создания
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

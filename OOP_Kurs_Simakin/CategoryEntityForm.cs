@@ -10,12 +10,32 @@ using System.Windows.Forms;
 
 namespace OOP_Kurs_Simakin
 {
+    /// <summary>
+    /// Окно предстваления категории блюда
+    /// </summary>
     public partial class CategoryEntityForm : Form
     {
+        /// <summary>
+        /// Идентификатор открытой записи
+        /// </summary>
         private long id;
+
+        /// <summary>
+        /// Ссылка на окно "Меню"
+        /// </summary>
         private MealForm ref_to_main_form;
+
+        /// <summary>
+        /// Ссылка на родительское окно - "Категории блюд"
+        /// </summary>
         private CategoryForm ref_to_parent_form;
 
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="_id">Идентификатор открытой записи</param>
+        /// <param name="_ref_to_main_form">Ссылка на окно "Меню"</param>
+        /// <param name="_ref_to_parent_form">Ссылка на родительское окно - "Категории блюд"</param>
         public CategoryEntityForm(long _id, MealForm _ref_to_main_form, CategoryForm _ref_to_parent_form)
         {
             InitializeComponent();
@@ -24,6 +44,11 @@ namespace OOP_Kurs_Simakin
             ref_to_parent_form = _ref_to_parent_form;
         }
 
+        /// <summary>
+        /// Сохранить изменения в базу данных
+        /// </summary>
+        /// <param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void ApplyChanges_Click(object sender, EventArgs e)
         {
             string edited_category_name = EditedCategoryName.Text;
@@ -45,6 +70,10 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Обновление таблицы категорий
+        /// </summary>
+        /// <param name="edited_category">Измененная категория</param>
         private void UpdateDGV(Category edited_category)
         {
             for (int i = 0; i < ref_to_parent_form.CategoriesTable.RowCount; i++)
@@ -58,11 +87,21 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Закрыть окно
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void ExitCategoryEntityForm_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Удалить запись
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void Delete_Click(object sender, EventArgs e)
         {
             using (kursContext db = new kursContext())
@@ -87,6 +126,11 @@ namespace OOP_Kurs_Simakin
             ref_to_main_form.ResetMealsDGV();
         }
 
+        /// <summary>
+        /// Заполнение информации о записи при загрузке окна
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void CategoryEntityForm_Load(object sender, EventArgs e)
         {
             Text = $"ID : {id}";

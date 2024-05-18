@@ -12,21 +12,41 @@ using System.Windows.Forms;
 
 namespace OOP_Kurs_Simakin
 {
+    /// <summary>
+    /// Окно добавления нового блюда
+    /// </summary>
     public partial class AddMealForm : Form
     {
+        /// <summary>
+        /// Ссылка на родительское окно - "Меню"
+        /// </summary>
         private MealForm ref_to_parent_form;
 
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="_ref_to_parent_form">Ссылка на родительское окно - "Меню"</param>
         public AddMealForm(MealForm _ref_to_parent_form)
         {
             InitializeComponent();
             ref_to_parent_form = _ref_to_parent_form;
         }
 
+        /// <summary>
+        /// Закрытие формы
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Добавление блюда в базу данных
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void ApplyAddMealForm_Click(object sender, EventArgs e)
         {
             string name = NewMealName.Text;
@@ -65,6 +85,9 @@ namespace OOP_Kurs_Simakin
             ClearInput();
         }
 
+        /// <summary>
+        /// Очистка полей ввода
+        /// </summary>
         private void ClearInput()
         {
             NewMealName.Text = "";
@@ -75,12 +98,22 @@ namespace OOP_Kurs_Simakin
             CategoryId.Value = CategoryId.Minimum;
         }
 
+        /// <summary>
+        /// Открытие окна "Категории блюд"
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCategoriesForm_Click(object sender, EventArgs e)
         {
             CategoryForm categoryForm = new CategoryForm(ref_to_parent_form);
             categoryForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Открытие окна "Виды кухонь"
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCuisinesForm_Click(object sender, EventArgs e)
         {
             CuisineForm cuisineForm = new CuisineForm(ref_to_parent_form);

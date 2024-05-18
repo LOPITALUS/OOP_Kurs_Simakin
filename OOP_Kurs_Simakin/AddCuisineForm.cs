@@ -11,14 +11,26 @@ using System.Xml.Linq;
 
 namespace OOP_Kurs_Simakin
 {
+    /// <summary>
+    /// Окно добавления нового вида кухни
+    /// </summary>
     public partial class AddCuisineForm : Form
     {
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="_ref_to_parent_form">Ссылка на родительскую форму - "Виды кухонь"</param>
         public AddCuisineForm(CuisineForm _ref_to_parent_form)
         {
             InitializeComponent();
             ref_to_parent_form = _ref_to_parent_form;
         }
 
+        /// <summary>
+        /// Добавление в базу данных новой кухни
+        /// </summary>
+        /// <param name="sender">Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void ApplyAddCuisinelForm_Click(object sender, EventArgs e)
         {
             string new_cuisine_name = NewCuisineName.Text;
@@ -41,17 +53,28 @@ namespace OOP_Kurs_Simakin
             ClearInput();
         }
 
+        /// <summary>
+        /// Очистка ввода в окне
+        /// </summary>
         private void ClearInput()
         {
             NewCuisineName.Text = "";
             NewCuisineDescription.Text = "";
         }
 
+        /// <summary>
+        /// Закрытие формы
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void ExitAddCuisineForm_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Ссылка на родительское окно - "Виды кухонь"
+        /// </summary>
         private CuisineForm ref_to_parent_form;
     }
 }

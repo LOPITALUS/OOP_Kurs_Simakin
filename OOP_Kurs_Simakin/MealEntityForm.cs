@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace OOP_Kurs_Simakin
 {
-
+    /// <summary>
+    /// Окно представления блюда
+    /// </summary>
     public partial class MealEntityForm : Form
     {
+        /// <summary>
+        /// Идентификатор открытой записи
+        /// </summary>
         private long id;
+
+        /// <summary>
+        /// Ссылка на окно "Меню"
+        /// </summary>
         private MealForm ref_to_parent_form;
+
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="_id">Идентификатор открытой записи</param>
+        /// <param name="_ref_to_parent_form">Ссылка на окно "Меню"</param>
         public MealEntityForm(long _id, MealForm _ref_to_parent_form)
         {
             InitializeComponent();
@@ -22,6 +37,11 @@ namespace OOP_Kurs_Simakin
             ref_to_parent_form = _ref_to_parent_form;
         }
 
+        /// <summary>
+        /// Сохранить изменения
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void ApplyChanges_Click(object sender, EventArgs e)
         {
             string name = EditedMealName.Text;
@@ -63,6 +83,11 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Заполнить информацию о записи при загрузке
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void MealEntityForm_Load(object sender, EventArgs e)
         {
             Text = $"ID : {id}";
@@ -78,6 +103,10 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Обновить таблицу "Блюда"
+        /// </summary>
+        /// <param name="edited_meal">Измененное блюдо</param>
         private void UpdateDGV(Meal edited_meal)
         {
             for (int i = 0; i < ref_to_parent_form.MealsTable.RowCount; i++)
@@ -95,11 +124,21 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Закрыть окно
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void ExitMealEntityForm_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Удалить запись
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void Delete_Click(object sender, EventArgs e)
         {
             using (kursContext db = new kursContext())
@@ -122,12 +161,22 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Открыть окно "Виды кухонь"
+        /// </summary>
+        ///<param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCuisinesForm_Click(object sender, EventArgs e)
         {
             CuisineForm cuisineForm = new CuisineForm(ref_to_parent_form);
             cuisineForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Открыть окно "Категории блюд"
+        /// </summary>
+        /// <param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCategoriesForm_Click(object sender, EventArgs e)
         {
             CategoryForm categoryForm = new CategoryForm(ref_to_parent_form);

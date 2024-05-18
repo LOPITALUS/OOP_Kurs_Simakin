@@ -10,26 +10,50 @@ using System.Windows.Forms;
 
 namespace OOP_Kurs_Simakin
 {
+    /// <summary>
+    /// Окно "Категории блюд"
+    /// </summary>
     public partial class CategoryForm : Form
     {
+        /// <summary>
+        /// Ссылка на окно "Меню"
+        /// </summary>
         private MealForm ref_to_main_form;
+
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="_ref_to_main_form">Ссылка на окно "Меню"</param>
         public CategoryForm(MealForm _ref_to_main_form)
         {
             InitializeComponent();
             ref_to_main_form = _ref_to_main_form;
         }
 
+        /// <summary>
+        /// Перейти в окно создания
+        /// </summary>
+        /// <param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void AddCategoryBtn_Click(object sender, EventArgs e)
         {
             AddCategoryForm addCuisineForm = new AddCategoryForm(this);
             addCuisineForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Построение таблицы при загрузке
+        /// </summary>
+        /// <param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void CategoryForm_Load(object sender, EventArgs e)
         {
             ResetCategoryDGV();
         }
 
+        /// <summary>
+        /// Построение таблицы
+        /// </summary>
         private void ResetCategoryDGV()
         {
             CategoriesTable.Rows.Clear();
@@ -43,6 +67,11 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Открытие представление записи при клике на строку таблицы
+        /// </summary>
+        /// <param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void CategoriesTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -53,6 +82,11 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Поиск по названию
+        /// </summary>
+        /// <param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void SearchNameButton_Click(object sender, EventArgs e)
         {
             CategoriesTable.Rows.Clear();
@@ -68,6 +102,11 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Поиск по идентификатору
+        /// </summary>
+        /// <param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void SearchIdButton_Click(object sender, EventArgs e)
         {
             long current_id = (long)IdForSearching.Value;
@@ -83,6 +122,11 @@ namespace OOP_Kurs_Simakin
             }
         }
 
+        /// <summary>
+        /// Снятие всех фильтров с таблицы
+        /// </summary>
+        /// <param name = "sender" > Источник события</param>
+        /// <param name="e">Объект с дополнительной информацией</param>
         private void CancelFilters_Click(object sender, EventArgs e)
         {
             ResetCategoryDGV();

@@ -138,7 +138,6 @@
             NameForSearching.Name = "NameForSearching";
             NameForSearching.Size = new Size(157, 27);
             NameForSearching.TabIndex = 7;
-            NameForSearching.TextChanged += NameForSearching_TextChanged;
             // 
             // SearchIdButton
             // 
@@ -227,7 +226,6 @@
             label1.Size = new Size(110, 20);
             label1.TabIndex = 16;
             label1.Text = "По названию: ";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -237,7 +235,6 @@
             label2.Size = new Size(150, 20);
             label2.TabIndex = 17;
             label2.Text = "По идентификатору:";
-            label2.Click += label2_Click;
             // 
             // IdForSearching
             // 
@@ -246,7 +243,6 @@
             IdForSearching.Name = "IdForSearching";
             IdForSearching.Size = new Size(117, 27);
             IdForSearching.TabIndex = 18;
-            IdForSearching.ValueChanged += IdForSearching_ValueChanged;
             // 
             // SearchNameButton
             // 
