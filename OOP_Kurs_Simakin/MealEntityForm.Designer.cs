@@ -214,7 +214,7 @@
             OpenCuisinesForm.Name = "OpenCuisinesForm";
             OpenCuisinesForm.Size = new Size(182, 41);
             OpenCuisinesForm.TabIndex = 20;
-            OpenCuisinesForm.Text = "Открыть виды кухонь";
+            OpenCuisinesForm.Text = "Открыть \"Виды кухонь\"";
             OpenCuisinesForm.UseVisualStyleBackColor = false;
             OpenCuisinesForm.Click += OpenCuisinesForm_Click;
             // 
@@ -226,7 +226,7 @@
             OpenCategoriesForm.Name = "OpenCategoriesForm";
             OpenCategoriesForm.Size = new Size(182, 41);
             OpenCategoriesForm.TabIndex = 21;
-            OpenCategoriesForm.Text = "Открыть категории блюд";
+            OpenCategoriesForm.Text = "Открыть \"Категории блюд\"";
             OpenCategoriesForm.UseVisualStyleBackColor = false;
             OpenCategoriesForm.Click += OpenCategoriesForm_Click;
             // 
