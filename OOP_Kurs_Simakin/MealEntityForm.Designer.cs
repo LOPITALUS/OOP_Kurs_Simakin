@@ -70,9 +70,9 @@
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(26, 80);
             label2.Name = "label2";
-            label2.Size = new Size(45, 15);
+            label2.Size = new Size(61, 15);
             label2.TabIndex = 1;
-            label2.Text = "Масса:";
+            label2.Text = "Масса (г):";
             // 
             // label3
             // 
@@ -124,6 +124,7 @@
             EditedMealName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             EditedMealName.Location = new Point(180, 42);
             EditedMealName.Margin = new Padding(3, 2, 3, 2);
+            EditedMealName.MaxLength = 100;
             EditedMealName.Name = "EditedMealName";
             EditedMealName.Size = new Size(120, 23);
             EditedMealName.TabIndex = 6;
@@ -131,7 +132,7 @@
             // EditedMealWeight
             // 
             EditedMealWeight.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealWeight.DecimalPlaces = 5;
+            EditedMealWeight.DecimalPlaces = 3;
             EditedMealWeight.Location = new Point(180, 80);
             EditedMealWeight.Margin = new Padding(3, 2, 3, 2);
             EditedMealWeight.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
@@ -144,7 +145,7 @@
             // EditedMealKcal
             // 
             EditedMealKcal.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealKcal.DecimalPlaces = 5;
+            EditedMealKcal.DecimalPlaces = 3;
             EditedMealKcal.Location = new Point(180, 118);
             EditedMealKcal.Margin = new Padding(3, 2, 3, 2);
             EditedMealKcal.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
@@ -157,7 +158,7 @@
             // EditedMealPrice
             // 
             EditedMealPrice.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            EditedMealPrice.DecimalPlaces = 5;
+            EditedMealPrice.DecimalPlaces = 3;
             EditedMealPrice.Location = new Point(180, 157);
             EditedMealPrice.Margin = new Padding(3, 2, 3, 2);
             EditedMealPrice.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
@@ -234,6 +235,7 @@
             // 
             CuisineId.Location = new Point(180, 195);
             CuisineId.Margin = new Padding(3, 2, 3, 2);
+            CuisineId.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             CuisineId.Name = "CuisineId";
             CuisineId.Size = new Size(120, 23);
             CuisineId.TabIndex = 22;
@@ -242,6 +244,7 @@
             // 
             CategoryId.Location = new Point(180, 233);
             CategoryId.Margin = new Padding(3, 2, 3, 2);
+            CategoryId.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             CategoryId.Name = "CategoryId";
             CategoryId.Size = new Size(120, 23);
             CategoryId.TabIndex = 23;

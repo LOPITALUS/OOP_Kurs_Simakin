@@ -78,9 +78,9 @@
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(26, 80);
             label3.Name = "label3";
-            label3.Size = new Size(45, 15);
+            label3.Size = new Size(61, 15);
             label3.TabIndex = 3;
-            label3.Text = "Масса:";
+            label3.Text = "Масса (г):";
             // 
             // label4
             // 
@@ -125,13 +125,14 @@
             // NewMealName
             // 
             NewMealName.Location = new Point(180, 42);
+            NewMealName.MaxLength = 100;
             NewMealName.Name = "NewMealName";
             NewMealName.Size = new Size(120, 23);
             NewMealName.TabIndex = 8;
             // 
             // NewMealWeight
             // 
-            NewMealWeight.DecimalPlaces = 5;
+            NewMealWeight.DecimalPlaces = 3;
             NewMealWeight.Location = new Point(180, 80);
             NewMealWeight.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             NewMealWeight.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -142,7 +143,7 @@
             // 
             // NewMealKcal
             // 
-            NewMealKcal.DecimalPlaces = 5;
+            NewMealKcal.DecimalPlaces = 3;
             NewMealKcal.Location = new Point(180, 118);
             NewMealKcal.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             NewMealKcal.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -153,7 +154,7 @@
             // 
             // NewMealPrice
             // 
-            NewMealPrice.DecimalPlaces = 5;
+            NewMealPrice.DecimalPlaces = 3;
             NewMealPrice.Location = new Point(180, 157);
             NewMealPrice.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             NewMealPrice.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -177,6 +178,7 @@
             // 
             CuisineId.Location = new Point(180, 195);
             CuisineId.Margin = new Padding(3, 2, 3, 2);
+            CuisineId.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             CuisineId.Name = "CuisineId";
             CuisineId.Size = new Size(120, 23);
             CuisineId.TabIndex = 16;
@@ -185,6 +187,7 @@
             // 
             CategoryId.Location = new Point(180, 233);
             CategoryId.Margin = new Padding(3, 2, 3, 2);
+            CategoryId.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             CategoryId.Name = "CategoryId";
             CategoryId.Size = new Size(120, 23);
             CategoryId.TabIndex = 17;
