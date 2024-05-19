@@ -337,7 +337,7 @@ namespace OOP_Kurs_Simakin
                 CreateDb.Enabled = true;
         }
 
-        
+
     }
 }
 

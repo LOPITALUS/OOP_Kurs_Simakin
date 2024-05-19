@@ -54,13 +54,14 @@
             CuisinesTable.BackgroundColor = SystemColors.GradientActiveCaption;
             CuisinesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CuisinesTable.Columns.AddRange(new DataGridViewColumn[] { idCuis, nameCuis, descriptionCuis });
-            CuisinesTable.Location = new Point(55, 47);
+            CuisinesTable.Location = new Point(48, 35);
+            CuisinesTable.Margin = new Padding(3, 2, 3, 2);
             CuisinesTable.Name = "CuisinesTable";
             CuisinesTable.RowHeadersVisible = false;
             CuisinesTable.RowHeadersWidth = 51;
             CuisinesTable.RowTemplate.Height = 29;
             CuisinesTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            CuisinesTable.Size = new Size(804, 288);
+            CuisinesTable.Size = new Size(704, 216);
             CuisinesTable.TabIndex = 0;
             CuisinesTable.CellClick += CuisinesTable_CellClick;
             // 
@@ -89,9 +90,10 @@
             // 
             AddCuisineBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             AddCuisineBtn.BackColor = SystemColors.Info;
-            AddCuisineBtn.Location = new Point(73, 521);
+            AddCuisineBtn.Location = new Point(64, 391);
+            AddCuisineBtn.Margin = new Padding(3, 2, 3, 2);
             AddCuisineBtn.Name = "AddCuisineBtn";
-            AddCuisineBtn.Size = new Size(170, 36);
+            AddCuisineBtn.Size = new Size(149, 27);
             AddCuisineBtn.TabIndex = 1;
             AddCuisineBtn.Text = "Добавить кухню";
             AddCuisineBtn.UseVisualStyleBackColor = false;
@@ -101,10 +103,9 @@
             // 
             SearchNameButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             SearchNameButton.BackColor = SystemColors.Info;
-            SearchNameButton.Location = new Point(371, 400);
-            SearchNameButton.Margin = new Padding(3, 4, 3, 4);
+            SearchNameButton.Location = new Point(325, 300);
             SearchNameButton.Name = "SearchNameButton";
-            SearchNameButton.Size = new Size(86, 31);
+            SearchNameButton.Size = new Size(75, 23);
             SearchNameButton.TabIndex = 25;
             SearchNameButton.Text = "Найти запись";
             SearchNameButton.UseVisualStyleBackColor = false;
@@ -113,10 +114,11 @@
             // IdForSearching
             // 
             IdForSearching.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            IdForSearching.Location = new Point(617, 400);
-            IdForSearching.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
+            IdForSearching.Location = new Point(540, 300);
+            IdForSearching.Margin = new Padding(3, 2, 3, 2);
+            IdForSearching.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             IdForSearching.Name = "IdForSearching";
-            IdForSearching.Size = new Size(150, 27);
+            IdForSearching.Size = new Size(131, 23);
             IdForSearching.TabIndex = 24;
             // 
             // label2
@@ -124,9 +126,9 @@
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(515, 403);
+            label2.Location = new Point(451, 302);
             label2.Name = "label2";
-            label2.Size = new Size(98, 20);
+            label2.Size = new Size(78, 15);
             label2.TabIndex = 23;
             label2.Text = "Поиск по ID:";
             // 
@@ -135,9 +137,9 @@
             label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(55, 402);
+            label1.Location = new Point(48, 302);
             label1.Name = "label1";
-            label1.Size = new Size(158, 20);
+            label1.Size = new Size(124, 15);
             label1.TabIndex = 22;
             label1.Text = "Поиск по названию: ";
             // 
@@ -145,10 +147,9 @@
             // 
             SearchIdButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             SearchIdButton.BackColor = SystemColors.Info;
-            SearchIdButton.Location = new Point(773, 400);
-            SearchIdButton.Margin = new Padding(3, 4, 3, 4);
+            SearchIdButton.Location = new Point(676, 300);
             SearchIdButton.Name = "SearchIdButton";
-            SearchIdButton.Size = new Size(86, 31);
+            SearchIdButton.Size = new Size(75, 23);
             SearchIdButton.TabIndex = 21;
             SearchIdButton.Text = "Найти запись";
             SearchIdButton.UseVisualStyleBackColor = false;
@@ -157,19 +158,20 @@
             // NameForSearching
             // 
             NameForSearching.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            NameForSearching.Location = new Point(216, 400);
-            NameForSearching.Margin = new Padding(3, 4, 3, 4);
+            NameForSearching.Location = new Point(189, 300);
+            NameForSearching.MaxLength = 100;
             NameForSearching.Name = "NameForSearching";
-            NameForSearching.Size = new Size(149, 27);
+            NameForSearching.Size = new Size(131, 23);
             NameForSearching.TabIndex = 20;
             // 
             // CancelFilters
             // 
             CancelFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             CancelFilters.BackColor = SystemColors.Info;
-            CancelFilters.Location = new Point(705, 521);
+            CancelFilters.Location = new Point(617, 391);
+            CancelFilters.Margin = new Padding(3, 2, 3, 2);
             CancelFilters.Name = "CancelFilters";
-            CancelFilters.Size = new Size(154, 36);
+            CancelFilters.Size = new Size(135, 27);
             CancelFilters.TabIndex = 26;
             CancelFilters.Text = "Снять фильтры";
             CancelFilters.UseVisualStyleBackColor = false;
@@ -177,10 +179,10 @@
             // 
             // CuisineForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(802, 456);
             Controls.Add(CancelFilters);
             Controls.Add(SearchNameButton);
             Controls.Add(IdForSearching);
@@ -190,8 +192,7 @@
             Controls.Add(NameForSearching);
             Controls.Add(AddCuisineBtn);
             Controls.Add(CuisinesTable);
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(932, 647);
+            MinimumSize = new Size(818, 495);
             Name = "CuisineForm";
             Text = "Виды кухонь ";
             Load += CuisineForm_Load;

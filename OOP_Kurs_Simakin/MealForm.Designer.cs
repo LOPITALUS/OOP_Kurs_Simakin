@@ -101,10 +101,9 @@
             // 
             Exit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             Exit.BackColor = SystemColors.Info;
-            Exit.Location = new Point(1346, 563);
-            Exit.Margin = new Padding(3, 4, 3, 4);
+            Exit.Location = new Point(1178, 422);
             Exit.Name = "Exit";
-            Exit.Size = new Size(86, 31);
+            Exit.Size = new Size(75, 23);
             Exit.TabIndex = 1;
             Exit.Text = "Выход";
             Exit.UseVisualStyleBackColor = false;
@@ -113,19 +112,18 @@
             // CuisineLabel
             // 
             CuisineLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            CuisineLabel.Location = new Point(94, 95);
+            CuisineLabel.Location = new Point(82, 71);
             CuisineLabel.Name = "CuisineLabel";
-            CuisineLabel.Size = new Size(0, 20);
+            CuisineLabel.Size = new Size(0, 15);
             CuisineLabel.TabIndex = 4;
             // 
             // SetFiltersButton
             // 
             SetFiltersButton.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SetFiltersButton.BackColor = SystemColors.Info;
-            SetFiltersButton.Location = new Point(135, 259);
-            SetFiltersButton.Margin = new Padding(3, 4, 3, 4);
+            SetFiltersButton.Location = new Point(118, 194);
             SetFiltersButton.Name = "SetFiltersButton";
-            SetFiltersButton.Size = new Size(106, 29);
+            SetFiltersButton.Size = new Size(93, 22);
             SetFiltersButton.TabIndex = 5;
             SetFiltersButton.Text = "Применить";
             SetFiltersButton.UseVisualStyleBackColor = false;
@@ -133,19 +131,18 @@
             // 
             // NameForSearching
             // 
-            NameForSearching.Location = new Point(123, 40);
-            NameForSearching.Margin = new Padding(3, 4, 3, 4);
+            NameForSearching.Location = new Point(108, 30);
+            NameForSearching.MaxLength = 100;
             NameForSearching.Name = "NameForSearching";
-            NameForSearching.Size = new Size(157, 27);
+            NameForSearching.Size = new Size(138, 23);
             NameForSearching.TabIndex = 7;
             // 
             // SearchIdButton
             // 
             SearchIdButton.BackColor = SystemColors.Info;
-            SearchIdButton.Location = new Point(286, 96);
-            SearchIdButton.Margin = new Padding(3, 4, 3, 4);
+            SearchIdButton.Location = new Point(250, 72);
             SearchIdButton.Name = "SearchIdButton";
-            SearchIdButton.Size = new Size(86, 31);
+            SearchIdButton.Size = new Size(75, 23);
             SearchIdButton.TabIndex = 8;
             SearchIdButton.Text = "Найти запись";
             SearchIdButton.UseVisualStyleBackColor = false;
@@ -155,10 +152,9 @@
             // 
             DeleteDb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             DeleteDb.BackColor = SystemColors.Info;
-            DeleteDb.Location = new Point(1236, 80);
-            DeleteDb.Margin = new Padding(3, 4, 3, 4);
+            DeleteDb.Location = new Point(1082, 60);
             DeleteDb.Name = "DeleteDb";
-            DeleteDb.Size = new Size(152, 55);
+            DeleteDb.Size = new Size(133, 41);
             DeleteDb.TabIndex = 10;
             DeleteDb.Text = "Удалить базу данных";
             DeleteDb.UseVisualStyleBackColor = false;
@@ -167,10 +163,9 @@
             // button3
             // 
             button3.BackColor = SystemColors.Info;
-            button3.Location = new Point(40, 198);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(35, 148);
             button3.Name = "button3";
-            button3.Size = new Size(153, 53);
+            button3.Size = new Size(134, 40);
             button3.TabIndex = 11;
             button3.Text = "Добавить новое блюдо\r\n";
             button3.UseVisualStyleBackColor = false;
@@ -180,10 +175,9 @@
             // 
             CreateDb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             CreateDb.BackColor = SystemColors.Info;
-            CreateDb.Location = new Point(1236, 179);
-            CreateDb.Margin = new Padding(3, 4, 3, 4);
+            CreateDb.Location = new Point(1082, 134);
             CreateDb.Name = "CreateDb";
-            CreateDb.Size = new Size(152, 55);
+            CreateDb.Size = new Size(133, 41);
             CreateDb.TabIndex = 12;
             CreateDb.Text = "Создать базу данных";
             CreateDb.UseVisualStyleBackColor = false;
@@ -197,10 +191,9 @@
             // OpenCuisineForm
             // 
             OpenCuisineForm.BackColor = SystemColors.Info;
-            OpenCuisineForm.Location = new Point(40, 52);
-            OpenCuisineForm.Margin = new Padding(3, 4, 3, 4);
+            OpenCuisineForm.Location = new Point(35, 39);
             OpenCuisineForm.Name = "OpenCuisineForm";
-            OpenCuisineForm.Size = new Size(153, 55);
+            OpenCuisineForm.Size = new Size(134, 41);
             OpenCuisineForm.TabIndex = 14;
             OpenCuisineForm.Text = "Открыть \"Виды кухонь\"";
             OpenCuisineForm.UseVisualStyleBackColor = false;
@@ -209,10 +202,9 @@
             // OpenCategoryForm
             // 
             OpenCategoryForm.BackColor = SystemColors.Info;
-            OpenCategoryForm.Location = new Point(40, 126);
-            OpenCategoryForm.Margin = new Padding(3, 4, 3, 4);
+            OpenCategoryForm.Location = new Point(35, 94);
             OpenCategoryForm.Name = "OpenCategoryForm";
-            OpenCategoryForm.Size = new Size(153, 53);
+            OpenCategoryForm.Size = new Size(134, 40);
             OpenCategoryForm.TabIndex = 15;
             OpenCategoryForm.Text = "Открыть \"Категории блюд\"";
             OpenCategoryForm.UseVisualStyleBackColor = false;
@@ -221,36 +213,36 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(7, 40);
+            label1.Location = new Point(6, 35);
             label1.Name = "label1";
-            label1.Size = new Size(110, 20);
+            label1.Size = new Size(86, 15);
             label1.TabIndex = 16;
             label1.Text = "По названию: ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(7, 101);
+            label2.Location = new Point(6, 76);
             label2.Name = "label2";
-            label2.Size = new Size(150, 20);
+            label2.Size = new Size(120, 15);
             label2.TabIndex = 17;
             label2.Text = "По идентификатору:";
             // 
             // IdForSearching
             // 
-            IdForSearching.Location = new Point(163, 97);
-            IdForSearching.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
+            IdForSearching.Location = new Point(143, 73);
+            IdForSearching.Margin = new Padding(3, 2, 3, 2);
+            IdForSearching.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             IdForSearching.Name = "IdForSearching";
-            IdForSearching.Size = new Size(117, 27);
+            IdForSearching.Size = new Size(102, 23);
             IdForSearching.TabIndex = 18;
             // 
             // SearchNameButton
             // 
             SearchNameButton.BackColor = SystemColors.Info;
-            SearchNameButton.Location = new Point(286, 38);
-            SearchNameButton.Margin = new Padding(3, 4, 3, 4);
+            SearchNameButton.Location = new Point(250, 28);
             SearchNameButton.Name = "SearchNameButton";
-            SearchNameButton.Size = new Size(86, 31);
+            SearchNameButton.Size = new Size(75, 23);
             SearchNameButton.TabIndex = 19;
             SearchNameButton.Text = "Найти запись";
             SearchNameButton.UseVisualStyleBackColor = false;
@@ -260,9 +252,10 @@
             // 
             CancelFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             CancelFilters.BackColor = SystemColors.Info;
-            CancelFilters.Location = new Point(1216, 400);
+            CancelFilters.Location = new Point(1064, 300);
+            CancelFilters.Margin = new Padding(3, 2, 3, 2);
             CancelFilters.Name = "CancelFilters";
-            CancelFilters.Size = new Size(216, 50);
+            CancelFilters.Size = new Size(189, 38);
             CancelFilters.TabIndex = 20;
             CancelFilters.Text = "Снять все фильтры с таблицы";
             CancelFilters.UseVisualStyleBackColor = false;
@@ -272,18 +265,19 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(19, 12);
+            label3.Location = new Point(17, 9);
             label3.Name = "label3";
-            label3.Size = new Size(99, 20);
+            label3.Size = new Size(78, 15);
             label3.TabIndex = 21;
             label3.Text = "Сортировка:";
             // 
             // IdSort
             // 
             IdSort.AutoSize = true;
-            IdSort.Location = new Point(20, 47);
+            IdSort.Location = new Point(18, 35);
+            IdSort.Margin = new Padding(3, 2, 3, 2);
             IdSort.Name = "IdSort";
-            IdSort.Size = new Size(46, 24);
+            IdSort.Size = new Size(37, 19);
             IdSort.TabIndex = 22;
             IdSort.Text = "ID";
             IdSort.UseVisualStyleBackColor = true;
@@ -291,9 +285,10 @@
             // button6
             // 
             button6.BackColor = SystemColors.Info;
-            button6.Location = new Point(138, 259);
+            button6.Location = new Point(121, 194);
+            button6.Margin = new Padding(3, 2, 3, 2);
             button6.Name = "button6";
-            button6.Size = new Size(113, 29);
+            button6.Size = new Size(99, 22);
             button6.TabIndex = 23;
             button6.Text = "Сортировать";
             button6.UseVisualStyleBackColor = false;
@@ -303,9 +298,10 @@
             // 
             UpSort.AutoSize = true;
             UpSort.Checked = true;
-            UpSort.Location = new Point(198, 47);
+            UpSort.Location = new Point(173, 35);
+            UpSort.Margin = new Padding(3, 2, 3, 2);
             UpSort.Name = "UpSort";
-            UpSort.Size = new Size(146, 24);
+            UpSort.Size = new Size(116, 19);
             UpSort.TabIndex = 24;
             UpSort.TabStop = true;
             UpSort.Text = "По возрастанию";
@@ -314,9 +310,10 @@
             // DownSort
             // 
             DownSort.AutoSize = true;
-            DownSort.Location = new Point(198, 76);
+            DownSort.Location = new Point(173, 57);
+            DownSort.Margin = new Padding(3, 2, 3, 2);
             DownSort.Name = "DownSort";
-            DownSort.Size = new Size(127, 24);
+            DownSort.Size = new Size(102, 19);
             DownSort.TabIndex = 25;
             DownSort.Text = "По убыванию";
             DownSort.UseVisualStyleBackColor = true;
@@ -324,9 +321,10 @@
             // WeightSort
             // 
             WeightSort.AutoSize = true;
-            WeightSort.Location = new Point(20, 105);
+            WeightSort.Location = new Point(18, 79);
+            WeightSort.Margin = new Padding(3, 2, 3, 2);
             WeightSort.Name = "WeightSort";
-            WeightSort.Size = new Size(74, 24);
+            WeightSort.Size = new Size(61, 19);
             WeightSort.TabIndex = 26;
             WeightSort.Text = "Масса";
             WeightSort.UseVisualStyleBackColor = true;
@@ -334,9 +332,10 @@
             // NameSort
             // 
             NameSort.AutoSize = true;
-            NameSort.Location = new Point(20, 76);
+            NameSort.Location = new Point(18, 57);
+            NameSort.Margin = new Padding(3, 2, 3, 2);
             NameSort.Name = "NameSort";
-            NameSort.Size = new Size(99, 24);
+            NameSort.Size = new Size(78, 19);
             NameSort.TabIndex = 27;
             NameSort.Text = "Название";
             NameSort.UseVisualStyleBackColor = true;
@@ -344,9 +343,10 @@
             // PriceSort
             // 
             PriceSort.AutoSize = true;
-            PriceSort.Location = new Point(20, 167);
+            PriceSort.Location = new Point(18, 125);
+            PriceSort.Margin = new Padding(3, 2, 3, 2);
             PriceSort.Name = "PriceSort";
-            PriceSort.Size = new Size(67, 24);
+            PriceSort.Size = new Size(54, 19);
             PriceSort.TabIndex = 30;
             PriceSort.Text = "Цена";
             PriceSort.UseVisualStyleBackColor = true;
@@ -354,9 +354,10 @@
             // CuisineSort
             // 
             CuisineSort.AutoSize = true;
-            CuisineSort.Location = new Point(20, 196);
+            CuisineSort.Location = new Point(18, 147);
+            CuisineSort.Margin = new Padding(3, 2, 3, 2);
             CuisineSort.Name = "CuisineSort";
-            CuisineSort.Size = new Size(100, 24);
+            CuisineSort.Size = new Size(81, 19);
             CuisineSort.TabIndex = 29;
             CuisineSort.Text = "Вид кухни";
             CuisineSort.UseVisualStyleBackColor = true;
@@ -364,9 +365,10 @@
             // KcalSort
             // 
             KcalSort.AutoSize = true;
-            KcalSort.Location = new Point(20, 136);
+            KcalSort.Location = new Point(18, 102);
+            KcalSort.Margin = new Padding(3, 2, 3, 2);
             KcalSort.Name = "KcalSort";
-            KcalSort.Size = new Size(114, 24);
+            KcalSort.Size = new Size(93, 19);
             KcalSort.TabIndex = 28;
             KcalSort.Text = "Кол-во ккал";
             KcalSort.UseVisualStyleBackColor = true;
@@ -374,9 +376,10 @@
             // CategorySort
             // 
             CategorySort.AutoSize = true;
-            CategorySort.Location = new Point(20, 225);
+            CategorySort.Location = new Point(18, 169);
+            CategorySort.Margin = new Padding(3, 2, 3, 2);
             CategorySort.Name = "CategorySort";
-            CategorySort.Size = new Size(103, 24);
+            CategorySort.Size = new Size(82, 19);
             CategorySort.TabIndex = 31;
             CategorySort.Text = "Категория";
             CategorySort.UseVisualStyleBackColor = true;
@@ -384,138 +387,150 @@
             // label4
             // 
             label4.Anchor = AnchorStyles.None;
-            label4.Location = new Point(13, 49);
+            label4.Location = new Point(11, 37);
             label4.Name = "label4";
-            label4.Size = new Size(52, 20);
+            label4.Size = new Size(46, 15);
             label4.TabIndex = 32;
             label4.Text = "Масса";
             // 
             // label5
             // 
             label5.Anchor = AnchorStyles.None;
-            label5.Location = new Point(13, 77);
+            label5.Location = new Point(11, 58);
             label5.Name = "label5";
-            label5.Size = new Size(92, 20);
+            label5.Size = new Size(80, 15);
             label5.TabIndex = 33;
             label5.Text = "Кол-во ккал";
             // 
             // label6
             // 
             label6.Anchor = AnchorStyles.None;
-            label6.Location = new Point(13, 104);
+            label6.Location = new Point(11, 78);
             label6.Name = "label6";
-            label6.Size = new Size(45, 20);
+            label6.Size = new Size(39, 15);
             label6.TabIndex = 34;
             label6.Text = "Цена";
             // 
             // WeightFilterMin
             // 
             WeightFilterMin.Anchor = AnchorStyles.None;
-            WeightFilterMin.DecimalPlaces = 5;
-            WeightFilterMin.Location = new Point(151, 47);
+            WeightFilterMin.DecimalPlaces = 3;
+            WeightFilterMin.Location = new Point(132, 35);
+            WeightFilterMin.Margin = new Padding(3, 2, 3, 2);
+            WeightFilterMin.Maximum = new decimal(new int[] { 99999, 0, 0, 196608 });
             WeightFilterMin.Name = "WeightFilterMin";
-            WeightFilterMin.Size = new Size(77, 27);
+            WeightFilterMin.Size = new Size(67, 23);
             WeightFilterMin.TabIndex = 35;
             WeightFilterMin.ValueChanged += WeightFilterMin_ValueChanged;
             // 
             // WeightFilterMax
             // 
             WeightFilterMax.Anchor = AnchorStyles.None;
-            WeightFilterMax.DecimalPlaces = 5;
-            WeightFilterMax.Location = new Point(282, 47);
+            WeightFilterMax.DecimalPlaces = 3;
+            WeightFilterMax.Location = new Point(247, 35);
+            WeightFilterMax.Margin = new Padding(3, 2, 3, 2);
+            WeightFilterMax.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             WeightFilterMax.Name = "WeightFilterMax";
-            WeightFilterMax.Size = new Size(82, 27);
+            WeightFilterMax.Size = new Size(72, 23);
             WeightFilterMax.TabIndex = 36;
             // 
             // KcalFilterMax
             // 
             KcalFilterMax.Anchor = AnchorStyles.None;
-            KcalFilterMax.DecimalPlaces = 5;
-            KcalFilterMax.Location = new Point(282, 75);
+            KcalFilterMax.DecimalPlaces = 3;
+            KcalFilterMax.Location = new Point(247, 56);
+            KcalFilterMax.Margin = new Padding(3, 2, 3, 2);
+            KcalFilterMax.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             KcalFilterMax.Name = "KcalFilterMax";
-            KcalFilterMax.Size = new Size(82, 27);
+            KcalFilterMax.Size = new Size(72, 23);
             KcalFilterMax.TabIndex = 37;
             // 
             // KcalFilterMin
             // 
             KcalFilterMin.Anchor = AnchorStyles.None;
-            KcalFilterMin.DecimalPlaces = 5;
-            KcalFilterMin.Location = new Point(151, 75);
+            KcalFilterMin.DecimalPlaces = 3;
+            KcalFilterMin.Location = new Point(132, 56);
+            KcalFilterMin.Margin = new Padding(3, 2, 3, 2);
+            KcalFilterMin.Maximum = new decimal(new int[] { 99999, 0, 0, 196608 });
             KcalFilterMin.Name = "KcalFilterMin";
-            KcalFilterMin.Size = new Size(77, 27);
+            KcalFilterMin.Size = new Size(67, 23);
             KcalFilterMin.TabIndex = 38;
             KcalFilterMin.ValueChanged += KcalFilterMin_ValueChanged;
             // 
             // PriceFilterMin
             // 
             PriceFilterMin.Anchor = AnchorStyles.None;
-            PriceFilterMin.DecimalPlaces = 5;
-            PriceFilterMin.Location = new Point(151, 101);
+            PriceFilterMin.DecimalPlaces = 3;
+            PriceFilterMin.Location = new Point(132, 76);
+            PriceFilterMin.Margin = new Padding(3, 2, 3, 2);
+            PriceFilterMin.Maximum = new decimal(new int[] { 99999, 0, 0, 196608 });
             PriceFilterMin.Name = "PriceFilterMin";
-            PriceFilterMin.Size = new Size(77, 27);
+            PriceFilterMin.Size = new Size(67, 23);
             PriceFilterMin.TabIndex = 39;
             PriceFilterMin.ValueChanged += PriceFilterMin_ValueChanged;
             // 
             // PriceFilterMax
             // 
             PriceFilterMax.Anchor = AnchorStyles.None;
-            PriceFilterMax.DecimalPlaces = 5;
-            PriceFilterMax.Location = new Point(282, 101);
+            PriceFilterMax.DecimalPlaces = 3;
+            PriceFilterMax.Location = new Point(247, 76);
+            PriceFilterMax.Margin = new Padding(3, 2, 3, 2);
+            PriceFilterMax.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             PriceFilterMax.Name = "PriceFilterMax";
-            PriceFilterMax.Size = new Size(82, 27);
+            PriceFilterMax.Size = new Size(72, 23);
             PriceFilterMax.TabIndex = 40;
             // 
             // label7
             // 
             label7.Anchor = AnchorStyles.None;
-            label7.Location = new Point(238, 54);
+            label7.Location = new Point(208, 40);
             label7.Name = "label7";
-            label7.Size = new Size(26, 20);
+            label7.Size = new Size(23, 15);
             label7.TabIndex = 41;
             label7.Text = "до";
             // 
             // label8
             // 
             label8.Anchor = AnchorStyles.None;
-            label8.Location = new Point(238, 82);
+            label8.Location = new Point(208, 62);
             label8.Name = "label8";
-            label8.Size = new Size(26, 20);
+            label8.Size = new Size(23, 15);
             label8.TabIndex = 42;
             label8.Text = "до";
             // 
             // label9
             // 
             label9.Anchor = AnchorStyles.None;
-            label9.Location = new Point(238, 108);
+            label9.Location = new Point(208, 81);
             label9.Name = "label9";
-            label9.Size = new Size(26, 20);
+            label9.Size = new Size(23, 15);
             label9.TabIndex = 43;
             label9.Text = "до";
             // 
             // label10
             // 
             label10.Anchor = AnchorStyles.None;
-            label10.Location = new Point(111, 54);
+            label10.Location = new Point(97, 40);
             label10.Name = "label10";
-            label10.Size = new Size(24, 20);
+            label10.Size = new Size(21, 15);
             label10.TabIndex = 44;
             label10.Text = "от";
             // 
             // label11
             // 
             label11.Anchor = AnchorStyles.None;
-            label11.Location = new Point(111, 82);
+            label11.Location = new Point(97, 62);
             label11.Name = "label11";
-            label11.Size = new Size(24, 20);
+            label11.Size = new Size(21, 15);
             label11.TabIndex = 45;
             label11.Text = "от";
             // 
             // label12
             // 
             label12.Anchor = AnchorStyles.None;
-            label12.Location = new Point(111, 107);
+            label12.Location = new Point(97, 80);
             label12.Name = "label12";
-            label12.Size = new Size(24, 20);
+            label12.Size = new Size(21, 15);
             label12.TabIndex = 46;
             label12.Text = "от";
             // 
@@ -534,9 +549,10 @@
             SortPanel.Controls.Add(button6);
             SortPanel.Controls.Add(IdSort);
             SortPanel.Controls.Add(label3);
-            SortPanel.Location = new Point(20, 291);
+            SortPanel.Location = new Point(18, 218);
+            SortPanel.Margin = new Padding(3, 2, 3, 2);
             SortPanel.Name = "SortPanel";
-            SortPanel.Size = new Size(408, 304);
+            SortPanel.Size = new Size(357, 228);
             SortPanel.TabIndex = 47;
             // 
             // FiltersPanel
@@ -561,18 +577,19 @@
             FiltersPanel.Controls.Add(label4);
             FiltersPanel.Controls.Add(SetFiltersButton);
             FiltersPanel.Controls.Add(CuisineLabel);
-            FiltersPanel.Location = new Point(434, 291);
+            FiltersPanel.Location = new Point(380, 218);
+            FiltersPanel.Margin = new Padding(3, 2, 3, 2);
             FiltersPanel.Name = "FiltersPanel";
-            FiltersPanel.Size = new Size(380, 304);
+            FiltersPanel.Size = new Size(333, 228);
             FiltersPanel.TabIndex = 48;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(13, 12);
+            label13.Location = new Point(11, 9);
             label13.Name = "label13";
-            label13.Size = new Size(80, 20);
+            label13.Size = new Size(64, 15);
             label13.TabIndex = 32;
             label13.Text = "Фильтры:";
             // 
@@ -587,18 +604,19 @@
             SearchPanel.Controls.Add(label1);
             SearchPanel.Controls.Add(SearchIdButton);
             SearchPanel.Controls.Add(NameForSearching);
-            SearchPanel.Location = new Point(820, 291);
+            SearchPanel.Location = new Point(718, 218);
+            SearchPanel.Margin = new Padding(3, 2, 3, 2);
             SearchPanel.Name = "SearchPanel";
-            SearchPanel.Size = new Size(380, 303);
+            SearchPanel.Size = new Size(333, 228);
             SearchPanel.TabIndex = 49;
             // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.Location = new Point(7, 12);
+            label14.Location = new Point(6, 9);
             label14.Name = "label14";
-            label14.Size = new Size(57, 20);
+            label14.Size = new Size(47, 15);
             label14.TabIndex = 47;
             label14.Text = "Поиск:";
             // 
@@ -612,15 +630,14 @@
             MealsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             MealsTable.Columns.AddRange(new DataGridViewColumn[] { ID, NameColumn, WeightColumn, KcalColumn, PriceColumn, CuisineColumn, CategoryColumn });
             MealsTable.GridColor = SystemColors.Info;
-            MealsTable.Location = new Point(219, 52);
-            MealsTable.Margin = new Padding(3, 4, 3, 4);
+            MealsTable.Location = new Point(192, 39);
             MealsTable.Name = "MealsTable";
             MealsTable.ReadOnly = true;
             MealsTable.RowHeadersVisible = false;
             MealsTable.RowHeadersWidth = 51;
             MealsTable.RowTemplate.Height = 25;
             MealsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            MealsTable.Size = new Size(962, 209);
+            MealsTable.Size = new Size(842, 157);
             MealsTable.TabIndex = 0;
             MealsTable.CellClick += MealsTable_CellClick;
             // 
@@ -682,10 +699,10 @@
             // 
             // MealForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(1444, 600);
+            ClientSize = new Size(1265, 456);
             Controls.Add(MealsTable);
             Controls.Add(CancelFilters);
             Controls.Add(SearchPanel);
@@ -697,8 +714,7 @@
             Controls.Add(button3);
             Controls.Add(DeleteDb);
             Controls.Add(Exit);
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(1462, 647);
+            MinimumSize = new Size(1281, 495);
             Name = "MealForm";
             Text = "Меню";
             Load += MealForm_Load;

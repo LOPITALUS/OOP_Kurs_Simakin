@@ -48,9 +48,10 @@
             // 
             AddCategoryBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             AddCategoryBtn.BackColor = SystemColors.Info;
-            AddCategoryBtn.Location = new Point(73, 521);
+            AddCategoryBtn.Location = new Point(64, 391);
+            AddCategoryBtn.Margin = new Padding(3, 2, 3, 2);
             AddCategoryBtn.Name = "AddCategoryBtn";
-            AddCategoryBtn.Size = new Size(170, 36);
+            AddCategoryBtn.Size = new Size(149, 27);
             AddCategoryBtn.TabIndex = 0;
             AddCategoryBtn.Text = "Добавить категорию";
             AddCategoryBtn.UseVisualStyleBackColor = false;
@@ -65,13 +66,14 @@
             CategoriesTable.BackgroundColor = SystemColors.GradientActiveCaption;
             CategoriesTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CategoriesTable.Columns.AddRange(new DataGridViewColumn[] { idCat, nameCat, descriptionCat });
-            CategoriesTable.Location = new Point(55, 47);
+            CategoriesTable.Location = new Point(48, 35);
+            CategoriesTable.Margin = new Padding(3, 2, 3, 2);
             CategoriesTable.Name = "CategoriesTable";
             CategoriesTable.RowHeadersVisible = false;
             CategoriesTable.RowHeadersWidth = 51;
             CategoriesTable.RowTemplate.Height = 29;
             CategoriesTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            CategoriesTable.Size = new Size(804, 288);
+            CategoriesTable.Size = new Size(704, 216);
             CategoriesTable.TabIndex = 1;
             CategoriesTable.CellClick += CategoriesTable_CellClick;
             // 
@@ -100,9 +102,10 @@
             // 
             CancelFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             CancelFilters.BackColor = SystemColors.Info;
-            CancelFilters.Location = new Point(705, 521);
+            CancelFilters.Location = new Point(617, 391);
+            CancelFilters.Margin = new Padding(3, 2, 3, 2);
             CancelFilters.Name = "CancelFilters";
-            CancelFilters.Size = new Size(154, 36);
+            CancelFilters.Size = new Size(135, 27);
             CancelFilters.TabIndex = 34;
             CancelFilters.Text = "Снять фильтры";
             CancelFilters.UseVisualStyleBackColor = false;
@@ -112,10 +115,9 @@
             // 
             SearchNameButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             SearchNameButton.BackColor = SystemColors.Info;
-            SearchNameButton.Location = new Point(371, 400);
-            SearchNameButton.Margin = new Padding(3, 4, 3, 4);
+            SearchNameButton.Location = new Point(325, 300);
             SearchNameButton.Name = "SearchNameButton";
-            SearchNameButton.Size = new Size(86, 31);
+            SearchNameButton.Size = new Size(75, 23);
             SearchNameButton.TabIndex = 33;
             SearchNameButton.Text = "Найти запись";
             SearchNameButton.UseVisualStyleBackColor = false;
@@ -124,19 +126,20 @@
             // IdForSearching
             // 
             IdForSearching.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            IdForSearching.Location = new Point(617, 400);
-            IdForSearching.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
+            IdForSearching.Location = new Point(540, 300);
+            IdForSearching.Margin = new Padding(3, 2, 3, 2);
+            IdForSearching.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             IdForSearching.Name = "IdForSearching";
-            IdForSearching.Size = new Size(150, 27);
+            IdForSearching.Size = new Size(131, 23);
             IdForSearching.TabIndex = 32;
             // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(515, 403);
+            label2.Location = new Point(451, 302);
             label2.Name = "label2";
-            label2.Size = new Size(96, 20);
+            label2.Size = new Size(76, 15);
             label2.TabIndex = 31;
             label2.Text = "Поиск по ID:";
             // 
@@ -144,9 +147,9 @@
             // 
             label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label1.AutoSize = true;
-            label1.Location = new Point(55, 402);
+            label1.Location = new Point(48, 302);
             label1.Name = "label1";
-            label1.Size = new Size(155, 20);
+            label1.Size = new Size(122, 15);
             label1.TabIndex = 30;
             label1.Text = "Поиск по названию: ";
             // 
@@ -154,10 +157,9 @@
             // 
             SearchIdButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             SearchIdButton.BackColor = SystemColors.Info;
-            SearchIdButton.Location = new Point(773, 400);
-            SearchIdButton.Margin = new Padding(3, 4, 3, 4);
+            SearchIdButton.Location = new Point(676, 300);
             SearchIdButton.Name = "SearchIdButton";
-            SearchIdButton.Size = new Size(86, 31);
+            SearchIdButton.Size = new Size(75, 23);
             SearchIdButton.TabIndex = 29;
             SearchIdButton.Text = "Найти запись";
             SearchIdButton.UseVisualStyleBackColor = false;
@@ -166,18 +168,18 @@
             // NameForSearching
             // 
             NameForSearching.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            NameForSearching.Location = new Point(216, 400);
-            NameForSearching.Margin = new Padding(3, 4, 3, 4);
+            NameForSearching.Location = new Point(189, 300);
+            NameForSearching.MaxLength = 100;
             NameForSearching.Name = "NameForSearching";
-            NameForSearching.Size = new Size(149, 27);
+            NameForSearching.Size = new Size(131, 23);
             NameForSearching.TabIndex = 28;
             // 
             // CategoryForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(802, 456);
             Controls.Add(CancelFilters);
             Controls.Add(SearchNameButton);
             Controls.Add(IdForSearching);
@@ -187,7 +189,8 @@
             Controls.Add(NameForSearching);
             Controls.Add(CategoriesTable);
             Controls.Add(AddCategoryBtn);
-            MinimumSize = new Size(932, 647);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(818, 495);
             Name = "CategoryForm";
             Text = "Категории блюд";
             Load += CategoryForm_Load;
