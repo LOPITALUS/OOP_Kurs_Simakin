@@ -1,12 +1,12 @@
-namespace OOP_Kurs_Simakin
+п»їnamespace OOP_Kurs_Simakin
 {
     /// <summary>
-    /// Форма с информацией об авторе при запуске программы
+    /// Р¤РѕСЂРјР° СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ РѕР± Р°РІС‚РѕСЂРµ РїСЂРё Р·Р°РїСѓСЃРєРµ РїСЂРѕРіСЂР°РјРјС‹
     /// </summary>
     public partial class WelcomeForm : Form
     {
         /// <summary>
-        /// Конструктор
+        /// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
         /// </summary>
         public WelcomeForm()
         {
@@ -14,10 +14,10 @@ namespace OOP_Kurs_Simakin
         }
 
         /// <summary>
-        /// Нажатие на кнопку для перехода к программе
+        /// РќР°Р¶Р°С‚РёРµ РЅР° РєРЅРѕРїРєСѓ РґР»СЏ РїРµСЂРµС…РѕРґР° Рє РїСЂРѕРіСЂР°РјРјРµ
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
-        /// <param name="e">Объект с дополнительной информацией</param>
+        ///<param name = "sender" > РСЃС‚РѕС‡РЅРёРє СЃРѕР±С‹С‚РёСЏ</param>
+        /// <param name="e">РћР±СЉРµРєС‚ СЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРµР№</param>
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
