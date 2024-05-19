@@ -41,9 +41,10 @@
             // 
             ApplyChanges.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             ApplyChanges.BackColor = SystemColors.Info;
-            ApplyChanges.Location = new Point(49, 396);
+            ApplyChanges.Location = new Point(43, 297);
+            ApplyChanges.Margin = new Padding(3, 2, 3, 2);
             ApplyChanges.Name = "ApplyChanges";
-            ApplyChanges.Size = new Size(111, 29);
+            ApplyChanges.Size = new Size(97, 22);
             ApplyChanges.TabIndex = 0;
             ApplyChanges.Text = "Сохранить";
             ApplyChanges.UseVisualStyleBackColor = false;
@@ -53,38 +54,38 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(17, 69);
+            label2.Location = new Point(15, 52);
             label2.Name = "label2";
-            label2.Size = new Size(83, 20);
+            label2.Size = new Size(65, 15);
             label2.TabIndex = 10;
             label2.Text = "Описание:";
             // 
             // EditedCategoryDescription
             // 
             EditedCategoryDescription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            EditedCategoryDescription.Location = new Point(231, 69);
-            EditedCategoryDescription.Margin = new Padding(3, 4, 3, 4);
+            EditedCategoryDescription.Location = new Point(202, 52);
+            EditedCategoryDescription.MaxLength = 1000;
             EditedCategoryDescription.Name = "EditedCategoryDescription";
-            EditedCategoryDescription.Size = new Size(503, 292);
+            EditedCategoryDescription.Size = new Size(441, 220);
             EditedCategoryDescription.TabIndex = 9;
             EditedCategoryDescription.Text = "";
             // 
             // EditedCategoryName
             // 
             EditedCategoryName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            EditedCategoryName.Location = new Point(231, 13);
-            EditedCategoryName.Margin = new Padding(3, 4, 3, 4);
+            EditedCategoryName.Location = new Point(202, 10);
+            EditedCategoryName.MaxLength = 100;
             EditedCategoryName.Name = "EditedCategoryName";
-            EditedCategoryName.Size = new Size(503, 27);
+            EditedCategoryName.Size = new Size(441, 23);
             EditedCategoryName.TabIndex = 8;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(17, 17);
+            label1.Location = new Point(15, 13);
             label1.Name = "label1";
-            label1.Size = new Size(200, 20);
+            label1.Size = new Size(157, 15);
             label1.TabIndex = 7;
             label1.Text = "Название категории блюд:";
             // 
@@ -92,9 +93,10 @@
             // 
             Delete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Delete.BackColor = SystemColors.Info;
-            Delete.Location = new Point(362, 396);
+            Delete.Location = new Point(317, 297);
+            Delete.Margin = new Padding(3, 2, 3, 2);
             Delete.Name = "Delete";
-            Delete.Size = new Size(94, 29);
+            Delete.Size = new Size(82, 22);
             Delete.TabIndex = 16;
             Delete.Text = "Удалить";
             Delete.UseVisualStyleBackColor = false;
@@ -104,9 +106,10 @@
             // 
             ExitCategoryEntityForm.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             ExitCategoryEntityForm.BackColor = SystemColors.Info;
-            ExitCategoryEntityForm.Location = new Point(657, 396);
+            ExitCategoryEntityForm.Location = new Point(575, 297);
+            ExitCategoryEntityForm.Margin = new Padding(3, 2, 3, 2);
             ExitCategoryEntityForm.Name = "ExitCategoryEntityForm";
-            ExitCategoryEntityForm.Size = new Size(94, 29);
+            ExitCategoryEntityForm.Size = new Size(82, 22);
             ExitCategoryEntityForm.TabIndex = 15;
             ExitCategoryEntityForm.Text = "Выход";
             ExitCategoryEntityForm.UseVisualStyleBackColor = false;
@@ -114,10 +117,10 @@
             // 
             // CategoryEntityForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(702, 344);
             Controls.Add(Delete);
             Controls.Add(ExitCategoryEntityForm);
             Controls.Add(label2);
@@ -125,7 +128,8 @@
             Controls.Add(EditedCategoryName);
             Controls.Add(label1);
             Controls.Add(ApplyChanges);
-            MinimumSize = new Size(818, 497);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(718, 383);
             Name = "CategoryEntityForm";
             Text = "CategoryEntityForm";
             Load += CategoryEntityForm_Load;

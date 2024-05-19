@@ -41,9 +41,10 @@
             // 
             Delete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Delete.BackColor = SystemColors.Info;
-            Delete.Location = new Point(362, 396);
+            Delete.Location = new Point(317, 297);
+            Delete.Margin = new Padding(3, 2, 3, 2);
             Delete.Name = "Delete";
-            Delete.Size = new Size(94, 29);
+            Delete.Size = new Size(82, 22);
             Delete.TabIndex = 23;
             Delete.Text = "Удалить";
             Delete.UseVisualStyleBackColor = false;
@@ -53,9 +54,10 @@
             // 
             ExitCuisineEntityForm.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             ExitCuisineEntityForm.BackColor = SystemColors.Info;
-            ExitCuisineEntityForm.Location = new Point(657, 396);
+            ExitCuisineEntityForm.Location = new Point(575, 297);
+            ExitCuisineEntityForm.Margin = new Padding(3, 2, 3, 2);
             ExitCuisineEntityForm.Name = "ExitCuisineEntityForm";
-            ExitCuisineEntityForm.Size = new Size(94, 29);
+            ExitCuisineEntityForm.Size = new Size(82, 22);
             ExitCuisineEntityForm.TabIndex = 22;
             ExitCuisineEntityForm.Text = "Выход";
             ExitCuisineEntityForm.UseVisualStyleBackColor = false;
@@ -65,38 +67,38 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(17, 69);
+            label2.Location = new Point(15, 52);
             label2.Name = "label2";
-            label2.Size = new Size(83, 20);
+            label2.Size = new Size(65, 15);
             label2.TabIndex = 21;
             label2.Text = "Описание:";
             // 
             // EditedCuisineDescription
             // 
             EditedCuisineDescription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            EditedCuisineDescription.Location = new Point(185, 69);
-            EditedCuisineDescription.Margin = new Padding(3, 4, 3, 4);
+            EditedCuisineDescription.Location = new Point(162, 52);
+            EditedCuisineDescription.MaxLength = 1000;
             EditedCuisineDescription.Name = "EditedCuisineDescription";
-            EditedCuisineDescription.Size = new Size(549, 292);
+            EditedCuisineDescription.Size = new Size(481, 220);
             EditedCuisineDescription.TabIndex = 20;
             EditedCuisineDescription.Text = "";
             // 
             // EditedCuisineName
             // 
             EditedCuisineName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            EditedCuisineName.Location = new Point(185, 13);
-            EditedCuisineName.Margin = new Padding(3, 4, 3, 4);
+            EditedCuisineName.Location = new Point(162, 10);
+            EditedCuisineName.MaxLength = 100;
             EditedCuisineName.Name = "EditedCuisineName";
-            EditedCuisineName.Size = new Size(549, 27);
+            EditedCuisineName.Size = new Size(481, 23);
             EditedCuisineName.TabIndex = 19;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(17, 17);
+            label1.Location = new Point(15, 13);
             label1.Name = "label1";
-            label1.Size = new Size(165, 20);
+            label1.Size = new Size(129, 15);
             label1.TabIndex = 18;
             label1.Text = "Название вида кухни:";
             // 
@@ -104,9 +106,10 @@
             // 
             ApplyChanges.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             ApplyChanges.BackColor = SystemColors.Info;
-            ApplyChanges.Location = new Point(49, 396);
+            ApplyChanges.Location = new Point(43, 297);
+            ApplyChanges.Margin = new Padding(3, 2, 3, 2);
             ApplyChanges.Name = "ApplyChanges";
-            ApplyChanges.Size = new Size(111, 29);
+            ApplyChanges.Size = new Size(97, 22);
             ApplyChanges.TabIndex = 17;
             ApplyChanges.Text = "Сохранить";
             ApplyChanges.UseVisualStyleBackColor = false;
@@ -114,10 +117,10 @@
             // 
             // CuisineEntityForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(702, 344);
             Controls.Add(Delete);
             Controls.Add(ExitCuisineEntityForm);
             Controls.Add(label2);
@@ -125,7 +128,8 @@
             Controls.Add(EditedCuisineName);
             Controls.Add(label1);
             Controls.Add(ApplyChanges);
-            MinimumSize = new Size(818, 497);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(718, 383);
             Name = "CuisineEntityForm";
             Text = "CuisineEntityForm";
             Load += CuisineEntityForm_Load;
