@@ -1,4 +1,6 @@
-﻿namespace OOP_Kurs_Simakin
+﻿using System.Diagnostics;
+
+namespace OOP_Kurs_Simakin
 {
     /// <summary>
     /// Форма с информацией об авторе при запуске программы
@@ -11,6 +13,11 @@
         public WelcomeForm()
         {
             InitializeComponent();
+
+            var tmr = new System.Windows.Forms.Timer();
+            tmr.Tick += delegate { this.Close(); };
+            tmr.Interval = (int)TimeSpan.FromSeconds(10).TotalMilliseconds;
+            tmr.Start();
         }
 
         /// <summary>

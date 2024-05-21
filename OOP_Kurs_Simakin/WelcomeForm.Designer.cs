@@ -37,9 +37,10 @@
             // button1
             // 
             button1.BackColor = SystemColors.Info;
-            button1.Location = new Point(122, 186);
+            button1.Location = new Point(139, 248);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(86, 31);
             button1.TabIndex = 0;
             button1.Text = "Ок!";
             button1.UseVisualStyleBackColor = false;
@@ -48,9 +49,9 @@
             // label1
             // 
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(66, 45);
+            label1.Location = new Point(75, 60);
             label1.Name = "label1";
-            label1.Size = new Size(181, 20);
+            label1.Size = new Size(207, 27);
             label1.TabIndex = 1;
             label1.Text = "Приложение БД \"Меню\"";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -58,9 +59,9 @@
             // label2
             // 
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(20, 122);
+            label2.Location = new Point(23, 163);
             label2.Name = "label2";
-            label2.Size = new Size(279, 15);
+            label2.Size = new Size(319, 20);
             label2.TabIndex = 2;
             label2.Text = "Разработал: Симакин Константин 22ВП1";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -68,24 +69,25 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(21, 84);
+            label3.Location = new Point(24, 112);
             label3.Name = "label3";
-            label3.Size = new Size(279, 15);
+            label3.Size = new Size(319, 20);
             label3.TabIndex = 3;
             label3.Text = "Предметная область: ресторан";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // WelcomeForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(320, 244);
+            ClientSize = new Size(366, 325);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "WelcomeForm";
             StartPosition = FormStartPosition.CenterScreen;
