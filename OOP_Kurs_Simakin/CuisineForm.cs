@@ -100,6 +100,7 @@ namespace OOP_Kurs_Simakin
                         CuisinesTable.Rows.Add(cuisine.CuisineId, cuisine.Name, cuisine.Description);
                 }
             }
+            CancelFilters.Enabled = true;
         }
 
         /// <summary>
@@ -131,6 +132,7 @@ namespace OOP_Kurs_Simakin
         {
             ResetCuisineDGV();
             MessageBox.Show("Все фильтры сняты\nТаблица показывает актуальную таблицу из БД", "Уведомление");
+            CancelFilters.Enabled = false;
         }
     }
 }
