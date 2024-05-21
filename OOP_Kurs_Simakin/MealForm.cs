@@ -315,23 +315,19 @@ namespace OOP_Kurs_Simakin
         {
             foreach (Control c in Controls)
             {
-                if (c is Button)
-                    c.Enabled = enable;
+                c.Enabled = enable;
             }
             foreach (Control c in SortPanel.Controls)
             {
-                if (c is Button)
-                    c.Enabled = enable;
+                c.Enabled = enable;
             }
             foreach (Control c in FiltersPanel.Controls)
             {
-                if (c is Button)
-                    c.Enabled = enable;
+                c.Enabled = enable;
             }
             foreach (Control c in SearchPanel.Controls)
             {
-                if (c is Button)
-                    c.Enabled = enable;
+                c.Enabled = enable;
             }
             if (!enable)
                 CreateDb.Enabled = true;
