@@ -149,7 +149,7 @@ namespace OOP_Kurs_Simakin
                         MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
                 }
             }
-
+            CancelFilters.Enabled = true;
         }
 
         /// <summary>
@@ -170,6 +170,7 @@ namespace OOP_Kurs_Simakin
                         MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
                 }
             }
+            CancelFilters.Enabled = true;
         }
 
         /// <summary>
@@ -201,6 +202,7 @@ namespace OOP_Kurs_Simakin
         {
             ResetMealsDGV();
             MessageBox.Show("Все фильтры сняты\nТаблица показывает актуальную таблицу из БД", "Уведомление");
+            CancelFilters.Enabled = false;
         }
 
         /// <summary>

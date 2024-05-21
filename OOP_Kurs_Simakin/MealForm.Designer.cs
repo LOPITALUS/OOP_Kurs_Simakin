@@ -261,6 +261,7 @@
             // 
             CancelFilters.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             CancelFilters.BackColor = SystemColors.Info;
+            CancelFilters.Enabled = false;
             CancelFilters.Location = new Point(1216, 400);
             CancelFilters.Name = "CancelFilters";
             CancelFilters.Size = new Size(216, 51);
