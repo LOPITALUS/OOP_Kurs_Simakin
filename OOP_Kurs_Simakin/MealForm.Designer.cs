@@ -34,7 +34,7 @@
             NameForSearching = new TextBox();
             SearchIdButton = new Button();
             DeleteDb = new Button();
-            button3 = new Button();
+            AddMealButton = new Button();
             CreateDb = new Button();
             fileSystemWatcher1 = new FileSystemWatcher();
             OpenCuisineForm = new Button();
@@ -46,7 +46,7 @@
             CancelFilters = new Button();
             label3 = new Label();
             IdSort = new CheckBox();
-            button6 = new Button();
+            SortButton = new Button();
             UpSort = new RadioButton();
             DownSort = new RadioButton();
             WeightSort = new CheckBox();
@@ -165,17 +165,17 @@
             DeleteDb.UseVisualStyleBackColor = false;
             DeleteDb.Click += DeleteDb_Click;
             // 
-            // button3
+            // AddMealButton
             // 
-            button3.BackColor = SystemColors.Info;
-            button3.Location = new Point(40, 197);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(153, 53);
-            button3.TabIndex = 11;
-            button3.Text = "Добавить новое блюдо\r\n";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            AddMealButton.BackColor = SystemColors.Info;
+            AddMealButton.Location = new Point(40, 197);
+            AddMealButton.Margin = new Padding(3, 4, 3, 4);
+            AddMealButton.Name = "AddMealButton";
+            AddMealButton.Size = new Size(153, 53);
+            AddMealButton.TabIndex = 11;
+            AddMealButton.Text = "Добавить новое блюдо\r\n";
+            AddMealButton.UseVisualStyleBackColor = false;
+            AddMealButton.Click += AddMealButton_Click;
             // 
             // CreateDb
             // 
@@ -290,16 +290,16 @@
             IdSort.Text = "ID";
             IdSort.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // SortButton
             // 
-            button6.BackColor = SystemColors.Info;
-            button6.Location = new Point(138, 259);
-            button6.Name = "button6";
-            button6.Size = new Size(113, 29);
-            button6.TabIndex = 23;
-            button6.Text = "Сортировать";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
+            SortButton.BackColor = SystemColors.Info;
+            SortButton.Location = new Point(138, 259);
+            SortButton.Name = "SortButton";
+            SortButton.Size = new Size(113, 29);
+            SortButton.TabIndex = 23;
+            SortButton.Text = "Сортировать";
+            SortButton.UseVisualStyleBackColor = false;
+            SortButton.Click += SortButton_Click;
             // 
             // UpSort
             // 
@@ -539,7 +539,7 @@
             SortPanel.Controls.Add(WeightSort);
             SortPanel.Controls.Add(DownSort);
             SortPanel.Controls.Add(UpSort);
-            SortPanel.Controls.Add(button6);
+            SortPanel.Controls.Add(SortButton);
             SortPanel.Controls.Add(IdSort);
             SortPanel.Controls.Add(label3);
             SortPanel.Location = new Point(21, 291);
@@ -702,7 +702,7 @@
             Controls.Add(OpenCategoryForm);
             Controls.Add(OpenCuisineForm);
             Controls.Add(CreateDb);
-            Controls.Add(button3);
+            Controls.Add(AddMealButton);
             Controls.Add(DeleteDb);
             Controls.Add(Exit);
             Margin = new Padding(3, 4, 3, 4);
@@ -735,7 +735,7 @@
         private TextBox NameForSearching;
         private Button SearchIdButton;
         private Button DeleteDb;
-        private Button button3;
+        private Button AddMealButton;
         private Button CreateDb;
         private FileSystemWatcher fileSystemWatcher1;
         private Button OpenCategoryForm;
@@ -747,7 +747,7 @@
         private Button CancelFilters;
         private RadioButton DownSort;
         private RadioButton UpSort;
-        private Button button6;
+        private Button SortButton;
         private CheckBox IdSort;
         private Label label3;
         private CheckBox WeightSort;

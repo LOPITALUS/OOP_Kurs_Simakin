@@ -79,7 +79,7 @@ namespace OOP_Kurs_Simakin
         /// </summary>
         ///<param name = "sender" > Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
-        private void button3_Click(object sender, EventArgs e)
+        private void AddMealButton_Click(object sender, EventArgs e)
         {
             AddMealForm addMealForm = new AddMealForm(this);
             addMealForm.ShowDialog();
@@ -210,7 +210,7 @@ namespace OOP_Kurs_Simakin
         /// </summary>
         ///<param name = "sender" > Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
-        private void button6_Click(object sender, EventArgs e)
+        private void SortButton_Click(object sender, EventArgs e)
         {
             using (kursContext db = new kursContext())
             {
