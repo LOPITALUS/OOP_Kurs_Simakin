@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            ExitButton = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // ExitButton
             // 
-            button1.BackColor = SystemColors.Info;
-            button1.Location = new Point(139, 248);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(86, 31);
-            button1.TabIndex = 0;
-            button1.Text = "Ок!";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            ExitButton.BackColor = SystemColors.Info;
+            ExitButton.Location = new Point(139, 248);
+            ExitButton.Margin = new Padding(3, 4, 3, 4);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(86, 31);
+            ExitButton.TabIndex = 0;
+            ExitButton.Text = "Ок!";
+            ExitButton.UseVisualStyleBackColor = false;
+            ExitButton.Click += ExitButton_Click;
             // 
             // label1
             // 
@@ -85,7 +85,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button1);
+            Controls.Add(ExitButton);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
@@ -97,7 +97,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button ExitButton;
         private Label label1;
         private Label label2;
         private Label label3;
