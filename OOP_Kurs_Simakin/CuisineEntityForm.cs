@@ -105,7 +105,8 @@ namespace OOP_Kurs_Simakin
         /// <param name="e">Объект с дополнительной информацией</param>
         private void Delete_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show("При удалении данной кухни, все связанные блюда также удалятся. Все равно удалить?", "Внимание", MessageBoxButtons.YesNo);
+            var res = MessageBox.Show("При удалении данной кухни, все связанные блюда также удалятся. " +
+                "Все равно удалить?", "Внимание", MessageBoxButtons.YesNo);
             if (res == DialogResult.Yes)
             {
                 using (kursContext db = new kursContext())

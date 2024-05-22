@@ -104,26 +104,31 @@ namespace OOP_Kurs_Simakin
         /// <param name="e">Объект с дополнительной информацией</param>
         private void Delete_Click(object sender, EventArgs e)
         {
-            using (kursContext db = new kursContext())
+            var res = MessageBox.Show("При удалении данной категории, все связанные блюда также удалятся. " +
+                "Все равно удалить?", "Внимание", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
             {
-                Category category = db.Categories.First(e => e.CategoryId == id);
-                db.Categories.Remove(category);
-                db.SaveChanges();
-            }
-
-
-            // Удаление строки из таблицы
-            for (int i = 0; i < ref_to_parent_form.CategoriesTable.RowCount; i++)
-            {
-                if ((long)ref_to_parent_form.CategoriesTable.Rows[i].Cells[0].Value == id)
+                using (kursContext db = new kursContext())
                 {
-                    ref_to_parent_form.CategoriesTable.Rows.RemoveAt(i);
-                    Close();
-                    break;
+                    Category category = db.Categories.First(e => e.CategoryId == id);
+                    db.Categories.Remove(category);
+                    db.SaveChanges();
                 }
-            }
 
-            ref_to_main_form.ResetMealsDGV();
+
+                // Удаление строки из таблицы
+                for (int i = 0; i < ref_to_parent_form.CategoriesTable.RowCount; i++)
+                {
+                    if ((long)ref_to_parent_form.CategoriesTable.Rows[i].Cells[0].Value == id)
+                    {
+                        ref_to_parent_form.CategoriesTable.Rows.RemoveAt(i);
+                        Close();
+                        break;
+                    }
+                }
+
+                ref_to_main_form.ResetMealsDGV();
+            }
         }
 
         /// <summary>
