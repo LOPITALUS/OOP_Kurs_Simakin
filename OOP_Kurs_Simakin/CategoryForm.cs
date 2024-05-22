@@ -91,15 +91,20 @@ namespace OOP_Kurs_Simakin
         {
             CategoriesTable.Rows.Clear();
             string current_name = NameForSearching.Text;
+            long final_count = 0;
             using (kursContext db = new kursContext())
             {
                 var categories = db.Categories.ToList();
                 foreach (var category in categories)
                 {
                     if (category.Name == current_name)
+                    {
                         CategoriesTable.Rows.Add(category.CategoryId, category.Name, category.Description);
+                        final_count++;
+                    }
                 }
             }
+            MessageBox.Show($"Найдено записей: {final_count}\nВсего записей: {GetDbCount()}", "Уведомление");
             CancelFilters.Enabled = true;
         }
 
@@ -133,6 +138,18 @@ namespace OOP_Kurs_Simakin
             ResetCategoryDGV();
             MessageBox.Show("Все фильтры сняты\nТаблица показывает актуальную таблицу из БД", "Уведомление");
             CancelFilters.Enabled = false;
+        }
+
+        /// <summary>
+        /// Подсчет записей в таблице "Категории"
+        /// </summary>
+        /// <returns>Кол-во записей</returns>
+        private long GetDbCount()
+        {
+            using (kursContext db = new kursContext())
+            {
+                return db.Categories.LongCount();
+            }
         }
     }
 }

@@ -130,7 +130,7 @@ namespace OOP_Kurs_Simakin
         /// <param name="e">Объект с дополнительной информацией</param>
         private void SetFiltersButton_Click(object sender, EventArgs e)
         {
-            MealsTable.Rows.Clear();
+            //MealsTable.Rows.Clear();
             double min_w = (double)WeightFilterMin.Value;
             double max_w = (double)WeightFilterMax.Value;
 
@@ -140,15 +140,34 @@ namespace OOP_Kurs_Simakin
             double min_p = (double)PriceFilterMin.Value;
             double max_p = (double)PriceFilterMax.Value;
 
-            using (kursContext db = new kursContext())
+            long final_count = 0;
+
+            /*using (kursContext db = new kursContext())
             {
                 var meals = db.Meals.ToList();
                 foreach (var meal in meals)
                 {
                     if ((meal.Weight >= min_w && meal.Weight <= max_w) && (meal.Kcal >= min_k && meal.Kcal <= max_k) && (meal.Price >= min_p && meal.Price <= max_p))
+                    {
                         MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                        final_count++;
+                    }
                 }
+            }*/
+
+            foreach (DataGridViewRow row in MealsTable.Rows)
+            {
+                double weight = (double)row.Cells[2].Value;
+                double kcal = (double)row.Cells[3].Value;
+                double price = (double)row.Cells[4].Value;
+                if ((weight >= min_w && weight <= max_w) && (kcal >= min_k && kcal <= max_k) && (price >= min_p && price <= max_p))
+                {
+                    final_count++;
+                }
+                else
+                    row.Visible = false;
             }
+            MessageBox.Show($"Показано записей: {final_count}\nВсего записей: {GetDbCount()}", "Уведомление");
             CancelFilters.Enabled = true;
         }
 
@@ -161,15 +180,20 @@ namespace OOP_Kurs_Simakin
         {
             MealsTable.Rows.Clear();
             string current_name = NameForSearching.Text;
+            long final_count = 0;
             using (kursContext db = new kursContext())
             {
                 var meals = db.Meals.ToList();
                 foreach (var meal in meals)
                 {
                     if (meal.Name == current_name)
+                    {
                         MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
+                        final_count++;
+                    }
                 }
             }
+            MessageBox.Show($"Найдено записей: {final_count}\nВсего записей: {GetDbCount()}", "Уведомление");
             CancelFilters.Enabled = true;
         }
 
@@ -333,6 +357,18 @@ namespace OOP_Kurs_Simakin
             }
             if (!enable)
                 CreateDb.Enabled = true;
+        }
+
+        /// <summary>
+        /// Подсчет записей в таблице "Блюда"
+        /// </summary>
+        /// <returns>Кол-во записей</returns>
+        private long GetDbCount()
+        {
+            using (kursContext db = new kursContext())
+            {
+                return db.Meals.LongCount();
+            }
         }
 
 

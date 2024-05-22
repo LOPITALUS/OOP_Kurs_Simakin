@@ -91,15 +91,20 @@ namespace OOP_Kurs_Simakin
         {
             CuisinesTable.Rows.Clear();
             string current_name = NameForSearching.Text;
+            long final_count = 0;
             using (kursContext db = new kursContext())
             {
                 var cuisines = db.Cuisines.ToList();
                 foreach (var cuisine in cuisines)
                 {
                     if (cuisine.Name == current_name)
+                    {
                         CuisinesTable.Rows.Add(cuisine.CuisineId, cuisine.Name, cuisine.Description);
+                        final_count++;
+                    }
                 }
             }
+            MessageBox.Show($"Найдено записей: {final_count}\nВсего записей: {GetDbCount()}", "Уведомление");
             CancelFilters.Enabled = true;
         }
 
@@ -133,6 +138,18 @@ namespace OOP_Kurs_Simakin
             ResetCuisineDGV();
             MessageBox.Show("Все фильтры сняты\nТаблица показывает актуальную таблицу из БД", "Уведомление");
             CancelFilters.Enabled = false;
+        }
+
+        /// <summary>
+        /// Подсчет записей в таблице "Кухни"
+        /// </summary>
+        /// <returns>Кол-во записей</returns>
+        private long GetDbCount()
+        {
+            using (kursContext db = new kursContext())
+            {
+                return db.Cuisines.LongCount();
+            }
         }
     }
 }
