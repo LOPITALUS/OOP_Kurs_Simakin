@@ -141,22 +141,26 @@ namespace OOP_Kurs_Simakin
         /// <param name="e">Объект с дополнительной информацией</param>
         private void Delete_Click(object sender, EventArgs e)
         {
-            using (kursContext db = new kursContext())
+            var res = MessageBox.Show("Вы действительно хотите удалить запись?", "Внимание", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
             {
-                Meal meal = db.Meals.First(e => e.IdMeal == id);
-                db.Meals.Remove(meal);
-                db.SaveChanges();
-            }
-
-
-            // Удаление строки из таблицы
-            for (int i = 0; i < ref_to_parent_form.MealsTable.RowCount; i++)
-            {
-                if ((long)ref_to_parent_form.MealsTable.Rows[i].Cells[0].Value == id)
+                using (kursContext db = new kursContext())
                 {
-                    ref_to_parent_form.MealsTable.Rows.RemoveAt(i);
-                    Close();
-                    return;
+                    Meal meal = db.Meals.First(e => e.IdMeal == id);
+                    db.Meals.Remove(meal);
+                    db.SaveChanges();
+                }
+
+
+                // Удаление строки из таблицы
+                for (int i = 0; i < ref_to_parent_form.MealsTable.RowCount; i++)
+                {
+                    if ((long)ref_to_parent_form.MealsTable.Rows[i].Cells[0].Value == id)
+                    {
+                        ref_to_parent_form.MealsTable.Rows.RemoveAt(i);
+                        Close();
+                        return;
+                    }
                 }
             }
         }

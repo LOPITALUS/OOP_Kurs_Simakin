@@ -105,7 +105,7 @@ namespace OOP_Kurs_Simakin
         private void Delete_Click(object sender, EventArgs e)
         {
             var res = MessageBox.Show("При удалении данной категории, все связанные блюда также удалятся. " +
-                "Все равно удалить?", "Внимание", MessageBoxButtons.YesNo);
+                "\nВсе равно удалить?", "Внимание", MessageBoxButtons.YesNo);
             if (res == DialogResult.Yes)
             {
                 using (kursContext db = new kursContext())
