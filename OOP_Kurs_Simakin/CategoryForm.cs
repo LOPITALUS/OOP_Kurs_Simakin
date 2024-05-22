@@ -104,8 +104,10 @@ namespace OOP_Kurs_Simakin
                     }
                 }
             }
-            MessageBox.Show($"Найдено записей: {final_count}\nВсего записей: {GetDbCount()}", "Уведомление");
-            CancelFilters.Enabled = true;
+            long total_count = GetDbCount();
+            MessageBox.Show($"Найдено записей: {final_count}\nВсего записей: {total_count}", "Уведомление");
+            if (final_count!= total_count) 
+                CancelFilters.Enabled = true;
         }
 
         /// <summary>
