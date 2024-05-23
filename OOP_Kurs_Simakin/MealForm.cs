@@ -130,7 +130,6 @@ namespace OOP_Kurs_Simakin
         /// <param name="e">Объект с дополнительной информацией</param>
         private void SetFiltersButton_Click(object sender, EventArgs e)
         {
-            //MealsTable.Rows.Clear();
             double min_w = (double)WeightFilterMin.Value;
             double max_w = (double)WeightFilterMax.Value;
 
@@ -141,19 +140,6 @@ namespace OOP_Kurs_Simakin
             double max_p = (double)PriceFilterMax.Value;
 
             long final_count = 0;
-
-            /*using (kursContext db = new kursContext())
-            {
-                var meals = db.Meals.ToList();
-                foreach (var meal in meals)
-                {
-                    if ((meal.Weight >= min_w && meal.Weight <= max_w) && (meal.Kcal >= min_k && meal.Kcal <= max_k) && (meal.Price >= min_p && meal.Price <= max_p))
-                    {
-                        MealsTable.Rows.Add(meal.IdMeal, meal.Name, meal.Weight, meal.Kcal, meal.Price, meal.CuisineId, meal.CategoryId);
-                        final_count++;
-                    }
-                }
-            }*/
 
             foreach (DataGridViewRow row in MealsTable.Rows)
             {
@@ -169,8 +155,7 @@ namespace OOP_Kurs_Simakin
             }
             long total_count = GetDbCount();
             MessageBox.Show($"Показано записей: {final_count}\nВсего записей: {total_count}", "Уведомление");
-            if (final_count != total_count)
-                CancelFilters.Enabled = true;
+            CancelFilters.Enabled = true;
         }
 
         /// <summary>
@@ -197,8 +182,7 @@ namespace OOP_Kurs_Simakin
             }
             long total_count = GetDbCount();
             MessageBox.Show($"Найдено записей: {final_count}\nВсего записей: {total_count}", "Уведомление");
-            if (final_count != total_count)
-                CancelFilters.Enabled = true;
+            CancelFilters.Enabled = true;
         }
 
         /// <summary>
