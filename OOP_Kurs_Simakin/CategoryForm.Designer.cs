@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryForm));
             AddCategoryBtn = new Button();
             CategoriesTable = new DataGridView();
             idCat = new DataGridViewTextBoxColumn();
@@ -189,6 +190,7 @@
             Controls.Add(NameForSearching);
             Controls.Add(CategoriesTable);
             Controls.Add(AddCategoryBtn);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(932, 644);
             Name = "CategoryForm";
             Text = "Категории блюд";

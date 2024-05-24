@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealForm));
             Exit = new Button();
             CuisineLabel = new Label();
             SetFiltersButton = new Button();
@@ -705,6 +706,7 @@
             Controls.Add(AddMealButton);
             Controls.Add(DeleteDb);
             Controls.Add(Exit);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MinimumSize = new Size(1461, 644);
             Name = "MealForm";

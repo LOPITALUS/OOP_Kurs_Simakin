@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CuisineForm));
             CuisinesTable = new DataGridView();
             idCuis = new DataGridViewTextBoxColumn();
             nameCuis = new DataGridViewTextBoxColumn();
@@ -192,6 +193,7 @@
             Controls.Add(NameForSearching);
             Controls.Add(AddCuisineBtn);
             Controls.Add(CuisinesTable);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MinimumSize = new Size(932, 644);
             Name = "CuisineForm";
