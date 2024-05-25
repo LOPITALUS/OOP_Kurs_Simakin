@@ -27,7 +27,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D4D0A4B2218040959744FD5288FC39B6"
+        "MsmKey" = "8:_ED143BB204DB4A1B9AB6AC2D35F3C444"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -148,10 +148,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D4D0A4B2218040959744FD5288FC39B6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED143BB204DB4A1B9AB6AC2D35F3C444"
             {
-            "SourcePath" = "8:..\\OOP_Kurs_Simakin\\bin\\Release\\net7.0-windows\\OOP_Kurs_Simakin.deps.json"
-            "TargetName" = "8:OOP_Kurs_Simakin.deps.json"
+            "SourcePath" = "8:Menu.deps.json"
+            "TargetName" = "8:Menu.deps.json"
             "Tag" = "8:"
             "Folder" = "8:_9C9D6BEBD5B74A1AB4E1A9F58E7F234F"
             "Condition" = "8:"
@@ -236,7 +236,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Menu"
         "ProductCode" = "8:{C3FD2A69-0E3F-4645-B07A-D3CFA6E2075A}"
-        "PackageCode" = "8:{3DAC47F4-49F9-4B46-8AD8-1AC0E315C476}"
+        "PackageCode" = "8:{AF2E4DF5-FB1C-461A-9E63-4B24BA4196FC}"
         "UpgradeCode" = "8:{33B74AE2-7683-49C7-86CB-C9D075D9F888}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

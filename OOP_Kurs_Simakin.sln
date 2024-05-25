@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_Kurs_Simakin", "OOP_Kurs_Simakin\OOP_Kurs_Simakin.csproj", "{850FE108-61B8-4C5C-904B-1E85E87EFD12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Menu", "OOP_Kurs_Simakin\Menu.csproj", "{850FE108-61B8-4C5C-904B-1E85E87EFD12}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{D578DE6D-D2C2-402A-8503-578541AFF230}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Menu Installer", "Setup\Setup.vdproj", "{D578DE6D-D2C2-402A-8503-578541AFF230}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
