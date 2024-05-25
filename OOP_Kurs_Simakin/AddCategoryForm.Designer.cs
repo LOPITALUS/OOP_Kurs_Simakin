@@ -10,7 +10,7 @@
         /// <summary>
         /// Очищает ресурсы
         /// </summary>
-        /// <param name="disposing">true если ресурсы должны быть очищены иначе false.</param>
+        /// <param name="disposing">true если ресурсы должны быть очищены иначе false</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
