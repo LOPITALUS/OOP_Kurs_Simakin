@@ -3,14 +3,14 @@
     partial class AddCategoryForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// Обязательная переменная дизайнера
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Очищает ресурсы
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true если ресурсы должны быть очищены иначе false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCategoryForm));
-            label1 = new Label();
+            NameLabel = new Label();
             NewCategoryName = new TextBox();
             ExitAddCategoryForm = new Button();
             ApplyAddCategoryForm = new Button();
             NewCategoryDescription = new RichTextBox();
-            label2 = new Label();
+            DescriptionLabel = new Label();
             SuspendLayout();
             // 
-            // label1
+            // NameLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(17, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(248, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Название новой категории блюд:";
+            NameLabel.AutoSize = true;
+            NameLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            NameLabel.Location = new Point(17, 17);
+            NameLabel.Name = "NameLabel";
+            NameLabel.Size = new Size(248, 20);
+            NameLabel.TabIndex = 0;
+            NameLabel.Text = "Название новой категории блюд:";
             // 
             // NewCategoryName
             // 
@@ -94,15 +94,15 @@
             NewCategoryDescription.TabIndex = 5;
             NewCategoryDescription.Text = "";
             // 
-            // label2
+            // DescriptionLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(17, 69);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 20);
-            label2.TabIndex = 6;
-            label2.Text = "Описание:";
+            DescriptionLabel.AutoSize = true;
+            DescriptionLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            DescriptionLabel.Location = new Point(17, 69);
+            DescriptionLabel.Name = "DescriptionLabel";
+            DescriptionLabel.Size = new Size(83, 20);
+            DescriptionLabel.TabIndex = 6;
+            DescriptionLabel.Text = "Описание:";
             // 
             // AddCategoryForm
             // 
@@ -110,12 +110,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(802, 459);
-            Controls.Add(label2);
+            Controls.Add(DescriptionLabel);
             Controls.Add(NewCategoryDescription);
             Controls.Add(ApplyAddCategoryForm);
             Controls.Add(ExitAddCategoryForm);
             Controls.Add(NewCategoryName);
-            Controls.Add(label1);
+            Controls.Add(NameLabel);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MinimumSize = new Size(818, 495);
@@ -126,12 +126,34 @@
         }
 
         #endregion
+        /// <summary>
+        /// Текст у поля ввода названия
+        /// </summary>
+        private Label NameLabel;
 
-        private Label label1;
+        /// <summary>
+        /// Поле ввода названия
+        /// </summary>
         private TextBox NewCategoryName;
+
+        /// <summary>
+        /// Кнопка закрытия формы
+        /// </summary>
         private Button ExitAddCategoryForm;
+
+        /// <summary>
+        /// Кнопка добавления
+        /// </summary>
         private Button ApplyAddCategoryForm;
+
+        /// <summary>
+        /// Поле ввода описания
+        /// </summary>
         private RichTextBox NewCategoryDescription;
-        private Label label2;
+
+        /// <summary>
+        /// Текст у поля ввода описания
+        /// </summary>
+        private Label DescriptionLabel;
     }
 }
