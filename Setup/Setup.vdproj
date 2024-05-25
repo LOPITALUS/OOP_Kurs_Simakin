@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Setup"
+"ProjectName" = "8:Menu Installer"
 "LanguageId" = "3:1049"
 "CodePage" = "3:1251"
 "UILanguageId" = "3:1049"
@@ -13,6 +13,12 @@
 "SccProvider" = "8:"
     "Hierarchy"
     {
+        "Entry"
+        {
+        "MsmKey" = "8:_3B55D08B71A44349B1A457C7B547D86E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
         "Entry"
         {
         "MsmKey" = "8:_923A0F261ED44E719FD7A98F048362B6"
@@ -33,7 +39,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Setup.msi"
+        "OutputFilename" = "8:Debug\\Menu Installer.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -50,6 +56,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -114,6 +128,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B55D08B71A44349B1A457C7B547D86E"
+            {
+            "SourcePath" = "8:Food.ico"
+            "TargetName" = "8:Food.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_9C9D6BEBD5B74A1AB4E1A9F58E7F234F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D4D0A4B2218040959744FD5288FC39B6"
             {
             "SourcePath" = "8:..\\OOP_Kurs_Simakin\\bin\\Release\\net7.0-windows\\OOP_Kurs_Simakin.deps.json"
@@ -200,9 +234,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup"
+        "ProductName" = "8:Menu"
         "ProductCode" = "8:{C3FD2A69-0E3F-4645-B07A-D3CFA6E2075A}"
-        "PackageCode" = "8:{6611E208-DAC3-452F-9F9C-77EBB6854761}"
+        "PackageCode" = "8:{3DAC47F4-49F9-4B46-8AD8-1AC0E315C476}"
         "UpgradeCode" = "8:{33B74AE2-7683-49C7-86CB-C9D075D9F888}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -213,19 +247,19 @@
         "Manufacturer" = "8:Simakin Konstantin"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Setup"
+        "Title" = "8:Menu"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Simakin Konstantin"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_3B55D08B71A44349B1A457C7B547D86E"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
-        "PostBuildEvent" = "8:"
+        "PostBuildEvent" = "8:rename \"$(TargetDir)setup.exe\" \"Menu Installer.exe\""
         "RunPostBuildEvent" = "3:0"
         }
         "Registry"
@@ -324,7 +358,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6D0F3DC4129A4365AD6DCD7049EF7728"
             {
-            "Name" = "8:OOP_Kurs_Simakin Installer"
+            "Name" = "8:Menu"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -333,12 +367,12 @@
             "Target" = "8:_923A0F261ED44E719FD7A98F048362B6"
             "Folder" = "8:_4F69E42BB6504D58B3D92009D3C2D34C"
             "WorkingFolder" = "8:_9C9D6BEBD5B74A1AB4E1A9F58E7F234F"
-            "Icon" = "8:"
+            "Icon" = "8:_3B55D08B71A44349B1A457C7B547D86E"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DAA85249F48E4C42A5C3C2ED3D691401"
             {
-            "Name" = "8:OOP_Kurs_Simakin Installer"
+            "Name" = "8:Menu"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -347,7 +381,7 @@
             "Target" = "8:_923A0F261ED44E719FD7A98F048362B6"
             "Folder" = "8:_80579E5774FB442CB1632D43BF6FB2E1"
             "WorkingFolder" = "8:_9C9D6BEBD5B74A1AB4E1A9F58E7F234F"
-            "Icon" = "8:"
+            "Icon" = "8:_3B55D08B71A44349B1A457C7B547D86E"
             "Feature" = "8:"
             }
         }
@@ -751,7 +785,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_923A0F261ED44E719FD7A98F048362B6"
             {
-            "SourcePath" = "8:..\\OOP_Kurs_Simakin\\obj\\Release\\net7.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\OOP_Kurs_Simakin\\obj\\Debug\\net7.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9C9D6BEBD5B74A1AB4E1A9F58E7F234F"
