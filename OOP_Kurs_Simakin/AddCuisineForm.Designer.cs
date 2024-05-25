@@ -10,7 +10,7 @@
         /// <summary>
         /// Очищает ресурсы
         /// </summary>
-        /// <param name="disposing">true если ресурсы должны быть очищены иначе false.</param>
+        /// <param name="disposing">true если ресурсы должны быть очищены иначе false</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +23,7 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Методы формы
         /// </summary>
         private void InitializeComponent()
         {

@@ -3,14 +3,14 @@
     partial class AddMealForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// Обязательная переменная дизайнера
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Очищает ресурсы
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true если ресурсы должны быть очищены иначе false</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,22 +20,22 @@
             base.Dispose(disposing);
         }
 
+        
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Методы формы
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMealForm));
             ExitAddMealForm = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
+            NameLabel = new Label();
+            WeightLabel = new Label();
+            KcalLabel = new Label();
+            PriceLabel = new Label();
+            CuisineIdLabel = new Label();
+            CategoryIdLabel = new Label();
             NewMealName = new TextBox();
             NewMealWeight = new NumericUpDown();
             NewMealKcal = new NumericUpDown();
@@ -64,65 +64,65 @@
             ExitAddMealForm.UseVisualStyleBackColor = false;
             ExitAddMealForm.Click += button1_Click;
             // 
-            // label2
+            // NameLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(30, 56);
-            label2.Name = "label2";
-            label2.Size = new Size(81, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Название:";
+            NameLabel.AutoSize = true;
+            NameLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            NameLabel.Location = new Point(30, 56);
+            NameLabel.Name = "NameLabel";
+            NameLabel.Size = new Size(81, 20);
+            NameLabel.TabIndex = 2;
+            NameLabel.Text = "Название:";
             // 
-            // label3
+            // WeightLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(30, 107);
-            label3.Name = "label3";
-            label3.Size = new Size(77, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Масса (г):";
+            WeightLabel.AutoSize = true;
+            WeightLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            WeightLabel.Location = new Point(30, 107);
+            WeightLabel.Name = "WeightLabel";
+            WeightLabel.Size = new Size(77, 20);
+            WeightLabel.TabIndex = 3;
+            WeightLabel.Text = "Масса (г):";
             // 
-            // label4
+            // KcalLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(30, 157);
-            label4.Name = "label4";
-            label4.Size = new Size(98, 20);
-            label4.TabIndex = 4;
-            label4.Text = "Кол-во ккал:";
+            KcalLabel.AutoSize = true;
+            KcalLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            KcalLabel.Location = new Point(30, 157);
+            KcalLabel.Name = "KcalLabel";
+            KcalLabel.Size = new Size(98, 20);
+            KcalLabel.TabIndex = 4;
+            KcalLabel.Text = "Кол-во ккал:";
             // 
-            // label5
+            // PriceLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(30, 209);
-            label5.Name = "label5";
-            label5.Size = new Size(50, 20);
-            label5.TabIndex = 5;
-            label5.Text = "Цена:";
+            PriceLabel.AutoSize = true;
+            PriceLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            PriceLabel.Location = new Point(30, 209);
+            PriceLabel.Name = "PriceLabel";
+            PriceLabel.Size = new Size(50, 20);
+            PriceLabel.TabIndex = 5;
+            PriceLabel.Text = "Цена:";
             // 
-            // label6
+            // CuisineIdLabel
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(30, 260);
-            label6.Name = "label6";
-            label6.Size = new Size(115, 20);
-            label6.TabIndex = 6;
-            label6.Text = "Вид кухни (ID):";
+            CuisineIdLabel.AutoSize = true;
+            CuisineIdLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            CuisineIdLabel.Location = new Point(30, 260);
+            CuisineIdLabel.Name = "CuisineIdLabel";
+            CuisineIdLabel.Size = new Size(115, 20);
+            CuisineIdLabel.TabIndex = 6;
+            CuisineIdLabel.Text = "Вид кухни (ID):";
             // 
-            // label7
+            // CategoryIdLabel
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(30, 311);
-            label7.Name = "label7";
-            label7.Size = new Size(165, 20);
-            label7.TabIndex = 7;
-            label7.Text = "Категория блюда (ID):";
+            CategoryIdLabel.AutoSize = true;
+            CategoryIdLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            CategoryIdLabel.Location = new Point(30, 311);
+            CategoryIdLabel.Name = "CategoryIdLabel";
+            CategoryIdLabel.Size = new Size(165, 20);
+            CategoryIdLabel.TabIndex = 7;
+            CategoryIdLabel.Text = "Категория блюда (ID):";
             // 
             // NewMealName
             // 
@@ -234,12 +234,12 @@
             Controls.Add(NewMealKcal);
             Controls.Add(NewMealWeight);
             Controls.Add(NewMealName);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(CategoryIdLabel);
+            Controls.Add(CuisineIdLabel);
+            Controls.Add(PriceLabel);
+            Controls.Add(KcalLabel);
+            Controls.Add(WeightLabel);
+            Controls.Add(NameLabel);
             Controls.Add(ExitAddMealForm);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -258,21 +258,84 @@
         }
 
         #endregion
+        /// <summary>
+        /// Кнопка закрытия формы
+        /// </summary>
         private Button ExitAddMealForm;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
+
+        /// <summary>
+        /// Текст у поля ввода названия
+        /// </summary>
+        private Label NameLabel;
+
+        /// <summary>
+        /// Текст у поля ввода массы
+        /// </summary>
+        private Label WeightLabel;
+
+        /// <summary>
+        /// Текст у поля ввода ккал
+        /// </summary>
+        private Label KcalLabel;
+
+        /// <summary>
+        /// Текст у поля ввода цены
+        /// </summary>
+        private Label PriceLabel;
+
+        /// <summary>
+        /// Текст у поля ввода id кухни
+        /// </summary>
+        private Label CuisineIdLabel;
+
+        /// <summary>
+        /// Текст у поля ввода id категории
+        /// </summary>
+        private Label CategoryIdLabel;
+
+        /// <summary>
+        /// Поле ввода названия
+        /// </summary>
         private TextBox NewMealName;
+
+        /// <summary>
+        /// Поле ввода массы
+        /// </summary>
         private NumericUpDown NewMealWeight;
+
+        /// <summary>
+        /// Поле ввода кол-ва ккал
+        /// </summary>
         private NumericUpDown NewMealKcal;
+
+        /// <summary>
+        /// Поле ввода цены
+        /// </summary>
         private NumericUpDown NewMealPrice;
+
+        /// <summary>
+        /// Кнопка добавления
+        /// </summary>
         private Button ApplyAddMealForm;
+
+        /// <summary>
+        /// Поле ввода id кухни
+        /// </summary>
         private NumericUpDown CuisineId;
+
+        /// <summary>
+        /// Поле ввода id категории
+        /// </summary>
         private NumericUpDown CategoryId;
+
+        /// <summary>
+        /// Кнопка открытия окна категорий
+        /// </summary>
         private Button OpenCategoriesForm;
+
+        /// <summary>
+        /// Кнопка открытия окна кухонь
+        /// </summary>
         private Button OpenCuisinesForm;
     }
 }
