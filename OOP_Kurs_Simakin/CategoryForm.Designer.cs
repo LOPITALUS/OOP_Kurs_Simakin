@@ -3,14 +3,14 @@
     partial class CategoryForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// Обязательная переменная дизайнера
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Очищает ресурсы
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true если ресурсы должны быть очищены иначе false</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +23,7 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Методы формы
         /// </summary>
         private void InitializeComponent()
         {
@@ -37,8 +36,8 @@
             CancelFilters = new Button();
             SearchNameButton = new Button();
             IdForSearching = new NumericUpDown();
-            label2 = new Label();
-            label1 = new Label();
+            SearchIdLabel = new Label();
+            SearchNameLabel = new Label();
             SearchIdButton = new Button();
             NameForSearching = new TextBox();
             ((System.ComponentModel.ISupportInitialize)CategoriesTable).BeginInit();
@@ -132,25 +131,25 @@
             IdForSearching.Size = new Size(150, 27);
             IdForSearching.TabIndex = 32;
             // 
-            // label2
+            // SearchIdLabel
             // 
-            label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Location = new Point(515, 403);
-            label2.Name = "label2";
-            label2.Size = new Size(96, 20);
-            label2.TabIndex = 31;
-            label2.Text = "Поиск по ID:";
+            SearchIdLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            SearchIdLabel.AutoSize = true;
+            SearchIdLabel.Location = new Point(515, 403);
+            SearchIdLabel.Name = "SearchIdLabel";
+            SearchIdLabel.Size = new Size(96, 20);
+            SearchIdLabel.TabIndex = 31;
+            SearchIdLabel.Text = "Поиск по ID:";
             // 
-            // label1
+            // SearchNameLabel
             // 
-            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Location = new Point(55, 403);
-            label1.Name = "label1";
-            label1.Size = new Size(155, 20);
-            label1.TabIndex = 30;
-            label1.Text = "Поиск по названию: ";
+            SearchNameLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            SearchNameLabel.AutoSize = true;
+            SearchNameLabel.Location = new Point(55, 403);
+            SearchNameLabel.Name = "SearchNameLabel";
+            SearchNameLabel.Size = new Size(155, 20);
+            SearchNameLabel.TabIndex = 30;
+            SearchNameLabel.Text = "Поиск по названию: ";
             // 
             // SearchIdButton
             // 
@@ -184,8 +183,8 @@
             Controls.Add(CancelFilters);
             Controls.Add(SearchNameButton);
             Controls.Add(IdForSearching);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(SearchIdLabel);
+            Controls.Add(SearchNameLabel);
             Controls.Add(SearchIdButton);
             Controls.Add(NameForSearching);
             Controls.Add(CategoriesTable);
@@ -202,18 +201,64 @@
         }
 
         #endregion
-
+        /// <summary>
+        /// Кнопка открытия окна добавления
+        /// </summary>
         private Button AddCategoryBtn;
+
+        /// <summary>
+        /// Таблица с категориями блюд
+        /// </summary>
         public DataGridView CategoriesTable;
+
+        /// <summary>
+        /// Кнопка сброса всех фильтров
+        /// </summary>
         private Button CancelFilters;
+
+        /// <summary>
+        /// Кнопка поиска по названию
+        /// </summary>
         private Button SearchNameButton;
+
+        /// <summary>
+        /// Поле ввода id для поиска
+        /// </summary>
         private NumericUpDown IdForSearching;
-        private Label label2;
-        private Label label1;
+
+        /// <summary>
+        /// Текст у поля ввода id для поиска
+        /// </summary>
+        private Label SearchIdLabel;
+
+        /// <summary>
+        /// Текст у поля ввода названия для поиска
+        /// </summary>
+        private Label SearchNameLabel;
+
+        /// <summary>
+        /// Кнопка поиска по id
+        /// </summary>
         private Button SearchIdButton;
+
+        /// <summary>
+        /// Поле ввода названия для поиска
+        /// </summary>
         private TextBox NameForSearching;
+
+        /// <summary>
+        /// Колонка таблицы - id
+        /// </summary>
         private DataGridViewTextBoxColumn idCat;
+
+        /// <summary>
+        /// Колонка таблицы - название
+        /// </summary>
         private DataGridViewTextBoxColumn nameCat;
+
+        /// <summary>
+        /// Колонка таблицы - описание
+        /// </summary>
         private DataGridViewTextBoxColumn descriptionCat;
     }
 }
