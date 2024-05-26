@@ -3,14 +3,14 @@
     partial class CuisineEntityForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// Обязательная переменная дизайнера
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Очищает ресурсы
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true если ресурсы должны быть очищены иначе false</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,18 +23,17 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Методы формы
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CuisineEntityForm));
             Delete = new Button();
             ExitCuisineEntityForm = new Button();
-            label2 = new Label();
+            DescriptionLabel = new Label();
             EditedCuisineDescription = new RichTextBox();
             EditedCuisineName = new TextBox();
-            label1 = new Label();
+            NameLabel = new Label();
             ApplyChanges = new Button();
             SuspendLayout();
             // 
@@ -62,15 +61,15 @@
             ExitCuisineEntityForm.UseVisualStyleBackColor = false;
             ExitCuisineEntityForm.Click += ExitCuisineEntityForm_Click;
             // 
-            // label2
+            // DescriptionLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(17, 69);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 20);
-            label2.TabIndex = 21;
-            label2.Text = "Описание:";
+            DescriptionLabel.AutoSize = true;
+            DescriptionLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            DescriptionLabel.Location = new Point(17, 69);
+            DescriptionLabel.Name = "DescriptionLabel";
+            DescriptionLabel.Size = new Size(83, 20);
+            DescriptionLabel.TabIndex = 21;
+            DescriptionLabel.Text = "Описание:";
             // 
             // EditedCuisineDescription
             // 
@@ -93,15 +92,15 @@
             EditedCuisineName.Size = new Size(549, 27);
             EditedCuisineName.TabIndex = 19;
             // 
-            // label1
+            // NameLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(17, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(165, 20);
-            label1.TabIndex = 18;
-            label1.Text = "Название вида кухни:";
+            NameLabel.AutoSize = true;
+            NameLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            NameLabel.Location = new Point(17, 17);
+            NameLabel.Name = "NameLabel";
+            NameLabel.Size = new Size(165, 20);
+            NameLabel.TabIndex = 18;
+            NameLabel.Text = "Название вида кухни:";
             // 
             // ApplyChanges
             // 
@@ -123,10 +122,10 @@
             ClientSize = new Size(802, 459);
             Controls.Add(Delete);
             Controls.Add(ExitCuisineEntityForm);
-            Controls.Add(label2);
+            Controls.Add(DescriptionLabel);
             Controls.Add(EditedCuisineDescription);
             Controls.Add(EditedCuisineName);
-            Controls.Add(label1);
+            Controls.Add(NameLabel);
             Controls.Add(ApplyChanges);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(818, 495);
@@ -138,13 +137,39 @@
         }
 
         #endregion
-
+        /// <summary>
+        /// Кнопка удаления
+        /// </summary>
         private Button Delete;
+
+        /// <summary>
+        /// Кнопка закрытия формы
+        /// </summary>
         private Button ExitCuisineEntityForm;
-        private Label label2;
+
+        /// <summary>
+        /// Текст у поля ввода описания
+        /// </summary>
+        private Label DescriptionLabel;
+
+        /// <summary>
+        /// Поле ввода описания
+        /// </summary>
         private RichTextBox EditedCuisineDescription;
+
+        /// <summary>
+        /// Поле ввода названия
+        /// </summary>
         private TextBox EditedCuisineName;
-        private Label label1;
+
+        /// <summary>
+        /// Текст у поля ввода названия
+        /// </summary>
+        private Label NameLabel;
+
+        /// <summary>
+        /// Кнопка сохранения
+        /// </summary>
         private Button ApplyChanges;
     }
 }
