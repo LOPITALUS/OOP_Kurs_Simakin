@@ -35,7 +35,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Закрытие формы
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void button1_Click(object sender, EventArgs e)
         {
@@ -45,7 +45,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Добавление блюда в базу данных
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void ApplyAddMealForm_Click(object sender, EventArgs e)
         {
@@ -101,7 +101,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Открытие окна "Категории блюд"
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCategoriesForm_Click(object sender, EventArgs e)
         {
@@ -112,7 +112,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Открытие окна "Виды кухонь"
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCuisinesForm_Click(object sender, EventArgs e)
         {

@@ -47,7 +47,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Сохранить изменения в базу данных
         /// </summary>
-        /// <param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void ApplyChanges_Click(object sender, EventArgs e)
         {
@@ -90,7 +90,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Закрыть окно
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void ExitCategoryEntityForm_Click(object sender, EventArgs e)
         {
@@ -100,7 +100,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Удалить запись
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void Delete_Click(object sender, EventArgs e)
         {
@@ -134,7 +134,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Заполнение информации о записи при загрузке окна
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void CategoryEntityForm_Load(object sender, EventArgs e)
         {

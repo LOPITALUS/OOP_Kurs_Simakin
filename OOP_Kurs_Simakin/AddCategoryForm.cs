@@ -64,7 +64,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Закрытие формы
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void ExitAddCategoryForm_Click(object sender, EventArgs e)
         {

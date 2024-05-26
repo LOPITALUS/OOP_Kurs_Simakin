@@ -40,7 +40,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Сохранить изменения
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void ApplyChanges_Click(object sender, EventArgs e)
         {
@@ -86,7 +86,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Заполнить информацию о записи при загрузке
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void MealEntityForm_Load(object sender, EventArgs e)
         {
@@ -127,7 +127,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Закрыть окно
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void ExitMealEntityForm_Click(object sender, EventArgs e)
         {
@@ -137,7 +137,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Удалить запись
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void Delete_Click(object sender, EventArgs e)
         {
@@ -168,7 +168,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Открыть окно "Виды кухонь"
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCuisinesForm_Click(object sender, EventArgs e)
         {
@@ -179,7 +179,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Открыть окно "Категории блюд"
         /// </summary>
-        /// <param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCategoriesForm_Click(object sender, EventArgs e)
         {

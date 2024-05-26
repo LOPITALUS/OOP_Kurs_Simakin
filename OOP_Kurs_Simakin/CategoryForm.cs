@@ -33,7 +33,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Перейти в окно создания
         /// </summary>
-        /// <param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void AddCategoryBtn_Click(object sender, EventArgs e)
         {
@@ -44,7 +44,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Построение таблицы при загрузке
         /// </summary>
-        /// <param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void CategoryForm_Load(object sender, EventArgs e)
         {
@@ -70,7 +70,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Открытие представление записи при клике на строку таблицы
         /// </summary>
-        /// <param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void CategoriesTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -85,7 +85,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Поиск по названию
         /// </summary>
-        /// <param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void SearchNameButton_Click(object sender, EventArgs e)
         {
@@ -112,7 +112,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Поиск по идентификатору
         /// </summary>
-        /// <param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void SearchIdButton_Click(object sender, EventArgs e)
         {
@@ -132,7 +132,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Снятие всех фильтров с таблицы
         /// </summary>
-        /// <param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void CancelFilters_Click(object sender, EventArgs e)
         {

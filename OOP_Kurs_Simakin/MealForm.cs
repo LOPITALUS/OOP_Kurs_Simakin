@@ -28,7 +28,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Заполнение таблицы при загрузке
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void MealForm_Load(object sender, EventArgs e)
         {
@@ -42,7 +42,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Создать базу данных
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void CreateDb_Click(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Удалить базу данных
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void DeleteDb_Click(object sender, EventArgs e)
         {
@@ -77,7 +77,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Перейти в окно добавления нового блюда
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void AddMealButton_Click(object sender, EventArgs e)
         {
@@ -88,7 +88,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Открыть окно "Категории блюд"
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCategoryForm_Click(object sender, EventArgs e)
         {
@@ -99,7 +99,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Открыть окно "Виды кухонь"
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void OpenCuisineForm_Click(object sender, EventArgs e)
         {
@@ -126,7 +126,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Установить фильтры
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void SetFiltersButton_Click(object sender, EventArgs e)
         {
@@ -161,7 +161,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Поиск по имени
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void SearchNameButton_Click(object sender, EventArgs e)
         {
@@ -188,7 +188,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Поиск по идентификатору
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void SearchIdButton_Click(object sender, EventArgs e)
         {
@@ -208,7 +208,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Снять все фильтры с таблицы
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void CancelFilters_Click(object sender, EventArgs e)
         {
@@ -220,7 +220,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Запустить сортировку
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void SortButton_Click(object sender, EventArgs e)
         {
@@ -269,7 +269,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Закрыть окно
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void Exit_Click(object sender, EventArgs e)
         {
@@ -279,7 +279,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Изменение минимального значения фильтра (Вес)
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void WeightFilterMin_ValueChanged(object sender, EventArgs e)
         {
@@ -289,7 +289,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Изменение минимального значения фильтра (Кол-во ккал)
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void KcalFilterMin_ValueChanged(object sender, EventArgs e)
         {
@@ -299,7 +299,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Изменение минимального значения фильтра (Цена)
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void PriceFilterMin_ValueChanged(object sender, EventArgs e)
         {
@@ -309,7 +309,7 @@ namespace OOP_Kurs_Simakin
         /// <summary>
         /// Открытие окна представления записи при клике на строкуу таблицы
         /// </summary>
-        ///<param name = "sender" > Источник события</param>
+        /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
         private void MealsTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
