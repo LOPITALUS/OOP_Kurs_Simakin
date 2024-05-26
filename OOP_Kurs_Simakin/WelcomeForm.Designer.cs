@@ -3,14 +3,14 @@
     partial class WelcomeForm
     {
         /// <summary>
-        ///  Required designer variable.
+        ///  Обязательная переменная дизайнера
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        ///  Очищает ресурсы
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true если ресурсы должны быть очищены иначе false</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,16 +23,15 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        ///  Методы формы
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeForm));
             ExitButton = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            ProgramNameLabel = new Label();
+            AuthorLabel = new Label();
+            SubjectLabel = new Label();
             SuspendLayout();
             // 
             // ExitButton
@@ -47,35 +46,35 @@
             ExitButton.UseVisualStyleBackColor = false;
             ExitButton.Click += ExitButton_Click;
             // 
-            // label1
+            // ProgramNameLabel
             // 
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(75, 60);
-            label1.Name = "label1";
-            label1.Size = new Size(207, 27);
-            label1.TabIndex = 1;
-            label1.Text = "Приложение БД \"Меню\"";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            ProgramNameLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            ProgramNameLabel.Location = new Point(75, 60);
+            ProgramNameLabel.Name = "ProgramNameLabel";
+            ProgramNameLabel.Size = new Size(207, 27);
+            ProgramNameLabel.TabIndex = 1;
+            ProgramNameLabel.Text = "Приложение БД \"Меню\"";
+            ProgramNameLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // AuthorLabel
             // 
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(23, 163);
-            label2.Name = "label2";
-            label2.Size = new Size(319, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Разработал: Симакин Константин 22ВП1";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            AuthorLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            AuthorLabel.Location = new Point(23, 163);
+            AuthorLabel.Name = "AuthorLabel";
+            AuthorLabel.Size = new Size(319, 20);
+            AuthorLabel.TabIndex = 2;
+            AuthorLabel.Text = "Разработал: Симакин Константин 22ВП1";
+            AuthorLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // SubjectLabel
             // 
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(24, 112);
-            label3.Name = "label3";
-            label3.Size = new Size(319, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Предметная область: ресторан";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            SubjectLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            SubjectLabel.Location = new Point(24, 112);
+            SubjectLabel.Name = "SubjectLabel";
+            SubjectLabel.Size = new Size(319, 20);
+            SubjectLabel.TabIndex = 3;
+            SubjectLabel.Text = "Предметная область: ресторан";
+            SubjectLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // WelcomeForm
             // 
@@ -83,9 +82,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(366, 325);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(SubjectLabel);
+            Controls.Add(AuthorLabel);
+            Controls.Add(ProgramNameLabel);
             Controls.Add(ExitButton);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -98,10 +97,24 @@
         }
 
         #endregion
-
+        /// <summary>
+        /// Кнопка закрытия окна
+        /// </summary>
         private Button ExitButton;
-        private Label label1;
-        private Label label2;
-        private Label label3;
+
+        /// <summary>
+        /// Текст с названием программы
+        /// </summary>
+        private Label ProgramNameLabel;
+
+        /// <summary>
+        /// Текст с автором программы
+        /// </summary>
+        private Label AuthorLabel;
+
+        /// <summary>
+        /// Текст с названием предметной области
+        /// </summary>
+        private Label SubjectLabel;
     }
 }
