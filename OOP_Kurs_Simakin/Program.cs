@@ -1,9 +1,12 @@
 namespace OOP_Kurs_Simakin
 {
+    /// <summary>
+    /// Класс с точкой входа
+    /// </summary>
     internal static class Program
     {
         /// <summary>
-        ///  The main entry point for the application.
+        ///  Точка входа
         /// </summary>
         [STAThread]
         static void Main()
