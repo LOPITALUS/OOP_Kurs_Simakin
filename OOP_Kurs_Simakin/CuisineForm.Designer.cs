@@ -3,14 +3,14 @@
     partial class CuisineForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// Обязательная переменная дизайнера
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Очищает ресурсы
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true если ресурсы должны быть очищены иначе false</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +23,7 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Методы формы
         /// </summary>
         private void InitializeComponent()
         {
@@ -36,12 +35,12 @@
             AddCuisineBtn = new Button();
             SearchNameButton = new Button();
             IdForSearching = new NumericUpDown();
-            label2 = new Label();
-            label1 = new Label();
+            SearchIdLabel = new Label();
+            SearchNameLabel = new Label();
             SearchIdButton = new Button();
             NameForSearching = new TextBox();
             CancelFilters = new Button();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            //backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)CuisinesTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
             SuspendLayout();
@@ -120,27 +119,27 @@
             IdForSearching.Size = new Size(150, 27);
             IdForSearching.TabIndex = 24;
             // 
-            // label2
+            // SearchIdLabel
             // 
-            label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(515, 403);
-            label2.Name = "label2";
-            label2.Size = new Size(98, 20);
-            label2.TabIndex = 23;
-            label2.Text = "Поиск по ID:";
+            SearchIdLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            SearchIdLabel.AutoSize = true;
+            SearchIdLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            SearchIdLabel.Location = new Point(515, 403);
+            SearchIdLabel.Name = "SearchIdLabel";
+            SearchIdLabel.Size = new Size(98, 20);
+            SearchIdLabel.TabIndex = 23;
+            SearchIdLabel.Text = "Поиск по ID:";
             // 
-            // label1
+            // SearchNameLabel
             // 
-            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(55, 403);
-            label1.Name = "label1";
-            label1.Size = new Size(158, 20);
-            label1.TabIndex = 22;
-            label1.Text = "Поиск по названию: ";
+            SearchNameLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            SearchNameLabel.AutoSize = true;
+            SearchNameLabel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            SearchNameLabel.Location = new Point(55, 403);
+            SearchNameLabel.Name = "SearchNameLabel";
+            SearchNameLabel.Size = new Size(158, 20);
+            SearchNameLabel.TabIndex = 22;
+            SearchNameLabel.Text = "Поиск по названию: ";
             // 
             // SearchIdButton
             // 
@@ -187,8 +186,8 @@
             Controls.Add(CancelFilters);
             Controls.Add(SearchNameButton);
             Controls.Add(IdForSearching);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(SearchIdLabel);
+            Controls.Add(SearchNameLabel);
             Controls.Add(SearchIdButton);
             Controls.Add(NameForSearching);
             Controls.Add(AddCuisineBtn);
@@ -206,19 +205,65 @@
         }
 
         #endregion
-
+        /// <summary>
+        /// Таблица кухонь
+        /// </summary>
         public DataGridView CuisinesTable;
+
+        /// <summary>
+        /// Кнопка открытия окна добавления
+        /// </summary>
         private Button AddCuisineBtn;
+
+        /// <summary>
+        /// Кнопка поиска по названию
+        /// </summary>
         private Button SearchNameButton;
+
+        /// <summary>
+        /// Поле ввода id для входа
+        /// </summary>
         private NumericUpDown IdForSearching;
-        private Label label2;
-        private Label label1;
+
+        /// <summary>
+        /// Текст у поля ввода id для поиска
+        /// </summary>
+        private Label SearchIdLabel;
+
+        /// <summary>
+        /// Текст у поля ввода названия
+        /// </summary>
+        private Label SearchNameLabel;
+
+        /// <summary>
+        /// Кнопка поиска по id
+        /// </summary>
         private Button SearchIdButton;
+
+        /// <summary>
+        /// Текст у поля ввода названия
+        /// </summary>
         private TextBox NameForSearching;
+
+        /// <summary>
+        /// Кнопка снятия фильтров
+        /// </summary>
         private Button CancelFilters;
+
+        /// <summary>
+        /// Колонка - id кухни
+        /// </summary>
         private DataGridViewTextBoxColumn idCuis;
+
+        /// <summary>
+        /// Колонка - название кухни
+        /// </summary>
         private DataGridViewTextBoxColumn nameCuis;
+
+        /// <summary>
+        /// Колонка - описание кухни
+        /// </summary>
         private DataGridViewTextBoxColumn descriptionCuis;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        //private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
