@@ -3,14 +3,14 @@
     partial class MealForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// Обязательная переменная дизайнера
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Очищает ресурсы
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true если ресурсы должны быть очищены иначе false</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +23,7 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Методы формы
         /// </summary>
         private void InitializeComponent()
         {
@@ -37,15 +36,15 @@
             DeleteDb = new Button();
             AddMealButton = new Button();
             CreateDb = new Button();
-            fileSystemWatcher1 = new FileSystemWatcher();
+           // fileSystemWatcher1 = new FileSystemWatcher();
             OpenCuisineForm = new Button();
             OpenCategoryForm = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            NameSearchLabel = new Label();
+            IdSearchLabel = new Label();
             IdForSearching = new NumericUpDown();
             SearchNameButton = new Button();
             CancelFilters = new Button();
-            label3 = new Label();
+            SortLabel = new Label();
             IdSort = new CheckBox();
             SortButton = new Button();
             UpSort = new RadioButton();
@@ -56,26 +55,26 @@
             CuisineSort = new CheckBox();
             KcalSort = new CheckBox();
             CategorySort = new CheckBox();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
+            WeightLabel = new Label();
+            KcalLabel = new Label();
+            PriceLabel = new Label();
             WeightFilterMin = new NumericUpDown();
             WeightFilterMax = new NumericUpDown();
             KcalFilterMax = new NumericUpDown();
             KcalFilterMin = new NumericUpDown();
             PriceFilterMin = new NumericUpDown();
             PriceFilterMax = new NumericUpDown();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
+            WeightMaxLabel = new Label();
+            KcalMaxLabel = new Label();
+            PriceMaxLabel = new Label();
+            WeightMinLabel = new Label();
+            KcalMinLabel = new Label();
+            PriceMinLabel = new Label();
             SortPanel = new Panel();
             FiltersPanel = new Panel();
-            label13 = new Label();
+            FiltersLabel = new Label();
             SearchPanel = new Panel();
-            label14 = new Label();
+            SearchLabel = new Label();
             MealsTable = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             NameColumn = new DataGridViewTextBoxColumn();
@@ -84,7 +83,7 @@
             PriceColumn = new DataGridViewTextBoxColumn();
             CuisineColumn = new DataGridViewTextBoxColumn();
             CategoryColumn = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMax).BeginInit();
@@ -190,11 +189,11 @@
             CreateDb.Text = "Создать базу данных";
             CreateDb.UseVisualStyleBackColor = false;
             CreateDb.Click += CreateDb_Click;
-            // 
-            // fileSystemWatcher1
-            // 
-            fileSystemWatcher1.EnableRaisingEvents = true;
-            fileSystemWatcher1.SynchronizingObject = this;
+            //// 
+            //// fileSystemWatcher1
+            //// 
+            //fileSystemWatcher1.EnableRaisingEvents = true;
+            //fileSystemWatcher1.SynchronizingObject = this;
             // 
             // OpenCuisineForm
             // 
@@ -220,23 +219,23 @@
             OpenCategoryForm.UseVisualStyleBackColor = false;
             OpenCategoryForm.Click += OpenCategoryForm_Click;
             // 
-            // label1
+            // NameSearchLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(7, 47);
-            label1.Name = "label1";
-            label1.Size = new Size(110, 20);
-            label1.TabIndex = 16;
-            label1.Text = "По названию: ";
+            NameSearchLabel.AutoSize = true;
+            NameSearchLabel.Location = new Point(7, 47);
+            NameSearchLabel.Name = "NameSearchLabel";
+            NameSearchLabel.Size = new Size(110, 20);
+            NameSearchLabel.TabIndex = 16;
+            NameSearchLabel.Text = "По названию: ";
             // 
-            // label2
+            // IdSearchLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(7, 101);
-            label2.Name = "label2";
-            label2.Size = new Size(150, 20);
-            label2.TabIndex = 17;
-            label2.Text = "По идентификатору:";
+            IdSearchLabel.AutoSize = true;
+            IdSearchLabel.Location = new Point(7, 101);
+            IdSearchLabel.Name = "IdSearchLabel";
+            IdSearchLabel.Size = new Size(150, 20);
+            IdSearchLabel.TabIndex = 17;
+            IdSearchLabel.Text = "По идентификатору:";
             // 
             // IdForSearching
             // 
@@ -271,15 +270,15 @@
             CancelFilters.UseVisualStyleBackColor = false;
             CancelFilters.Click += CancelFilters_Click;
             // 
-            // label3
+            // SortLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(19, 12);
-            label3.Name = "label3";
-            label3.Size = new Size(99, 20);
-            label3.TabIndex = 21;
-            label3.Text = "Сортировка:";
+            SortLabel.AutoSize = true;
+            SortLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            SortLabel.Location = new Point(19, 12);
+            SortLabel.Name = "SortLabel";
+            SortLabel.Size = new Size(99, 20);
+            SortLabel.TabIndex = 21;
+            SortLabel.Text = "Сортировка:";
             // 
             // IdSort
             // 
@@ -384,32 +383,32 @@
             CategorySort.Text = "Категория";
             CategorySort.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // WeightLabel
             // 
-            label4.Anchor = AnchorStyles.None;
-            label4.Location = new Point(13, 49);
-            label4.Name = "label4";
-            label4.Size = new Size(53, 20);
-            label4.TabIndex = 32;
-            label4.Text = "Масса";
+            WeightLabel.Anchor = AnchorStyles.None;
+            WeightLabel.Location = new Point(3, 49);
+            WeightLabel.Name = "WeightLabel";
+            WeightLabel.Size = new Size(53, 20);
+            WeightLabel.TabIndex = 32;
+            WeightLabel.Text = "Масса";
             // 
-            // label5
+            // KcalLabel
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.Location = new Point(13, 77);
-            label5.Name = "label5";
-            label5.Size = new Size(91, 20);
-            label5.TabIndex = 33;
-            label5.Text = "Кол-во ккал";
+            KcalLabel.Anchor = AnchorStyles.None;
+            KcalLabel.Location = new Point(3, 76);
+            KcalLabel.Name = "KcalLabel";
+            KcalLabel.Size = new Size(101, 21);
+            KcalLabel.TabIndex = 33;
+            KcalLabel.Text = "Кол-во ккал";
             // 
-            // label6
+            // PriceLabel
             // 
-            label6.Anchor = AnchorStyles.None;
-            label6.Location = new Point(13, 104);
-            label6.Name = "label6";
-            label6.Size = new Size(45, 20);
-            label6.TabIndex = 34;
-            label6.Text = "Цена";
+            PriceLabel.Anchor = AnchorStyles.None;
+            PriceLabel.Location = new Point(3, 104);
+            PriceLabel.Name = "PriceLabel";
+            PriceLabel.Size = new Size(45, 20);
+            PriceLabel.TabIndex = 34;
+            PriceLabel.Text = "Цена";
             // 
             // WeightFilterMin
             // 
@@ -474,59 +473,59 @@
             PriceFilterMax.Size = new Size(82, 27);
             PriceFilterMax.TabIndex = 40;
             // 
-            // label7
+            // WeightMaxLabel
             // 
-            label7.Anchor = AnchorStyles.None;
-            label7.Location = new Point(238, 53);
-            label7.Name = "label7";
-            label7.Size = new Size(26, 20);
-            label7.TabIndex = 41;
-            label7.Text = "до";
+            WeightMaxLabel.Anchor = AnchorStyles.None;
+            WeightMaxLabel.Location = new Point(238, 53);
+            WeightMaxLabel.Name = "WeightMaxLabel";
+            WeightMaxLabel.Size = new Size(26, 20);
+            WeightMaxLabel.TabIndex = 41;
+            WeightMaxLabel.Text = "до";
             // 
-            // label8
+            // KcalMaxLabel
             // 
-            label8.Anchor = AnchorStyles.None;
-            label8.Location = new Point(238, 83);
-            label8.Name = "label8";
-            label8.Size = new Size(26, 20);
-            label8.TabIndex = 42;
-            label8.Text = "до";
+            KcalMaxLabel.Anchor = AnchorStyles.None;
+            KcalMaxLabel.Location = new Point(238, 83);
+            KcalMaxLabel.Name = "KcalMaxLabel";
+            KcalMaxLabel.Size = new Size(26, 20);
+            KcalMaxLabel.TabIndex = 42;
+            KcalMaxLabel.Text = "до";
             // 
-            // label9
+            // PriceMaxLabel
             // 
-            label9.Anchor = AnchorStyles.None;
-            label9.Location = new Point(238, 108);
-            label9.Name = "label9";
-            label9.Size = new Size(26, 20);
-            label9.TabIndex = 43;
-            label9.Text = "до";
+            PriceMaxLabel.Anchor = AnchorStyles.None;
+            PriceMaxLabel.Location = new Point(238, 108);
+            PriceMaxLabel.Name = "PriceMaxLabel";
+            PriceMaxLabel.Size = new Size(26, 20);
+            PriceMaxLabel.TabIndex = 43;
+            PriceMaxLabel.Text = "до";
             // 
-            // label10
+            // WeightMinLabel
             // 
-            label10.Anchor = AnchorStyles.None;
-            label10.Location = new Point(111, 53);
-            label10.Name = "label10";
-            label10.Size = new Size(24, 20);
-            label10.TabIndex = 44;
-            label10.Text = "от";
+            WeightMinLabel.Anchor = AnchorStyles.None;
+            WeightMinLabel.Location = new Point(111, 53);
+            WeightMinLabel.Name = "WeightMinLabel";
+            WeightMinLabel.Size = new Size(24, 20);
+            WeightMinLabel.TabIndex = 44;
+            WeightMinLabel.Text = "от";
             // 
-            // label11
+            // KcalMinLabel
             // 
-            label11.Anchor = AnchorStyles.None;
-            label11.Location = new Point(111, 83);
-            label11.Name = "label11";
-            label11.Size = new Size(24, 20);
-            label11.TabIndex = 45;
-            label11.Text = "от";
+            KcalMinLabel.Anchor = AnchorStyles.None;
+            KcalMinLabel.Location = new Point(111, 83);
+            KcalMinLabel.Name = "KcalMinLabel";
+            KcalMinLabel.Size = new Size(24, 20);
+            KcalMinLabel.TabIndex = 45;
+            KcalMinLabel.Text = "от";
             // 
-            // label12
+            // PriceMinLabel
             // 
-            label12.Anchor = AnchorStyles.None;
-            label12.Location = new Point(111, 107);
-            label12.Name = "label12";
-            label12.Size = new Size(24, 20);
-            label12.TabIndex = 46;
-            label12.Text = "от";
+            PriceMinLabel.Anchor = AnchorStyles.None;
+            PriceMinLabel.Location = new Point(111, 107);
+            PriceMinLabel.Name = "PriceMinLabel";
+            PriceMinLabel.Size = new Size(24, 20);
+            PriceMinLabel.TabIndex = 46;
+            PriceMinLabel.Text = "от";
             // 
             // SortPanel
             // 
@@ -542,7 +541,7 @@
             SortPanel.Controls.Add(UpSort);
             SortPanel.Controls.Add(SortButton);
             SortPanel.Controls.Add(IdSort);
-            SortPanel.Controls.Add(label3);
+            SortPanel.Controls.Add(SortLabel);
             SortPanel.Location = new Point(21, 291);
             SortPanel.Name = "SortPanel";
             SortPanel.Size = new Size(408, 303);
@@ -552,22 +551,22 @@
             // 
             FiltersPanel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             FiltersPanel.BorderStyle = BorderStyle.FixedSingle;
-            FiltersPanel.Controls.Add(label13);
-            FiltersPanel.Controls.Add(label12);
-            FiltersPanel.Controls.Add(label11);
-            FiltersPanel.Controls.Add(label10);
-            FiltersPanel.Controls.Add(label9);
-            FiltersPanel.Controls.Add(label8);
-            FiltersPanel.Controls.Add(label7);
+            FiltersPanel.Controls.Add(FiltersLabel);
+            FiltersPanel.Controls.Add(PriceMinLabel);
+            FiltersPanel.Controls.Add(KcalMinLabel);
+            FiltersPanel.Controls.Add(WeightMinLabel);
+            FiltersPanel.Controls.Add(PriceMaxLabel);
+            FiltersPanel.Controls.Add(KcalMaxLabel);
+            FiltersPanel.Controls.Add(WeightMaxLabel);
             FiltersPanel.Controls.Add(PriceFilterMax);
             FiltersPanel.Controls.Add(PriceFilterMin);
             FiltersPanel.Controls.Add(KcalFilterMin);
             FiltersPanel.Controls.Add(KcalFilterMax);
             FiltersPanel.Controls.Add(WeightFilterMax);
             FiltersPanel.Controls.Add(WeightFilterMin);
-            FiltersPanel.Controls.Add(label6);
-            FiltersPanel.Controls.Add(label5);
-            FiltersPanel.Controls.Add(label4);
+            FiltersPanel.Controls.Add(PriceLabel);
+            FiltersPanel.Controls.Add(KcalLabel);
+            FiltersPanel.Controls.Add(WeightLabel);
             FiltersPanel.Controls.Add(SetFiltersButton);
             FiltersPanel.Controls.Add(CuisineLabel);
             FiltersPanel.Location = new Point(434, 291);
@@ -575,25 +574,25 @@
             FiltersPanel.Size = new Size(380, 303);
             FiltersPanel.TabIndex = 48;
             // 
-            // label13
+            // FiltersLabel
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(13, 12);
-            label13.Name = "label13";
-            label13.Size = new Size(80, 20);
-            label13.TabIndex = 32;
-            label13.Text = "Фильтры:";
+            FiltersLabel.AutoSize = true;
+            FiltersLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            FiltersLabel.Location = new Point(3, 12);
+            FiltersLabel.Name = "FiltersLabel";
+            FiltersLabel.Size = new Size(80, 20);
+            FiltersLabel.TabIndex = 32;
+            FiltersLabel.Text = "Фильтры:";
             // 
             // SearchPanel
             // 
             SearchPanel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             SearchPanel.BorderStyle = BorderStyle.FixedSingle;
-            SearchPanel.Controls.Add(label14);
+            SearchPanel.Controls.Add(SearchLabel);
             SearchPanel.Controls.Add(SearchNameButton);
             SearchPanel.Controls.Add(IdForSearching);
-            SearchPanel.Controls.Add(label2);
-            SearchPanel.Controls.Add(label1);
+            SearchPanel.Controls.Add(IdSearchLabel);
+            SearchPanel.Controls.Add(NameSearchLabel);
             SearchPanel.Controls.Add(SearchIdButton);
             SearchPanel.Controls.Add(NameForSearching);
             SearchPanel.Location = new Point(821, 291);
@@ -601,15 +600,15 @@
             SearchPanel.Size = new Size(380, 303);
             SearchPanel.TabIndex = 49;
             // 
-            // label14
+            // SearchLabel
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.Location = new Point(7, 12);
-            label14.Name = "label14";
-            label14.Size = new Size(57, 20);
-            label14.TabIndex = 47;
-            label14.Text = "Поиск:";
+            SearchLabel.AutoSize = true;
+            SearchLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            SearchLabel.Location = new Point(7, 12);
+            SearchLabel.Name = "SearchLabel";
+            SearchLabel.Size = new Size(57, 20);
+            SearchLabel.TabIndex = 47;
+            SearchLabel.Text = "Поиск:";
             // 
             // MealsTable
             // 
@@ -712,7 +711,7 @@
             Name = "MealForm";
             Text = "Меню";
             Load += MealForm_Load;
-            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
+            //((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).EndInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMax).EndInit();
@@ -731,60 +730,276 @@
         }
 
         #endregion
+        /// <summary>
+        /// Кнопка закрытия окна
+        /// </summary>
         private Button Exit;
+
+        /// <summary>
+        /// Текст названия кухни
+        /// </summary>
         private Label CuisineLabel;
+
+        /// <summary>
+        /// Кнопка установки фильтров
+        /// </summary>
         private Button SetFiltersButton;
+
+        /// <summary>
+        /// Поле ввода названия для поиска
+        /// </summary>
         private TextBox NameForSearching;
+
+        /// <summary>
+        /// Кнопка поиска по id
+        /// </summary>
         private Button SearchIdButton;
+
+        /// <summary>
+        /// Кнопка удаления базы данных
+        /// </summary>
         private Button DeleteDb;
+
+        /// <summary>
+        /// Кнопка открытия окна добавления блюда
+        /// </summary>
         private Button AddMealButton;
+
+        /// <summary>
+        /// Кнопка создания базы данных
+        /// </summary>
         private Button CreateDb;
-        private FileSystemWatcher fileSystemWatcher1;
+
+        //private FileSystemWatcher fileSystemWatcher1;
+        
+        /// <summary>
+        /// Кнопка открытия окна "Виды кухонь"
+        /// </summary>
         private Button OpenCategoryForm;
+
+        /// <summary>
+        /// Кнопка открытия окна "Категории блюд"
+        /// </summary>
         private Button OpenCuisineForm;
+
+        /// <summary>
+        /// Поле ввода id для поиска
+        /// </summary>
         private NumericUpDown IdForSearching;
-        private Label label2;
-        private Label label1;
+
+        /// <summary>
+        /// Текст у поля ввода id для поиска
+        /// </summary>
+        private Label IdSearchLabel;
+
+        /// <summary>
+        /// Текст у ввода названия для поиска
+        /// </summary>
+        private Label NameSearchLabel;
+
+        /// <summary>
+        /// Кнопка поиска по навзванию
+        /// </summary>
         private Button SearchNameButton;
+
+        /// <summary>
+        /// Кнопка снятия фильтров
+        /// </summary>
         private Button CancelFilters;
+
+        /// <summary>
+        /// Радио-кнопка для выбора сортировки по убыванию
+        /// </summary>
         private RadioButton DownSort;
+
+        /// <summary>
+        /// Радио-кнопка для выбора сортировки по возрастанию
+        /// </summary>
         private RadioButton UpSort;
+
+        /// <summary>
+        /// Кнопка для сортировки
+        /// </summary>
         private Button SortButton;
+
+        /// <summary>
+        /// Чекбокс для сортировки по id
+        /// </summary>
         private CheckBox IdSort;
-        private Label label3;
+
+        /// <summary>
+        /// Текст у блока сортироки
+        /// </summary>
+        private Label SortLabel;
+
+        /// <summary>
+        /// Чекбокс для сортировки по массе
+        /// </summary>
         private CheckBox WeightSort;
+
+        /// <summary>
+        /// Чекбокс для сортировки по цене
+        /// </summary>
         private CheckBox PriceSort;
+
+        /// <summary>
+        /// Чекбокс для сортировки по id кухни
+        /// </summary>
         private CheckBox CuisineSort;
+
+        /// <summary>
+        /// Чекбокс для сортировки по кол-ву ккал
+        /// </summary>
         private CheckBox KcalSort;
+
+        /// <summary>
+        /// Чекбокс для сортировки по названию
+        /// </summary>
         private CheckBox NameSort;
+
+        /// <summary>
+        /// Чекбокс для сортировки по id категории
+        /// </summary>
         private CheckBox CategorySort;
-        private Label label6;
-        private Label label5;
-        private Label label4;
+
+        /// <summary>
+        /// Текст у фильтра по цене
+        /// </summary>
+        private Label PriceLabel;
+
+        /// <summary>
+        /// Текст у фильтра по кол-ву ккал
+        /// </summary>
+        private Label KcalLabel;
+
+        /// <summary>
+        /// Текст у фильтра по массе
+        /// </summary>
+        private Label WeightLabel;
+
+        /// <summary>
+        /// Макс. значения фильтра по цене
+        /// </summary>
         private NumericUpDown PriceFilterMax;
+
+        /// <summary>
+        /// Мин. значение фильтра по цене
+        /// </summary>
         private NumericUpDown PriceFilterMin;
+
+        /// <summary>
+        /// Мин. значения фильтра по кол-ву ккал
+        /// </summary>
         private NumericUpDown KcalFilterMin;
+
+        /// <summary>
+        /// Макс. значение фильтра по кол-ву ккал
+        /// </summary>
         private NumericUpDown KcalFilterMax;
+
+        /// <summary>
+        /// Макс. значение фильтра по массе
+        /// </summary>
         private NumericUpDown WeightFilterMax;
+
+        /// <summary>
+        /// Мин. значение фильтра по массе
+        /// </summary>
         private NumericUpDown WeightFilterMin;
-        private Label label12;
-        private Label label11;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private Label label7;
+
+        /// <summary>
+        /// Текст у поля ввода мин. значения цены при фильтрации
+        /// </summary>
+        private Label PriceMinLabel;
+
+        /// <summary>
+        /// Текст у поля ввода мин. значения кол-ва ккал при фильтрации
+        /// </summary>
+        private Label KcalMinLabel;
+
+        /// <summary>
+        /// Текст у поля ввода мин. значения массы при фильтрации
+        /// </summary>
+        private Label WeightMinLabel;
+
+        /// <summary>
+        /// Текст у поля ввода макс. значения цены при фильтрации
+        /// </summary>
+        private Label PriceMaxLabel;
+
+        /// <summary>
+        /// Текст у поля ввода макс. значения кол-ва ккал при фильтрации
+        /// </summary>
+        private Label KcalMaxLabel;
+
+        /// <summary>
+        /// Текст у поля ввода макс. значения массы при фильтрации
+        /// </summary>
+        private Label WeightMaxLabel;
+
+        /// <summary>
+        /// Панель с элементами сортировки
+        /// </summary>
         private Panel SortPanel;
+
+        /// <summary>
+        /// Панель с элементами поиска
+        /// </summary>
         private Panel SearchPanel;
+
+        /// <summary>
+        /// Панель с элементами фильтрации
+        /// </summary>
         private Panel FiltersPanel;
-        private Label label13;
-        private Label label14;
+
+        /// <summary>
+        /// Текст панели с фильтрами
+        /// </summary>
+        private Label FiltersLabel;
+
+        /// <summary>
+        /// Текст панели с поиском
+        /// </summary>
+        private Label SearchLabel;
+
+        /// <summary>
+        /// Таблица с блюдами
+        /// </summary>
         public DataGridView MealsTable;
+
+        /// <summary>
+        /// Колонка - id блюда
+        /// </summary>
         private DataGridViewTextBoxColumn ID;
+
+        /// <summary>
+        /// Колонка - название
+        /// </summary>
         private DataGridViewTextBoxColumn NameColumn;
+
+        /// <summary>
+        /// Колонка - вес
+        /// </summary>
         private DataGridViewTextBoxColumn WeightColumn;
+
+        /// <summary>
+        /// Колонка - кол-во ккал
+        /// </summary>
         private DataGridViewTextBoxColumn KcalColumn;
+
+        /// <summary>
+        /// Колонка - цена
+        /// </summary>
         private DataGridViewTextBoxColumn PriceColumn;
+
+        /// <summary>
+        /// Колонка - id кухни
+        /// </summary>
         private DataGridViewTextBoxColumn CuisineColumn;
+
+        /// <summary>
+        /// Колонка - id категории
+        /// </summary>
         private DataGridViewTextBoxColumn CategoryColumn;
     }
 }
