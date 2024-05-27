@@ -37,7 +37,7 @@ namespace OOP_Kurs_Simakin
         /// </summary>
         /// <param name="sender">Источник события</param>
         /// <param name="e">Объект с дополнительной информацией</param>
-        private void button1_Click(object sender, EventArgs e)
+        private void ExitAddMealForm_Click(object sender, EventArgs e)
         {
             Close();
         }

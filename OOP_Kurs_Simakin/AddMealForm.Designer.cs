@@ -62,7 +62,7 @@
             ExitAddMealForm.TabIndex = 1;
             ExitAddMealForm.Text = "Выход";
             ExitAddMealForm.UseVisualStyleBackColor = false;
-            ExitAddMealForm.Click += button1_Click;
+            ExitAddMealForm.Click += ExitAddMealForm_Click;
             // 
             // NameLabel
             // 
