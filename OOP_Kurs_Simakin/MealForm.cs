@@ -215,6 +215,15 @@ namespace OOP_Kurs_Simakin
             ResetMealsDGV();
             MessageBox.Show("Все фильтры сняты\nТаблица показывает актуальную таблицу из БД", "Уведомление");
             CancelFilters.Enabled = false;
+            
+            // Очистка полей фильтров
+            NameForSearching.Text = "";
+            WeightFilterMin.Value = WeightFilterMin.Minimum;
+            WeightFilterMax.Value = WeightFilterMax.Minimum;
+            PriceFilterMin.Value = PriceFilterMin.Minimum;
+            PriceFilterMax.Value = PriceFilterMax.Minimum;
+            KcalFilterMin.Value = KcalFilterMin.Minimum;
+            KcalFilterMax.Value = KcalFilterMax.Minimum;
         }
 
         /// <summary>

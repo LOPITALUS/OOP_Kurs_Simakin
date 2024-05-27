@@ -139,6 +139,7 @@ namespace OOP_Kurs_Simakin
             ResetCuisineDGV();
             MessageBox.Show("Все фильтры сняты\nТаблица показывает актуальную таблицу из БД", "Уведомление");
             CancelFilters.Enabled = false;
+            NameForSearching.Text = "";
         }
 
         /// <summary>
