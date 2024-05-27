@@ -60,6 +60,7 @@
             // 
             CategoriesTable.AllowUserToAddRows = false;
             CategoriesTable.AllowUserToDeleteRows = false;
+            CategoriesTable.AllowUserToResizeColumns = false;
             CategoriesTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             CategoriesTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             CategoriesTable.BackgroundColor = SystemColors.GradientActiveCaption;

@@ -27,7 +27,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_ED143BB204DB4A1B9AB6AC2D35F3C444"
+        "MsmKey" = "8:_9470B22711C24744854CE695547ECA5F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -148,9 +148,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED143BB204DB4A1B9AB6AC2D35F3C444"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9470B22711C24744854CE695547ECA5F"
             {
-            "SourcePath" = "8:Menu.deps.json"
+            "SourcePath" = "8:..\\OOP_Kurs_Simakin\\bin\\Debug\\net7.0-windows\\Menu.deps.json"
             "TargetName" = "8:Menu.deps.json"
             "Tag" = "8:"
             "Folder" = "8:_9C9D6BEBD5B74A1AB4E1A9F58E7F234F"

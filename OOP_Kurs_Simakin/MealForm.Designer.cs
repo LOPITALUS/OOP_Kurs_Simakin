@@ -36,7 +36,6 @@
             DeleteDb = new Button();
             AddMealButton = new Button();
             CreateDb = new Button();
-           // fileSystemWatcher1 = new FileSystemWatcher();
             OpenCuisineForm = new Button();
             OpenCategoryForm = new Button();
             NameSearchLabel = new Label();
@@ -83,7 +82,6 @@
             PriceColumn = new DataGridViewTextBoxColumn();
             CuisineColumn = new DataGridViewTextBoxColumn();
             CategoryColumn = new DataGridViewTextBoxColumn();
-           // ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMax).BeginInit();
@@ -189,11 +187,6 @@
             CreateDb.Text = "Создать базу данных";
             CreateDb.UseVisualStyleBackColor = false;
             CreateDb.Click += CreateDb_Click;
-            //// 
-            //// fileSystemWatcher1
-            //// 
-            //fileSystemWatcher1.EnableRaisingEvents = true;
-            //fileSystemWatcher1.SynchronizingObject = this;
             // 
             // OpenCuisineForm
             // 
@@ -614,6 +607,7 @@
             // 
             MealsTable.AllowUserToAddRows = false;
             MealsTable.AllowUserToDeleteRows = false;
+            MealsTable.AllowUserToResizeColumns = false;
             MealsTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             MealsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             MealsTable.BackgroundColor = SystemColors.GradientActiveCaption;
@@ -711,7 +705,6 @@
             Name = "MealForm";
             Text = "Меню";
             Load += MealForm_Load;
-            //((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).EndInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)WeightFilterMax).EndInit();
@@ -771,7 +764,7 @@
         private Button CreateDb;
 
         //private FileSystemWatcher fileSystemWatcher1;
-        
+
         /// <summary>
         /// Кнопка открытия окна "Виды кухонь"
         /// </summary>

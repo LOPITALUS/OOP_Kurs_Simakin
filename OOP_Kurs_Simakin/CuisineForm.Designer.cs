@@ -40,7 +40,6 @@
             SearchIdButton = new Button();
             NameForSearching = new TextBox();
             CancelFilters = new Button();
-            //backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)CuisinesTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IdForSearching).BeginInit();
             SuspendLayout();
@@ -49,6 +48,7 @@
             // 
             CuisinesTable.AllowUserToAddRows = false;
             CuisinesTable.AllowUserToDeleteRows = false;
+            CuisinesTable.AllowUserToResizeColumns = false;
             CuisinesTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             CuisinesTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             CuisinesTable.BackgroundColor = SystemColors.GradientActiveCaption;
